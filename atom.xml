@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zhengjay.com/"/>
-  <updated>2020-03-30T01:29:29.000Z</updated>
+  <updated>2021-11-15T04:57:47.398Z</updated>
   <id>https://zhengjay.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>简单优雅的搭建个人博客</title>
-    <link href="https://zhengjay.com/20211119/%E7%AE%80%E5%8D%95%E4%BC%98%E9%9B%85%E7%9A%84%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2.html"/>
-    <id>https://zhengjay.com/20211119/简单优雅的搭建个人博客.html</id>
-    <published>2021-11-19T13:13:42.846Z</published>
-    <updated>2020-03-30T01:29:29.000Z</updated>
+    <title>用Python处理excel数据 xlwt xlrd</title>
+    <link href="https://zhengjay.com/20211119/%E7%94%A8Python%E5%A4%84%E7%90%86excel%E6%95%B0%E6%8D%AE.html"/>
+    <id>https://zhengjay.com/20211119/用Python处理excel数据.html</id>
+    <published>2021-11-19T13:28:38.189Z</published>
+    <updated>2021-11-15T04:57:47.398Z</updated>
     
     <summary type="html">
     
@@ -35,21 +35,83 @@
     
     </summary>
     
-      <category term="个人博客" scheme="https://zhengjay.com/categories/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
+      <category term="Python" scheme="https://zhengjay.com/categories/Python/"/>
+    
+    
+      <category term="Python" scheme="https://zhengjay.com/tags/Python/"/>
+    
+      <category term="excel" scheme="https://zhengjay.com/tags/excel/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>文章模板</title>
+    <link href="https://zhengjay.com/20211119/%E6%96%87%E7%AB%A0%E6%A8%A1%E6%9D%BF.html"/>
+    <id>https://zhengjay.com/20211119/文章模板.html</id>
+    <published>2021-11-19T13:28:38.187Z</published>
+    <updated>2021-11-15T04:57:47.398Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="杂项" scheme="https://zhengjay.com/categories/%E6%9D%82%E9%A1%B9/"/>
+    
+    
+      <category term="模板" scheme="https://zhengjay.com/tags/%E6%A8%A1%E6%9D%BF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>建站之路</title>
+    <link href="https://zhengjay.com/20211119/%E5%BB%BA%E7%AB%99%E4%B9%8B%E8%B7%AF.html"/>
+    <id>https://zhengjay.com/20211119/建站之路.html</id>
+    <published>2021-11-19T13:28:38.183Z</published>
+    <updated>2021-11-15T04:57:47.398Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="杂项" scheme="https://zhengjay.com/categories/%E6%9D%82%E9%A1%B9/"/>
     
     
       <category term="hexo" scheme="https://zhengjay.com/tags/hexo/"/>
     
-      <category term="next" scheme="https://zhengjay.com/tags/next/"/>
+      <category term="建站" scheme="https://zhengjay.com/tags/%E5%BB%BA%E7%AB%99/"/>
+    
+      <category term="github pages" scheme="https://zhengjay.com/tags/github-pages/"/>
+    
+      <category term="SSH" scheme="https://zhengjay.com/tags/SSH/"/>
+    
+      <category term="github命令" scheme="https://zhengjay.com/tags/github%E5%91%BD%E4%BB%A4/"/>
+    
+      <category term="绑定域名" scheme="https://zhengjay.com/tags/%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D/"/>
     
   </entry>
   
   <entry>
-    <title>调第三方厂家接口实现文件文件上传httpclient</title>
-    <link href="https://zhengjay.com/20211119/%E8%B0%83%E7%AC%AC%E4%B8%89%E6%96%B9%E5%8E%82%E5%AE%B6%E6%8E%A5%E5%8F%A3%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0httpclient.html"/>
-    <id>https://zhengjay.com/20211119/调第三方厂家接口实现文件文件上传httpclient.html</id>
-    <published>2021-11-19T13:13:42.846Z</published>
-    <updated>2020-03-30T01:29:29.000Z</updated>
+    <title>专业知识</title>
+    <link href="https://zhengjay.com/20211119/%E4%B8%93%E4%B8%9A%E7%9F%A5%E8%AF%86.html"/>
+    <id>https://zhengjay.com/20211119/专业知识.html</id>
+    <published>2021-11-19T13:28:38.179Z</published>
+    <updated>2021-11-15T04:57:47.398Z</updated>
     
     <summary type="html">
     
@@ -63,25 +125,23 @@
     
     </summary>
     
-      <category term="springBoot番外篇" scheme="https://zhengjay.com/categories/springBoot%E7%95%AA%E5%A4%96%E7%AF%87/"/>
+      <category term="杂项" scheme="https://zhengjay.com/categories/%E6%9D%82%E9%A1%B9/"/>
     
     
-      <category term="java" scheme="https://zhengjay.com/tags/java/"/>
+      <category term="计算机" scheme="https://zhengjay.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
     
-      <category term="springboot" scheme="https://zhengjay.com/tags/springboot/"/>
+      <category term="网络" scheme="https://zhengjay.com/tags/%E7%BD%91%E7%BB%9C/"/>
     
-      <category term="上传文件" scheme="https://zhengjay.com/tags/%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6/"/>
-    
-      <category term="httpclient" scheme="https://zhengjay.com/tags/httpclient/"/>
+      <category term="定义" scheme="https://zhengjay.com/tags/%E5%AE%9A%E4%B9%89/"/>
     
   </entry>
   
   <entry>
-    <title>如何优雅实现属性的动态注入</title>
-    <link href="https://zhengjay.com/20211119/%E5%A6%82%E4%BD%95%E4%BC%98%E9%9B%85%E5%AE%9E%E7%8E%B0%E5%B1%9E%E6%80%A7%E7%9A%84%E5%8A%A8%E6%80%81%E6%B3%A8%E5%85%A5.html"/>
-    <id>https://zhengjay.com/20211119/如何优雅实现属性的动态注入.html</id>
-    <published>2021-11-19T13:13:42.845Z</published>
-    <updated>2020-03-30T01:29:29.000Z</updated>
+    <title>《平凡的世界》读后感</title>
+    <link href="https://zhengjay.com/20211119/%E3%80%8A%E5%B9%B3%E5%87%A1%E7%9A%84%E4%B8%96%E7%95%8C%E3%80%8B%E8%AF%BB%E5%90%8E%E6%84%9F.html"/>
+    <id>https://zhengjay.com/20211119/《平凡的世界》读后感.html</id>
+    <published>2021-11-19T13:28:38.176Z</published>
+    <updated>2021-11-15T04:57:47.397Z</updated>
     
     <summary type="html">
     
@@ -95,23 +155,21 @@
     
     </summary>
     
-      <category term="Java" scheme="https://zhengjay.com/categories/Java/"/>
+      <category term="读后感" scheme="https://zhengjay.com/categories/%E8%AF%BB%E5%90%8E%E6%84%9F/"/>
     
     
-      <category term="java" scheme="https://zhengjay.com/tags/java/"/>
+      <category term="随笔" scheme="https://zhengjay.com/tags/%E9%9A%8F%E7%AC%94/"/>
     
-      <category term="动态注入" scheme="https://zhengjay.com/tags/%E5%8A%A8%E6%80%81%E6%B3%A8%E5%85%A5/"/>
-    
-      <category term="映射" scheme="https://zhengjay.com/tags/%E6%98%A0%E5%B0%84/"/>
+      <category term="读后感" scheme="https://zhengjay.com/tags/%E8%AF%BB%E5%90%8E%E6%84%9F/"/>
     
   </entry>
   
   <entry>
-    <title>将个人博客迁移到云服务器上</title>
-    <link href="https://zhengjay.com/20211119/%E5%B0%86%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E5%88%B0%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A.html"/>
-    <id>https://zhengjay.com/20211119/将个人博客迁移到云服务器上.html</id>
-    <published>2021-11-19T13:13:42.845Z</published>
-    <updated>2020-03-30T01:29:29.000Z</updated>
+    <title>noteJava</title>
+    <link href="https://zhengjay.com/20211119/note%E7%AE%97%E6%B3%95.html"/>
+    <id>https://zhengjay.com/20211119/note算法.html</id>
+    <published>2021-11-19T13:28:38.174Z</published>
+    <updated>2021-11-18T14:48:13.616Z</updated>
     
     <summary type="html">
     
@@ -125,21 +183,21 @@
     
     </summary>
     
-      <category term="个人博客" scheme="https://zhengjay.com/categories/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
+      <category term="笔记" scheme="https://zhengjay.com/categories/%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="hexo" scheme="https://zhengjay.com/tags/hexo/"/>
+      <category term="算法" scheme="https://zhengjay.com/tags/%E7%AE%97%E6%B3%95/"/>
     
-      <category term="next" scheme="https://zhengjay.com/tags/next/"/>
+      <category term="笔记" scheme="https://zhengjay.com/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
-    <title>四、docker 仓库(让我们的镜像有处可存)</title>
-    <link href="https://zhengjay.com/20211119/%E5%9B%9B%E3%80%81docker%20%E4%BB%93%E5%BA%93(%E8%AE%A9%E6%88%91%E4%BB%AC%E7%9A%84%E9%95%9C%E5%83%8F%E6%9C%89%E5%A4%84%E5%8F%AF%E5%AD%98).html"/>
-    <id>https://zhengjay.com/20211119/四、docker 仓库(让我们的镜像有处可存).html</id>
-    <published>2021-11-19T13:13:42.844Z</published>
-    <updated>2020-03-30T01:29:29.000Z</updated>
+    <title>notePython</title>
+    <link href="https://zhengjay.com/20211119/notePython.html"/>
+    <id>https://zhengjay.com/20211119/notePython.html</id>
+    <published>2021-11-19T13:28:38.170Z</published>
+    <updated>2021-11-15T04:57:47.397Z</updated>
     
     <summary type="html">
     
@@ -153,21 +211,21 @@
     
     </summary>
     
-      <category term="docker" scheme="https://zhengjay.com/categories/docker/"/>
+      <category term="笔记" scheme="https://zhengjay.com/categories/%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="linux" scheme="https://zhengjay.com/tags/linux/"/>
+      <category term="笔记" scheme="https://zhengjay.com/tags/%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="docker" scheme="https://zhengjay.com/tags/docker/"/>
+      <category term="Python" scheme="https://zhengjay.com/tags/Python/"/>
     
   </entry>
   
   <entry>
-    <title>四、Spring Cloud之熔断处理 Hystrix</title>
-    <link href="https://zhengjay.com/20211119/%E5%9B%9B%E3%80%81Spring%20Cloud%E4%B9%8B%E7%86%94%E6%96%AD%E5%A4%84%E7%90%86%20Hystrix.html"/>
-    <id>https://zhengjay.com/20211119/四、Spring Cloud之熔断处理 Hystrix.html</id>
-    <published>2021-11-19T13:13:42.843Z</published>
-    <updated>2020-03-30T01:29:29.000Z</updated>
+    <title>noteMarkDown</title>
+    <link href="https://zhengjay.com/20211119/noteMarkDown.html"/>
+    <id>https://zhengjay.com/20211119/noteMarkDown.html</id>
+    <published>2021-11-19T13:28:38.165Z</published>
+    <updated>2021-11-17T13:41:52.586Z</updated>
     
     <summary type="html">
     
@@ -181,23 +239,21 @@
     
     </summary>
     
-      <category term="springCloud" scheme="https://zhengjay.com/categories/springCloud/"/>
+      <category term="笔记" scheme="https://zhengjay.com/categories/%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="springCloud" scheme="https://zhengjay.com/tags/springCloud/"/>
+      <category term="笔记" scheme="https://zhengjay.com/tags/%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="java" scheme="https://zhengjay.com/tags/java/"/>
-    
-      <category term="Hystrix" scheme="https://zhengjay.com/tags/Hystrix/"/>
+      <category term="MarkDown" scheme="https://zhengjay.com/tags/MarkDown/"/>
     
   </entry>
   
   <entry>
-    <title>升级nginx ,为nginx配置https证书</title>
-    <link href="https://zhengjay.com/20211119/%E5%8D%87%E7%BA%A7nginx%20,%E4%B8%BAnginx%E9%85%8D%E7%BD%AEhttps%E8%AF%81%E4%B9%A6.html"/>
-    <id>https://zhengjay.com/20211119/升级nginx ,为nginx配置https证书.html</id>
-    <published>2021-11-19T13:13:42.842Z</published>
-    <updated>2020-03-30T01:29:29.000Z</updated>
+    <title>noteLinux</title>
+    <link href="https://zhengjay.com/20211119/noteLinux.html"/>
+    <id>https://zhengjay.com/20211119/noteLinux.html</id>
+    <published>2021-11-19T13:28:38.162Z</published>
+    <updated>2021-11-17T13:44:30.889Z</updated>
     
     <summary type="html">
     
@@ -211,23 +267,21 @@
     
     </summary>
     
-      <category term="nginx" scheme="https://zhengjay.com/categories/nginx/"/>
+      <category term="笔记" scheme="https://zhengjay.com/categories/%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="nginx" scheme="https://zhengjay.com/tags/nginx/"/>
+      <category term="笔记" scheme="https://zhengjay.com/tags/%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="https" scheme="https://zhengjay.com/tags/https/"/>
-    
-      <category term="ssl" scheme="https://zhengjay.com/tags/ssl/"/>
+      <category term="Linux" scheme="https://zhengjay.com/tags/Linux/"/>
     
   </entry>
   
   <entry>
-    <title>十二、SpringBoot 优雅的集成Spring Security</title>
-    <link href="https://zhengjay.com/20211119/%E5%8D%81%E4%BA%8C%E3%80%81SpringBoot%20%E4%BC%98%E9%9B%85%E7%9A%84%E9%9B%86%E6%88%90Spring%20Security.html"/>
-    <id>https://zhengjay.com/20211119/十二、SpringBoot 优雅的集成Spring Security.html</id>
-    <published>2021-11-19T13:13:42.842Z</published>
-    <updated>2020-03-30T01:29:29.000Z</updated>
+    <title>noteJava</title>
+    <link href="https://zhengjay.com/20211119/noteJava.html"/>
+    <id>https://zhengjay.com/20211119/noteJava.html</id>
+    <published>2021-11-19T13:28:38.159Z</published>
+    <updated>2021-11-18T14:48:03.786Z</updated>
     
     <summary type="html">
     
@@ -241,21 +295,21 @@
     
     </summary>
     
-      <category term="springBoot" scheme="https://zhengjay.com/categories/springBoot/"/>
+      <category term="笔记" scheme="https://zhengjay.com/categories/%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="java" scheme="https://zhengjay.com/tags/java/"/>
+      <category term="笔记" scheme="https://zhengjay.com/tags/%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="springboot" scheme="https://zhengjay.com/tags/springboot/"/>
+      <category term="Java" scheme="https://zhengjay.com/tags/Java/"/>
     
   </entry>
   
   <entry>
-    <title>十、Spring boot 简单优雅的整合 Swagger2</title>
-    <link href="https://zhengjay.com/20211119/%E5%8D%81%E3%80%81Spring%20boot%20%E7%AE%80%E5%8D%95%E4%BC%98%E9%9B%85%E7%9A%84%E6%95%B4%E5%90%88%20Swagger2.html"/>
-    <id>https://zhengjay.com/20211119/十、Spring boot 简单优雅的整合 Swagger2.html</id>
-    <published>2021-11-19T13:13:42.841Z</published>
-    <updated>2020-03-30T01:29:29.000Z</updated>
+    <title>noteGit</title>
+    <link href="https://zhengjay.com/20211119/noteGit.html"/>
+    <id>https://zhengjay.com/20211119/noteGit.html</id>
+    <published>2021-11-19T13:28:38.156Z</published>
+    <updated>2021-11-19T12:36:38.116Z</updated>
     
     <summary type="html">
     
@@ -269,21 +323,21 @@
     
     </summary>
     
-      <category term="springBoot" scheme="https://zhengjay.com/categories/springBoot/"/>
+      <category term="笔记" scheme="https://zhengjay.com/categories/%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="java" scheme="https://zhengjay.com/tags/java/"/>
+      <category term="笔记" scheme="https://zhengjay.com/tags/%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="springboot" scheme="https://zhengjay.com/tags/springboot/"/>
+      <category term="Git" scheme="https://zhengjay.com/tags/Git/"/>
     
   </entry>
   
   <entry>
-    <title>十一、springboot 配置log4j2以及打包成zip文件</title>
-    <link href="https://zhengjay.com/20211119/%E5%8D%81%E4%B8%80%E3%80%81springboot%20%E9%85%8D%E7%BD%AElog4j2%E4%BB%A5%E5%8F%8A%E6%89%93%E5%8C%85%E6%88%90zip%E6%96%87%E4%BB%B6.html"/>
-    <id>https://zhengjay.com/20211119/十一、springboot 配置log4j2以及打包成zip文件.html</id>
-    <published>2021-11-19T13:13:42.841Z</published>
-    <updated>2020-03-30T01:29:29.000Z</updated>
+    <title>noteCMD</title>
+    <link href="https://zhengjay.com/20211119/noteCMD.html"/>
+    <id>https://zhengjay.com/20211119/noteCMD.html</id>
+    <published>2021-11-19T13:28:38.152Z</published>
+    <updated>2021-11-15T15:34:48.155Z</updated>
     
     <summary type="html">
     
@@ -297,21 +351,21 @@
     
     </summary>
     
-      <category term="springBoot" scheme="https://zhengjay.com/categories/springBoot/"/>
+      <category term="笔记" scheme="https://zhengjay.com/categories/%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="java" scheme="https://zhengjay.com/tags/java/"/>
+      <category term="笔记" scheme="https://zhengjay.com/tags/%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="springboot" scheme="https://zhengjay.com/tags/springboot/"/>
+      <category term="cmd" scheme="https://zhengjay.com/tags/cmd/"/>
     
   </entry>
   
   <entry>
-    <title>十三、springboot 优雅集成spring-boot-admin 实现程序监控</title>
-    <link href="https://zhengjay.com/20211119/%E5%8D%81%E4%B8%89%E3%80%81springboot%20%E4%BC%98%E9%9B%85%E9%9B%86%E6%88%90spring-boot-admin%20%E5%AE%9E%E7%8E%B0%E7%A8%8B%E5%BA%8F%E7%9B%91%E6%8E%A7.html"/>
-    <id>https://zhengjay.com/20211119/十三、springboot 优雅集成spring-boot-admin 实现程序监控.html</id>
-    <published>2021-11-19T13:13:42.841Z</published>
-    <updated>2020-03-30T01:29:29.000Z</updated>
+    <title>noteC&amp;C++</title>
+    <link href="https://zhengjay.com/20211119/noteC&amp;C++.html"/>
+    <id>https://zhengjay.com/20211119/noteC&amp;C++.html</id>
+    <published>2021-11-19T13:28:38.147Z</published>
+    <updated>2021-11-19T07:35:02.292Z</updated>
     
     <summary type="html">
     
@@ -325,21 +379,23 @@
     
     </summary>
     
-      <category term="springBoot" scheme="https://zhengjay.com/categories/springBoot/"/>
+      <category term="笔记" scheme="https://zhengjay.com/categories/%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="java" scheme="https://zhengjay.com/tags/java/"/>
+      <category term="笔记" scheme="https://zhengjay.com/tags/%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="springboot" scheme="https://zhengjay.com/tags/springboot/"/>
+      <category term="C" scheme="https://zhengjay.com/tags/C/"/>
+    
+      <category term="C++" scheme="https://zhengjay.com/tags/C/"/>
     
   </entry>
   
   <entry>
-    <title>六、Spring Cloud之配置中心config</title>
-    <link href="https://zhengjay.com/20211119/%E5%85%AD%E3%80%81Spring%20Cloud%E4%B9%8B%E9%85%8D%E7%BD%AE%E4%B8%AD%E5%BF%83config.html"/>
-    <id>https://zhengjay.com/20211119/六、Spring Cloud之配置中心config.html</id>
-    <published>2021-11-19T13:13:42.839Z</published>
-    <updated>2020-03-30T01:29:29.000Z</updated>
+    <title>第一篇博客</title>
+    <link href="https://zhengjay.com/20211119/my-first-blog.html"/>
+    <id>https://zhengjay.com/20211119/my-first-blog.html</id>
+    <published>2021-11-19T13:28:38.144Z</published>
+    <updated>2021-11-15T04:57:47.397Z</updated>
     
     <summary type="html">
     
@@ -353,23 +409,21 @@
     
     </summary>
     
-      <category term="springCloud" scheme="https://zhengjay.com/categories/springCloud/"/>
+      <category term="随笔" scheme="https://zhengjay.com/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
-      <category term="springCloud" scheme="https://zhengjay.com/tags/springCloud/"/>
+      <category term="生活" scheme="https://zhengjay.com/tags/%E7%94%9F%E6%B4%BB/"/>
     
-      <category term="java" scheme="https://zhengjay.com/tags/java/"/>
-    
-      <category term="zuul" scheme="https://zhengjay.com/tags/zuul/"/>
+      <category term="随笔" scheme="https://zhengjay.com/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
   <entry>
-    <title>六、springboot 简单优雅是实现短信服务</title>
-    <link href="https://zhengjay.com/20211119/%E5%85%AD%E3%80%81springboot%20%E7%AE%80%E5%8D%95%E4%BC%98%E9%9B%85%E6%98%AF%E5%AE%9E%E7%8E%B0%E7%9F%AD%E4%BF%A1%E6%9C%8D%E5%8A%A1.html"/>
-    <id>https://zhengjay.com/20211119/六、springboot 简单优雅是实现短信服务.html</id>
-    <published>2021-11-19T13:13:42.839Z</published>
-    <updated>2020-03-30T01:29:29.000Z</updated>
+    <title>it英语</title>
+    <link href="https://zhengjay.com/20211119/it%E8%8B%B1%E8%AF%AD.html"/>
+    <id>https://zhengjay.com/20211119/it英语.html</id>
+    <published>2021-11-19T13:28:38.141Z</published>
+    <updated>2021-11-15T04:57:47.396Z</updated>
     
     <summary type="html">
     
@@ -383,21 +437,21 @@
     
     </summary>
     
-      <category term="springBoot" scheme="https://zhengjay.com/categories/springBoot/"/>
+      <category term="笔记" scheme="https://zhengjay.com/categories/%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="java" scheme="https://zhengjay.com/tags/java/"/>
+      <category term="笔记" scheme="https://zhengjay.com/tags/%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="springboot" scheme="https://zhengjay.com/tags/springboot/"/>
+      <category term="英语" scheme="https://zhengjay.com/tags/%E8%8B%B1%E8%AF%AD/"/>
     
   </entry>
   
   <entry>
-    <title>八、springboot 简单优雅的通过docker-compose 构建</title>
-    <link href="https://zhengjay.com/20211119/%E5%85%AB%E3%80%81springboot%20%E7%AE%80%E5%8D%95%E4%BC%98%E9%9B%85%E7%9A%84%E9%80%9A%E8%BF%87docker-compose%20%E6%9E%84%E5%BB%BA.html"/>
-    <id>https://zhengjay.com/20211119/八、springboot 简单优雅的通过docker-compose 构建.html</id>
-    <published>2021-11-19T13:13:42.838Z</published>
-    <updated>2020-03-30T01:29:29.000Z</updated>
+    <title>ctf文件上传</title>
+    <link href="https://zhengjay.com/20211119/ctf%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0.html"/>
+    <id>https://zhengjay.com/20211119/ctf文件上传.html</id>
+    <published>2021-11-19T13:28:38.138Z</published>
+    <updated>2021-11-15T15:15:07.616Z</updated>
     
     <summary type="html">
     
@@ -411,21 +465,23 @@
     
     </summary>
     
-      <category term="springBoot" scheme="https://zhengjay.com/categories/springBoot/"/>
+      <category term="ctfWeb" scheme="https://zhengjay.com/categories/ctfWeb/"/>
     
     
-      <category term="java" scheme="https://zhengjay.com/tags/java/"/>
+      <category term="ctf" scheme="https://zhengjay.com/tags/ctf/"/>
     
-      <category term="springboot" scheme="https://zhengjay.com/tags/springboot/"/>
+      <category term="web" scheme="https://zhengjay.com/tags/web/"/>
+    
+      <category term="F12开发者工具" scheme="https://zhengjay.com/tags/F12%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
   <entry>
-    <title>五、springboot 简单优雅是实现邮件服务</title>
-    <link href="https://zhengjay.com/20211119/%E4%BA%94%E3%80%81springboot%20%E7%AE%80%E5%8D%95%E4%BC%98%E9%9B%85%E6%98%AF%E5%AE%9E%E7%8E%B0%E9%82%AE%E4%BB%B6%E6%9C%8D%E5%8A%A1.html"/>
-    <id>https://zhengjay.com/20211119/五、springboot 简单优雅是实现邮件服务.html</id>
-    <published>2021-11-19T13:13:42.837Z</published>
-    <updated>2020-03-30T01:29:29.000Z</updated>
+    <title>burp suit使用指南</title>
+    <link href="https://zhengjay.com/20211119/burp%20suit%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.html"/>
+    <id>https://zhengjay.com/20211119/burp suit使用指南.html</id>
+    <published>2021-11-19T13:28:38.133Z</published>
+    <updated>2021-11-15T15:15:52.837Z</updated>
     
     <summary type="html">
     
@@ -439,156 +495,16 @@
     
     </summary>
     
-      <category term="springBoot" scheme="https://zhengjay.com/categories/springBoot/"/>
+      <category term="笔记&#39;" scheme="https://zhengjay.com/categories/%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="java" scheme="https://zhengjay.com/tags/java/"/>
+      <category term="笔记" scheme="https://zhengjay.com/tags/%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="springboot" scheme="https://zhengjay.com/tags/springboot/"/>
+      <category term="ctf" scheme="https://zhengjay.com/tags/ctf/"/>
     
-  </entry>
-  
-  <entry>
-    <title>五、docker-compose开锋（docker 三剑客）</title>
-    <link href="https://zhengjay.com/20211119/%E4%BA%94%E3%80%81docker-compose%E5%BC%80%E9%94%8B%EF%BC%88docker%20%E4%B8%89%E5%89%91%E5%AE%A2%EF%BC%89.html"/>
-    <id>https://zhengjay.com/20211119/五、docker-compose开锋（docker 三剑客）.html</id>
-    <published>2021-11-19T13:13:42.836Z</published>
-    <updated>2020-03-30T01:29:29.000Z</updated>
+      <category term="web" scheme="https://zhengjay.com/tags/web/"/>
     
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="docker" scheme="https://zhengjay.com/categories/docker/"/>
-    
-    
-      <category term="linux" scheme="https://zhengjay.com/tags/linux/"/>
-    
-      <category term="docker" scheme="https://zhengjay.com/tags/docker/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>五、Spring Cloud之网关服务 zuul</title>
-    <link href="https://zhengjay.com/20211119/%E4%BA%94%E3%80%81Spring%20Cloud%E4%B9%8B%E7%BD%91%E5%85%B3%E6%9C%8D%E5%8A%A1%20zuul.html"/>
-    <id>https://zhengjay.com/20211119/五、Spring Cloud之网关服务 zuul.html</id>
-    <published>2021-11-19T13:13:42.835Z</published>
-    <updated>2020-03-30T01:29:29.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="springCloud" scheme="https://zhengjay.com/categories/springCloud/"/>
-    
-    
-      <category term="springCloud" scheme="https://zhengjay.com/tags/springCloud/"/>
-    
-      <category term="java" scheme="https://zhengjay.com/tags/java/"/>
-    
-      <category term="zuul" scheme="https://zhengjay.com/tags/zuul/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>二、docker 镜像容器常用操作(让我们用docker 溜得飞起)</title>
-    <link href="https://zhengjay.com/20211119/%E4%BA%8C%E3%80%81docker%20%E9%95%9C%E5%83%8F%E5%AE%B9%E5%99%A8%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C(%E8%AE%A9%E6%88%91%E4%BB%AC%E7%94%A8docker%20%E6%BA%9C%E5%BE%97%E9%A3%9E%E8%B5%B7).html"/>
-    <id>https://zhengjay.com/20211119/二、docker 镜像容器常用操作(让我们用docker 溜得飞起).html</id>
-    <published>2021-11-19T13:13:42.834Z</published>
-    <updated>2020-03-30T01:29:29.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="docker" scheme="https://zhengjay.com/categories/docker/"/>
-    
-    
-      <category term="linux" scheme="https://zhengjay.com/tags/linux/"/>
-    
-      <category term="docker" scheme="https://zhengjay.com/tags/docker/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>二、Vue 页面渲染过程</title>
-    <link href="https://zhengjay.com/20211119/%E4%BA%8C%E3%80%81Vue%20%E9%A1%B5%E9%9D%A2%E6%B8%B2%E6%9F%93%E8%BF%87%E7%A8%8B.html"/>
-    <id>https://zhengjay.com/20211119/二、Vue 页面渲染过程.html</id>
-    <published>2021-11-19T13:13:42.833Z</published>
-    <updated>2020-03-30T01:29:29.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="vue" scheme="https://zhengjay.com/categories/vue/"/>
-    
-    
-      <category term="vue" scheme="https://zhengjay.com/tags/vue/"/>
-    
-      <category term="前端" scheme="https://zhengjay.com/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>二、Spring Cloud之注册中心 Eureka</title>
-    <link href="https://zhengjay.com/20211119/%E4%BA%8C%E3%80%81Spring%20Cloud%E4%B9%8B%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83%20Eureka.html"/>
-    <id>https://zhengjay.com/20211119/二、Spring Cloud之注册中心 Eureka.html</id>
-    <published>2021-11-19T13:13:42.833Z</published>
-    <updated>2020-03-30T01:29:29.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="springCloud" scheme="https://zhengjay.com/categories/springCloud/"/>
-    
-    
-      <category term="springCloud" scheme="https://zhengjay.com/tags/springCloud/"/>
-    
-      <category term="java" scheme="https://zhengjay.com/tags/java/"/>
-    
-      <category term="Eureka" scheme="https://zhengjay.com/tags/Eureka/"/>
+      <category term="burp suit" scheme="https://zhengjay.com/tags/burp-suit/"/>
     
   </entry>
   
