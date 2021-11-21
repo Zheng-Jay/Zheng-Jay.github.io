@@ -14,13 +14,13 @@
   
 
 
-<html class="theme-next mist use-motion" lang="zh-CN">
+<html class="theme-next pisces use-motion" lang="zh-CN">
 
-<head><meta name="generator" content="Hexo 3.9.0">
-  <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222"/>
 
 
 
@@ -30,7 +30,7 @@
     
     
   <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
-  <link rel="stylesheet" href="/lib/pace/pace-theme-bounce.min.css?v=1.0.2">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-bounce.min.css?v=1.0.2"/>
 
 
 
@@ -48,7 +48,7 @@
 
   
   
-  <link rel="stylesheet" href="/lib/fancybox/source/jquery.fancybox.css">
+  <link rel="stylesheet" href="/lib/fancybox/source/jquery.fancybox.css"/>
 
 
 
@@ -56,23 +56,11 @@
   
   
   
-  
-
-  
-    
-    
   
 
   
     
-      
     
-
-    
-  
-
-  
-
   
 
   
@@ -84,9 +72,21 @@
   
 
   
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
     
     
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Roboto Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Roboto Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext"/>
   
 
 
@@ -94,9 +94,9 @@
 
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2"/>
 
-<link rel="stylesheet" href="/css/main.css?v=7.1.1">
+<link rel="stylesheet" href="/css/main.css?v=7.1.1"/>
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.1">
@@ -119,8 +119,8 @@
 <script id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
-    root: '/',
-    scheme: 'Mist',
+    root: '',
+    scheme: 'Pisces',
     version: '7.1.1',
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":true,"dimmer":false},
     back2top: true,
@@ -155,29 +155,30 @@
   </script>
 
   <meta name="description" content="前言之前在学爬虫的时候，有学到用Python将爬取的数据保存在excel中，不过只是用xlwt库进行写操作。 昨天，一个应用数学专业同学来找我，说晚上要交期中作业，让我帮他处理点数据，数据是保存在excel文件，本着助人为乐的精神，帮他写了个py脚本，随便学到了如何用xlwt（实现写操作）和xlrd（实现读操作）两个第三方库处理excel文件。 第三方库其实，不止有xlwt和xlrd这两个库能够处">
-<meta name="keywords" content="Python,excel">
 <meta property="og:type" content="article">
 <meta property="og:title" content="用Python处理excel数据 xlwt xlrd">
-<meta property="og:url" content="https://zhengjay.com/20211119/用Python处理excel数据.html">
+<meta property="og:url" content="https://zhengjay.com/20211119/%E7%94%A8Python%E5%A4%84%E7%90%86excel%E6%95%B0%E6%8D%AE.html">
 <meta property="og:site_name" content="Jay&#39; s blog">
 <meta property="og:description" content="前言之前在学爬虫的时候，有学到用Python将爬取的数据保存在excel中，不过只是用xlwt库进行写操作。 昨天，一个应用数学专业同学来找我，说晚上要交期中作业，让我帮他处理点数据，数据是保存在excel文件，本着助人为乐的精神，帮他写了个py脚本，随便学到了如何用xlwt（实现写操作）和xlrd（实现读操作）两个第三方库处理excel文件。 第三方库其实，不止有xlwt和xlrd这两个库能够处">
-<meta property="og:locale" content="zh-CN">
+<meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://i.loli.net/2021/11/14/GS1VFyJrZEMgpYa.jpg">
-<meta property="og:updated_time" content="2021-11-15T04:57:47.398Z">
+<meta property="article:published_time" content="2021-11-19T13:28:38.189Z">
+<meta property="article:modified_time" content="2021-11-15T04:57:47.398Z">
+<meta property="article:author" content="Jay">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="excel">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="用Python处理excel数据 xlwt xlrd">
-<meta name="twitter:description" content="前言之前在学爬虫的时候，有学到用Python将爬取的数据保存在excel中，不过只是用xlwt库进行写操作。 昨天，一个应用数学专业同学来找我，说晚上要交期中作业，让我帮他处理点数据，数据是保存在excel文件，本着助人为乐的精神，帮他写了个py脚本，随便学到了如何用xlwt（实现写操作）和xlrd（实现读操作）两个第三方库处理excel文件。 第三方库其实，不止有xlwt和xlrd这两个库能够处">
 <meta name="twitter:image" content="https://i.loli.net/2021/11/14/GS1VFyJrZEMgpYa.jpg">
 
 
 
-  <link rel="alternate" href="/atom.xml" title="Jay' s blog" type="application/atom+xml">
+  <link rel="alternate" href="/atom.xml" title="Jay' s blog" type="application/atom+xml"/>
 
 
 
   
   
-  <link rel="canonical" href="https://zhengjay.com/20211119/用Python处理excel数据">
+  <link rel="canonical" href="https://zhengjay.com/20211119/%E7%94%A8Python%E5%A4%84%E7%90%86excel%E6%95%B0%E6%8D%AE"/>
 
 
 
@@ -199,7 +200,7 @@
     var _hmt = _hmt || [];
     (function() {
       var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?34325eeadca4daa53a3ae649c0c5eb20";
+      hm.src = "https://hm.baidu.com/hm.js?2095a169c5818f784d737fd3b7f03ba4";
       var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(hm, s);
     })();
@@ -236,7 +237,7 @@
   </style>
 </noscript>
  
-</head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
@@ -293,7 +294,7 @@
 
     
 
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br/>首页</a>
 
   </li>
         
@@ -310,7 +311,7 @@
 
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签</a>
 
   </li>
         
@@ -327,7 +328,7 @@
 
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-bookmark"></i> <br>分类</a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-bookmark"></i> <br/>分类</a>
 
   </li>
         
@@ -344,7 +345,7 @@
 
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>归档</a>
 
   </li>
         
@@ -361,7 +362,7 @@
 
     
 
-    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br/>关于</a>
 
   </li>
         
@@ -378,7 +379,7 @@
 
     
 
-    <a href="/guestbook/" rel="section"><i class="menu-item-icon fa fa-fw fa-comments"></i> <br>互动</a>
+    <a href="/guestbook/" rel="section"><i class="menu-item-icon fa fa-fw fa-comments"></i> <br/>互动</a>
 
   </li>
 
@@ -389,14 +390,11 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br/>搜索</a>
         </li>
       
     </ul>
   
-
-  
-    
 
   
 
@@ -412,7 +410,9 @@
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -440,6 +440,9 @@
       <div class="main-inner">
         <div class="content-wrap">
           
+            
+
+          
           <div id="content" class="content">
             
 
@@ -459,16 +462,16 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://zhengjay.com/20211119/用Python处理excel数据.html">
+    <link itemprop="mainEntityOfPage" href="https://zhengjay.com/20211119/%E7%94%A8Python%E5%A4%84%E7%90%86excel%E6%95%B0%E6%8D%AE.html"/>
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jay">
-      <meta itemprop="description" content="生活本无意义，需要自己去寻找活着的意义。:)">
-      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Jay"/>
+      <meta itemprop="description" content="生活本无意义，需要自己去寻找活着的意义。:)"/>
+      <meta itemprop="image" content="/images/avatar.jpg"/>
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Jay' s blog">
+      <meta itemprop="name" content="Jay' s blog"/>
     </span>
 
     
@@ -554,7 +557,8 @@
 
           
             <span class="post-meta-divider">|</span>
-            <span class="post-meta-item-icon">
+            <span class="post-meta-item-icon"
+            >
             <i class="fa fa-eye"></i>
              阅读次数： 
             <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
@@ -572,7 +576,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">1.3k</span>
+                <span title="本文字数">1.4k</span>
               
 
               
@@ -610,7 +614,7 @@
 <p>昨天，一个<code>应用数学专业</code>同学来找我，说晚上要交期中作业，让我帮他处理点数据，数据是保存在<code>excel文件</code>，本着助人为乐的精神，帮他写了个py脚本，随便学到了如何用<code>xlwt</code>（实现写操作）和<code>xlrd</code>（实现读操作）两个第三方库处理excel文件。</p>
 <h1 id="第三方库"><a href="#第三方库" class="headerlink" title="第三方库"></a>第三方库</h1><p>其实，不止有xlwt和xlrd这两个库能够处理excel数据，只不过是我用过xlwt这个库，比较熟悉，所以就接着用了。</p>
 <p>各个库对比：</p>
-<p><img src="https://i.loli.net/2021/11/14/GS1VFyJrZEMgpYa.jpg" alt></p>
+<p><img src="https://i.loli.net/2021/11/14/GS1VFyJrZEMgpYa.jpg" alt=""></p>
 <h1 id="xls文件和xlsx文件"><a href="#xls文件和xlsx文件" class="headerlink" title="xls文件和xlsx文件"></a>xls文件和xlsx文件</h1><p>从图可以看出，我用到的库只能处理xls文件，而不能处理xlsx文件，这两种文件格式有何差别？</p>
 <blockquote>
 <p>文件核心结构不同：</p>
@@ -627,11 +631,11 @@
 <p>注意：xls文件最多支持256列，转换的时候要留心自己的xlsx文件列数是否超出。</p>
 <h1 id="安装库"><a href="#安装库" class="headerlink" title="安装库"></a>安装库</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip install xlwt</span><br><span class="line">pip install xlrd</span><br></pre></td></tr></table></figure>
 <h1 id="xlwt库"><a href="#xlwt库" class="headerlink" title="xlwt库"></a>xlwt库</h1><p>该库能够实现excel文件的写操作。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">workbook=xlwt.Workbook(encoding=<span class="string">"utf-8"</span>)<span class="comment">#创建workbook对象</span></span><br><span class="line">worksheet=workbook.add_sheet(<span class="string">"sheet1"</span>)<span class="comment">#创建工作表</span></span><br><span class="line">worksheet.write(<span class="number">0</span>,<span class="number">2</span>,<span class="string">"hi"</span>)<span class="comment">#在第0行第2列写入"hi"字符串</span></span><br><span class="line">workbook.save(<span class="string">"myData.xls"</span>)<span class="comment">#保存数据</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">workbook=xlwt.Workbook(encoding=<span class="string">&quot;utf-8&quot;</span>)<span class="comment">#创建workbook对象</span></span><br><span class="line">worksheet=workbook.add_sheet(<span class="string">&quot;sheet1&quot;</span>)<span class="comment">#创建工作表</span></span><br><span class="line">worksheet.write(<span class="number">0</span>,<span class="number">2</span>,<span class="string">&quot;hi&quot;</span>)<span class="comment">#在第0行第2列写入&quot;hi&quot;字符串</span></span><br><span class="line">workbook.save(<span class="string">&quot;myData.xls&quot;</span>)<span class="comment">#保存数据</span></span><br></pre></td></tr></table></figure>
 <h1 id="xlrd库"><a href="#xlrd库" class="headerlink" title="xlrd库"></a>xlrd库</h1><p>该库能够实现excel文件的读操作。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">   workbook = xlrd.open_workbook(<span class="string">"myData.xls"</span>)<span class="comment">#打开文件</span></span><br><span class="line">sheet_name = workbokk.sheet_names()<span class="comment">#获取所有sheet名称</span></span><br><span class="line">   sheet = workbook.sheet_by_index(<span class="number">0</span>)<span class="comment">#根据索引获取sheet</span></span><br><span class="line">   <span class="comment">#sheet = workbook.sheet_by_name('shee1')#根据名字获取sheet</span></span><br><span class="line">   <span class="comment"># sheet1的名称，行数，列数</span></span><br><span class="line">print(sheet1.name, sheet1.nrows, sheet1.ncols)</span><br><span class="line"><span class="comment"># 获取整行和整列的值（数组）</span></span><br><span class="line">rows = sheet1.row_values(<span class="number">2</span>) <span class="comment"># 获取第三行内容</span></span><br><span class="line">cols = sheet1.col_values(<span class="number">0</span>) <span class="comment"># 获取第1列内容</span></span><br></pre></td></tr></table></figure>
-<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p><a href="https://jingyan.baidu.com/article/1974b289c9aaefb5b0f7746b.html" target="_blank" rel="noopener">excel后缀.xls和.xlsx有什么区别</a></p>
-<p><a href="https://www.cnblogs.com/paul-liang/p/9187503.html" target="_blank" rel="noopener"><a href="https://www.cnblogs.com/paul-liang/p/9187503.html" target="_blank" rel="noopener">python处理excel总结</a></a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">   workbook = xlrd.open_workbook(<span class="string">&quot;myData.xls&quot;</span>)<span class="comment">#打开文件</span></span><br><span class="line">sheet_name = workbokk.sheet_names()<span class="comment">#获取所有sheet名称</span></span><br><span class="line">   sheet = workbook.sheet_by_index(<span class="number">0</span>)<span class="comment">#根据索引获取sheet</span></span><br><span class="line">   <span class="comment">#sheet = workbook.sheet_by_name(&#x27;shee1&#x27;)#根据名字获取sheet</span></span><br><span class="line">   <span class="comment"># sheet1的名称，行数，列数</span></span><br><span class="line"><span class="built_in">print</span>(sheet1.name, sheet1.nrows, sheet1.ncols)</span><br><span class="line"><span class="comment"># 获取整行和整列的值（数组）</span></span><br><span class="line">rows = sheet1.row_values(<span class="number">2</span>) <span class="comment"># 获取第三行内容</span></span><br><span class="line">cols = sheet1.col_values(<span class="number">0</span>) <span class="comment"># 获取第1列内容</span></span><br></pre></td></tr></table></figure>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p><a target="_blank" rel="noopener" href="https://jingyan.baidu.com/article/1974b289c9aaefb5b0f7746b.html">excel后缀.xls和.xlsx有什么区别</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/paul-liang/p/9187503.html"><a target="_blank" rel="noopener" href="https://www.cnblogs.com/paul-liang/p/9187503.html">python处理excel总结</a></a></p>
 
       
     </div>
@@ -657,24 +661,6 @@
   <div id="qr" style="display: none;">
 
     
-      
-      
-        
-      
-      <div style="display: inline-block">
-        <img src="/images/reward/wechatpay.png" alt="Jay 微信支付">
-        <p>微信支付</p>
-      </div>
-    
-      
-      
-        
-      
-      <div style="display: inline-block">
-        <img src="/images/reward/alipay.png" alt="Jay 支付宝">
-        <p>支付宝</p>
-      </div>
-    
 
   </div>
 </div>
@@ -699,7 +685,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="https://zhengjay.com/20211119/用Python处理excel数据.html" title="用Python处理excel数据 xlwt xlrd">https://zhengjay.com/20211119/用Python处理excel数据.html</a>
+    <a href="https://zhengjay.com/20211119/%E7%94%A8Python%E5%A4%84%E7%90%86excel%E6%95%B0%E6%8D%AE.html" title="用Python处理excel数据 xlwt xlrd">https://zhengjay.com/20211119/%E7%94%A8Python%E5%A4%84%E7%90%86excel%E6%95%B0%E6%8D%AE.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -736,7 +722,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/20211119/文章模板.html" rel="next" title="文章模板">
+              <a href="/20211119/%E6%96%87%E7%AB%A0%E6%A8%A1%E6%9D%BF.html" rel="next" title="文章模板">
                 <i class="fa fa-chevron-left"></i> 文章模板
               </a>
             
@@ -807,7 +793,9 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="Jay">
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="Jay"/>
             
               <p class="site-author-name" itemprop="name">Jay</p>
               <div class="site-description motion-element" itemprop="description">生活本无意义，需要自己去寻找活着的意义。:)</div>
@@ -818,7 +806,7 @@
               
                 <div class="site-state-item site-state-posts">
                 
-                  <a href="/archives/">
+                  <a href="/archives/%20%7C%7C%20archive">
                 
                     <span class="site-state-item-count">17</span>
                     <span class="site-state-item-name">日志</span>
@@ -832,36 +820,10 @@
                 <div class="site-state-item site-state-categories">
                   
                     
-                      <a href="/categories/">
+                      <a href="/categories/%20%7C%7C%20bookmark">
                     
                   
                     
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
                     
                       
                     
@@ -889,76 +851,10 @@
                 <div class="site-state-item site-state-tags">
                   
                     
-                      <a href="/tags/">
+                      <a href="/tags/%20%7C%7C%20tags">
                     
                   
                     
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
                     
                       
                     
@@ -1048,7 +944,7 @@
                   
                     
                   
-                  <a href="https://github.com/quellanan" title="GitHub &rarr; https://github.com/quellanan" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  <a href="https://github.com/Zheng-Jay" title="GitHub &rarr; https://github.com/Zheng-Jay" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
                 </span>
               
                 <span class="links-of-author-item">
@@ -1059,7 +955,7 @@
                   
                     
                   
-                  <a href="https://blog.csdn.net/qq_27790011" title="CSDN &rarr; https://blog.csdn.net/qq_27790011" rel="noopener" target="_blank"><i class="fa fa-fw fa-CSDN"></i>CSDN</a>
+                  <a href="https://blog.csdn.net/Zheng_Jay" title="CSDN &rarr; https://blog.csdn.net/Zheng_Jay" rel="noopener" target="_blank"><i class="fa fa-fw fa-CSDN"></i>CSDN</a>
                 </span>
               
                 <span class="links-of-author-item">
@@ -1070,40 +966,7 @@
                   
                     
                   
-                  <a href="https://www.cnblogs.com/quellanan/" title="博客园 &rarr; https://www.cnblogs.com/quellanan/" rel="noopener" target="_blank"><i class="fa fa-fw fa-globe"></i>博客园</a>
-                </span>
-              
-                <span class="links-of-author-item">
-                  
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="https://www.jianshu.com/u/50ba1aa097c8" title="简书 &rarr; https://www.jianshu.com/u/50ba1aa097c8" rel="noopener" target="_blank"><i class="fa fa-fw fa-globe"></i>简书</a>
-                </span>
-              
-                <span class="links-of-author-item">
-                  
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="https://juejin.im/user/5bfb4ce9f265da611204b096" title="掘金 &rarr; https://juejin.im/user/5bfb4ce9f265da611204b096" rel="noopener" target="_blank"><i class="fa fa-fw fa-globe"></i>掘金</a>
-                </span>
-              
-                <span class="links-of-author-item">
-                  
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="tencent://message/?uin=1186154608&Site=&menu=yes" title="QQ &rarr; tencent://message/?uin=1186154608&Site=&menu=yes" rel="noopener" target="_blank"><i class="fa fa-fw fa-qq"></i>QQ</a>
+                  <a href="tencent://message/?uin=417941858&Site=&menu=yes" title="QQ &rarr; tencent://message/?uin=417941858&Site=&menu=yes" rel="noopener" target="_blank"><i class="fa fa-fw fa-qq"></i>QQ</a>
                 </span>
               
             </div>
@@ -1150,7 +1013,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第三方库"><span class="nav-number">2.</span> <span class="nav-text">第三方库</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#xls文件和xlsx文件"><span class="nav-number">3.</span> <span class="nav-text">xls文件和xlsx文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装库"><span class="nav-number">4.</span> <span class="nav-text">安装库</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#xlwt库"><span class="nav-number">5.</span> <span class="nav-text">xlwt库</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#xlrd库"><span class="nav-number">6.</span> <span class="nav-text">xlrd库</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考资料"><span class="nav-number">7.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93"><span class="nav-number">2.</span> <span class="nav-text">第三方库</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#xls%E6%96%87%E4%BB%B6%E5%92%8Cxlsx%E6%96%87%E4%BB%B6"><span class="nav-number">3.</span> <span class="nav-text">xls文件和xlsx文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E5%BA%93"><span class="nav-number">4.</span> <span class="nav-text">安装库</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#xlwt%E5%BA%93"><span class="nav-number">5.</span> <span class="nav-text">xlwt库</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#xlrd%E5%BA%93"><span class="nav-number">6.</span> <span class="nav-text">xlrd库</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="nav-number">7.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
             
 
           </div>
@@ -1178,11 +1041,11 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" style=" text-align:center;">&copy; 2017 – <span itemprop="copyrightYear">2021</span>
+        <div class="copyright" style=" text-align:center;">&copy; <span itemprop="copyrightYear">2021</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Quellanan</span>
+  <span class="author" itemprop="copyrightHolder">ZhengJay</span>
 
   
     <span class="post-meta-divider">|</span>
@@ -1190,12 +1053,9 @@
       <i class="fa fa-area-chart"> 站点字数合计:</i>
     </span>
     
-    <span title="站点总字数">14k</span>
+    <span title="站点总字数">15k</span>
   
   
-  <span class="post-meta-divider">|</span>
-  <a href="http://www.beian.miit.gov.cn" rel="noopener" target="_blank">鄂ICP备20002824号 </a>
-
 </div>
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
@@ -1305,7 +1165,7 @@
       
     
   
-  <script color="255,0,255" opacity="0.7" zindex="-1" count="140" src="//cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-nest@1.0.0/canvas-nest.min.js"></script>
+  <script color='255,0,255' opacity='0.7' zIndex='-1' count='140' src="//cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-nest@1.0.0/canvas-nest.min.js"></script>
 
 
 
@@ -1317,7 +1177,7 @@
 
   
   
-  <script id="ribbon" size="300" alpha="0.1" zindex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  <script id="ribbon" size="300" alpha="0.1" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
 
 
 
@@ -1355,8 +1215,9 @@
   
 
 
-  <script src="/js/schemes/muse.js?v=7.1.1"></script>
+  <script src="/js/affix.js?v=7.1.1"></script>
 
+  <script src="/js/schemes/pisces.js?v=7.1.1"></script>
 
 
 

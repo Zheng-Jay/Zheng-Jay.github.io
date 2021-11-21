@@ -1,194 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[用Python处理excel数据 xlwt xlrd]]></title>
-    <url>%2F20211119%2F%E7%94%A8Python%E5%A4%84%E7%90%86excel%E6%95%B0%E6%8D%AE.html</url>
-    <content type="text"><![CDATA[前言之前在学爬虫的时候，有学到用Python将爬取的数据保存在excel中，不过只是用xlwt库进行写操作。 昨天，一个应用数学专业同学来找我，说晚上要交期中作业，让我帮他处理点数据，数据是保存在excel文件，本着助人为乐的精神，帮他写了个py脚本，随便学到了如何用xlwt（实现写操作）和xlrd（实现读操作）两个第三方库处理excel文件。 第三方库其实，不止有xlwt和xlrd这两个库能够处理excel数据，只不过是我用过xlwt这个库，比较熟悉，所以就接着用了。 各个库对比： xls文件和xlsx文件从图可以看出，我用到的库只能处理xls文件，而不能处理xlsx文件，这两种文件格式有何差别？ 文件核心结构不同： xls核心结构是复合文档类型的； xlsx 的核心结构是 XML 类型的结构，并且基于XML进行压缩（占用空间更小），所以也可以看做zip文件，将一个“.xlsx”文件的后缀改为ZIP后，用解压软件解压，可以看到里面有一个xml文件和文件的主要内容。 最大行列得数量不同： xls最大只有65536行、256列 xlsx可以有1048576行、16384列 根据网上的解释，xlsx文件能够保存的数据量更大，并且占用空间更小，毕竟是后来推出的文件格式。 要使用我们的xlwt和xlrd库，就得先将xlsx文件转换为xls文件，大家可以在wps或office的另存为中进行转换。 注意：xls文件最多支持256列，转换的时候要留心自己的xlsx文件列数是否超出。 安装库12pip install xlwtpip install xlrd xlwt库该库能够实现excel文件的写操作。 1234workbook=xlwt.Workbook(encoding="utf-8")#创建workbook对象worksheet=workbook.add_sheet("sheet1")#创建工作表worksheet.write(0,2,"hi")#在第0行第2列写入"hi"字符串workbook.save("myData.xls")#保存数据 xlrd库该库能够实现excel文件的读操作。 123456789 workbook = xlrd.open_workbook("myData.xls")#打开文件sheet_name = workbokk.sheet_names()#获取所有sheet名称 sheet = workbook.sheet_by_index(0)#根据索引获取sheet #sheet = workbook.sheet_by_name('shee1')#根据名字获取sheet # sheet1的名称，行数，列数print(sheet1.name, sheet1.nrows, sheet1.ncols)# 获取整行和整列的值（数组）rows = sheet1.row_values(2) # 获取第三行内容cols = sheet1.col_values(0) # 获取第1列内容 参考资料excel后缀.xls和.xlsx有什么区别 python处理excel总结]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>excel</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[文章模板]]></title>
-    <url>%2F20211119%2F%E6%96%87%E7%AB%A0%E6%A8%A1%E6%9D%BF.html</url>
-    <content type="text"><![CDATA[]]></content>
-      <categories>
-        <category>杂项</category>
-      </categories>
-      <tags>
-        <tag>模板</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[建站之路]]></title>
-    <url>%2F20211119%2F%E5%BB%BA%E7%AB%99%E4%B9%8B%E8%B7%AF.html</url>
-    <content type="text"><![CDATA[前言为了搭建个人博客，在网上查阅了大量的资料，遇到了许多没有用过的技术或工具，一些是之前用过但是不熟练的，像git。在这期间,踩了不少坑,绕了许多弯,终于在第三天，完成了个站的创建！点击查看效果 参考教程教程1,内附作者已配置好的主题源码 若clone作者的源码,好像得在目录输入npm install 教程2，这篇教程在关于绑定域名那块好像讲错了，建议这块换别的教程看 架构静态网站托管服务:github pages 博客模板:hexo 工具:git、node.js github pages每一个github用户都能够申请一个username.github.io仓库，该仓库能够用于存放静态文件，任何用户都可以通过https://username.github.io访问你的页面，所以，可以将该功能用于博客托管，省了买云服务器的钱😁。 不过,既然是github提供的服务,那国内的用户如果没梯子没加速器,访问速度应该挺慢的吧? hexo一个专门提供博客模板服务的网站,有大量的模板主题可以选择. 我选择的是 next. 下载环境安装gitgit是分布式版本控制系统,通过在本地运行git命令,将本地代码上传到github仓库,或者将仓库拉取到本地. 安装node.js网上的定义是: 简单的说 Node.js 就是运行在服务端的 JavaScript。 Node.js 是一个基于Chrome JavaScript 运行时建立的一个平台。 Node.js是一个事件驱动I/O服务端JavaScript环境，基于Google的V8引擎，V8引擎执行Javascript的速度非常快，性能非常好。 之前在写小程序的时候,也用到node.js. 但说实话,一直都是复制别人的命令来运行,没想过要去弄懂,因为觉得这东西更多的是跟开发有关,我以后又不搞开发😬 对了,跟node.js经常一块出现的还有npm,这东西是node.js的管理工具,用来安装各种扩展的. 关于node.js的安装,直接百度查教程就行了. 安装hexo装完npm后,输入npm install -g hexo即可. 配置SSH密钥什么是SSH?SSH全称Secure Shell,是建立在应用层上的安全协议,能够为通信双方的数据提供加密服务,防止中间人攻击. SSH有两种级别的安全验证,一种是基于口令,这种验证安全性不高,另一种是基于密钥. 在对github仓库进行代码管理前,需要配置SSH密钥,只有本地拥有账户上添加的公钥对应私钥的主机,才有权限管理仓库. 配置SSH密钥在git bash输入命令ssh-keygen -t rsa -C &quot;邮件地址&quot;. 该命令将在本地生成rsa的私钥\密钥,还有一个用来记录通信主机公钥的文件: 然后在github个人首页的setting里,将公钥复制到文本框内保存. 测试首先,配置全局用户名和邮箱: git config --global user.name &quot;nameVal&quot; git config --global user.email &quot;eamil@qq.com&quot; 输入ssh -T git@github.com,注意:这里不用修改邮箱. bug在配置过程中,遇到这个bug: 原因是在known_hosts里没有添加github的公钥,输入yes添加即可. 搭建博客基础框架创建blog文件夹,在该目录打开git bash,输入: hexo init和npm install 将自动搭建基本框架,这时,就可以本地运行看下效果了 先来认识一下hexo的基本命令. hexo基本命令1234567hexo new &quot;postName&quot; #新建文章hexo new page &quot;pageName&quot; #新建页面hexo generate #生成静态页面至public目录hexo server #开启预览访问端口（默认端口4000，&apos;ctrl + c&apos;关闭server）hexo deploy #部署到GitHubhexo help # 查看帮助hexo version #查看Hexo的版本 可缩写为: 1234hexo n == hexo newhexo g == hexo generatehexo s == hexo serverhexo d == hexo deploy 组合为: 12hexo s -g #生成并本地预览hexo d -g #生成并上传 本地运行搭好框架之后,输入hexo s -g并可本地运行,在浏览器中输入localhost:4000查看博客. 修改主题默认的主题比较丑,可以上hexo官网找自己喜欢的主题,然后git clone到blog目录.clone下来后,根据仓库里的readme.md进行修改即可. 我选择的是next next主题的配置手册在这:官方文档 官方的文档并不全,我还找到这份 hexo bug在运行hexo的时候,遇到bug: The “mode” argument must be integer. Received an instance of Object 原因:node.js和hexo存在版本适配的关系,将node换成低版本可以解决该问题,如何换? 下载nvm,专门用来管理node版本的工具,具体看这篇教程 其他hexo上的bug,看这篇博客 上传到github修改配置文件_config.yml是hexo的配置文件,分为站点和主题两种,这里打开站点配置,修改deploy为如下: 12345deploy: type: git repository: github: git@github.com:username/username.github.io.git branch: master 上传上传很简单,输入hexo d即可,以后修改后要上传也是直接运行该命令就行. 忘了用不用在blog目录先进行git仓库的初始化了,姑且记下来: git仓库初始化:git init. 关联远程仓库:git remote add origin https://github.com/Zheng-Jay/Zheng-Jay.github.io.git 源码备份hexo d上传的文件好像跟本地文件不太一样,因此有必要进行源码的备份 在仓库创建save分支 运行git push origin save,运行前记得先关联远程库. 仓库文件删除顺便记下删除仓库文件的办法,在github只能删除仓库,不能删除某个文件或者文件夹,所以必须先把文件都pull到本地进行删除,再上交(这也太麻烦了吧,泪目). 参考资料 首先,拉取仓库到本地:git pull origin master 在本地进行修改 然后输入git add .将修改上传到暂存区. 再运行git commit -m &#39;del&#39;提交到本地仓库 最后,才是git push origin master把修改提交到origin的master分支. 绑定自定义域名购买域名github pages给的域名https://username.github.io有点捞,可以上网买个,价格还可以. 网友推荐godday和阿里云,个人推荐阿里云. 一是阿里云是国内大厂,既方便,也信得过 二是价格便宜,同样一个域名,在godday要80元/年,而阿里云63元/年,这还用选? 域名实名制认证这应该就是传说中的域名备案吧 将域名和ip进行绑定这里有必要先了解下A记录和CNAME。 当我们拥有多个域名，并且要让它们都指向同个ip时，我们先将一个域名作为A记录与ip绑定，再让其他域名作为别名（即CNAME）指向A记录的域名上。这样，所有的域名就都指向ip了。 并且，当我们想要改变这些域名的指向时，只需修改A记录的指向，其他域名也会跟着它一块改变。 回到将我们买的域名绑定到github pages上，这时，我们需要到购买的云平台进行域名解析配置，将购买的域名作为CNAME，绑定到username.github.io。一共添加两条： 随便记下前缀的含义： 而我们的username.github.io就将作为A记录，指向我们的blog。 当然，我们还要到github进行配置，为什么？ 假如不用在github进行配置，那么试想，是不是任何人都能将他的域名随意地指向你的域名了呢？也就是说，域名的绑定需要双方同意。 这个时候，需要到github仓库的settings里的pages输入购买的域名，系统将自动生成CNAME文件夹在根目录，完成域名的绑定！ 写文章文章是用markdown下的,用的编辑器是typora,要写文章,在blog文件夹输入hexo new &quot;title&quot;即可在source/_posts创建文章. 创建的文章带有模板,不过这里有个问题,在模板写入文章的标签,在编译的时候会报错. 图个方便,就复制了教程1的文章作为模板,以后要写,就直接复制一份进行修改就行. 另外,我的typora也有些问题,在写的时候输入不了中文标点符号,像是句号,顿号,都是英文的.不过这样倒方便了我在输入特殊字符的时候不用进行中英文切换. markdown语法教程: 菜鸟教程 另外一个 SEO什么是SEO?百科解释 SEO（Search Engine Optimization）：汉译为搜索引擎优化。是一种方式：利用搜索引擎的规则提高网站在有关搜索引擎内的自然排名。目的是让其在行业内占据领先地位，获得品牌收益。很大程度上是网站经营者的一种商业行为，将自己或自己公司的排名前移。 说简单点,就是使我们的网站能够更容易被搜索引擎搜索爬取,从而提高流量热度. 在搜索引擎提交我们的站点根据教程1，我们可以在google和baidu提交我们的站点，但因为我没有梯子，只能在baidu提交。 https://ziyuan.baidu.com/site/index 提交前，需要验证网点是我们的，这里有三种验证方式： 这里推荐用第三种，第三种直接把它提供的网站在我们的云服务平台上解析下就可以了。 第一种我试过，把它给的文件放在public文件夹内，理论上是可以，但我怎么试都不可以。 一些小工具不蒜子这是一个博客网站访问人数和浏览人数的计数小工具,说是小工具,其实也就几行代码,引入脚本后调用标签就完了,非常轻量. 工作原理大概是这样的: 在引入的JS(JavaScript)脚本中，会把当前页面url（或某种唯一标识）注册到其第三方服务器，服务器上保存着url与对应的计数值，点击页面后通过JS更新服务器上的计数值，并在页面初始化时在本地标签加载、显示计数值。 图床写文章的时候用到的图片在这里上传就好了. live2d就是经常在别人博客里看到的左下角的看板娘,但其实除了二次元美少女(为什么这么多人喜欢这种,而且还都是大佬…),还有其他卡通形象,如我这个: 添加方法看这篇blog 总结虽然在搭建个站的过程中，遇到了许多麻烦，但了确确实实地学到了很多东西。 首先，是git的基本命令，算会敲了，然后对github的仓库托管也搞清楚了，这应该属于程序员的必备技能吧😋？ 其次，是对域名解析、SSH密钥验证这些，有了一定的认识。 最最重要的是，以后有了一个平台来托管我的文章，促进自己的学习了！]]></content>
-      <categories>
-        <category>杂项</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>建站</tag>
-        <tag>github pages</tag>
-        <tag>SSH</tag>
-        <tag>github命令</tag>
-        <tag>绑定域名</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[专业知识]]></title>
-    <url>%2F20211119%2F%E4%B8%93%E4%B8%9A%E7%9F%A5%E8%AF%86.html</url>
-    <content type="text"><![CDATA[引擎（指在计算机领域）参考资料： 1、https://zhidao.baidu.com/question/583464440.html 2、https://www.zhihu.com/question/278942403 3、https://baike.baidu.com/item/%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E/620879?fr=aladdin 联想日常生活中的例子，汽车想跑起来得有引擎，飞机想飞起来也得有引擎，这里的引擎是指发动机，是上述机器的动力来源，属于最重要的部分，没有它，机器无法工作。 同样地，在计算机领域，引擎也是最核心的部分，它能够帮助用户完成最基本的功能，但与上面提到的发动机相比，计算机领域的引擎还存在一个不一样的目的：让开发者能够迅速地开发软件，而不用从零开始。从这个目的上看，个人认为，或许可以把引擎理解为框架。 如游戏引擎，内含物理引擎、音效等，用同样的引擎制作出来的软件，可能外观不相同，但内核是一样的。 还有微软的操作系统，说糙一点DOS就是它的引擎，windows就是同个改进DOS发展出来的。]]></content>
-      <categories>
-        <category>杂项</category>
-      </categories>
-      <tags>
-        <tag>计算机</tag>
-        <tag>网络</tag>
-        <tag>定义</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[《平凡的世界》读后感]]></title>
-    <url>%2F20211119%2F%E3%80%8A%E5%B9%B3%E5%87%A1%E7%9A%84%E4%B8%96%E7%95%8C%E3%80%8B%E8%AF%BB%E5%90%8E%E6%84%9F.html</url>
-    <content type="text"><![CDATA[没想到除了古侠科幻和悬疑小说外，竟然还有其他类型的小说能够让我如痴如醉。 这学期刚开始，就去图书馆借来这本书。读这本书可比之前读的短篇小说集有趣多了，我在九个星期内，就把三部曲全部读完了。 这本书吸引人的地方太多了，有历史教材里看不到的文革时期那段荒唐的历史、为官者处理政治的手段、平凡的人面对困境时的内心挣扎、还有刻骨铭心的爱情….. 这本书给人最大的感受是，写得太现实太真实，但又不失温情。 作者描绘的旧时代中国社会里，几乎所有人都在为生存挣扎，连吃饭都成了问题，所有人都在想方设法的活下去。在这种环境下，只有亲情和友情，能够让人看到生活中温暖的一面。 在书中形形色色的人物中，最吸引人的当然是我们的主角孙少平和孙少安两兄弟。 即使家庭是全村最贫穷的家庭，即使生活看不到出头的日子，孙少安也要跳上生活的马车，坐在驾车的位置上，绷紧全身的肌肉和神经，为一家子的生存保驾护航。 他累吗？他当然累，他累得每天头一沾枕头，人就睡死过去。他苦吗？他也很苦，面对生存的压力，这个双水村有名的强人，不止一次独自落泪。但即使又苦又累，他也绝不会撒手不管家里人，因为他是家里的顶梁柱，是上至八十多岁奶奶，下至十岁出头妹妹的太阳。他深爱着这个家庭，这个家庭给了他无限的温暖和美好记忆，他愿意为了这个家庭，付出所有。 再说孙少平，他跟少安一样，也是一个很能吃苦的人，同时，跟少安相比，他的思想更丰富。这得益于他在少安的扶持下，能够去读高中（相信如果少安生存压力没有那么大，能够去高中读书，他也会有更广阔的思想境界），以及和晓霞相识，形成了爱读书爱思考的好习惯。 读到少平在家务农时憋得慌，想要趁年轻，到城市里去碰运气，看能不能成就一番事业这一段的时候，我不禁联想到了爸爸。想来，爸爸年轻的时候为了讨生活，到深圳去给人干苦力活，一定也跟少平一样艰辛吧。 书中的润叶和晓霞让人难以忘怀。我想，如果少安能够态度坚决一点，当面回绝润叶，或许润叶就可以少受点折磨了。 晓霞的死真的震惊到我了，读到她风风火火地赶往灾区报道时，我以为她会在那里出色地完成工作，根本就没想过她会出有什么生命危险，更别提她竟会死！ 晓霞真的是绝大部分男性的理想伴侣，美丽大方，俏皮活泼，特立独行，又有很高思想境界，同时，又对爱情忠贞。 她的出现，真的是给这本沉重的作品，增添了很多鲜艳的色彩，读到她的片段，眼前总是浮现出一个活泼俏皮却又知性的形象。 然而，在这朵美丽的花朵开放到最艳丽的时候，作者突然笔锋一转，让她瞬间枯萎凋零了！ 真的，让人意难平…… 后面上网查阅了作者路遥的经历，了解到作者年轻的时候家境贫寒，阶级观念根深蒂固，情路坎坷，甚至因为跟前妻身份的悬殊而没能走到最后。 作者的经历跟他笔下的少平十分相似，我严重怀疑作者是以自己为模板，创造了少平这个角色。 在资料中写到，有一天，作者发了一通紧急通电给兄长，让兄长赶紧去找他，兄长以为他身子出了问题，火急火燎地赶到他家，开门后，路遥痛哭流涕地对兄长说：“田晓霞死了！”。 ​ 从这件事上，就足以看出作者对田晓霞这个角色的喜爱之深。那作者为什么要把她写死呢？ ​ 这或许跟作者的经历和爱情观有关吧，尽管作者借润叶、少平之口，一再发出“爱情不因受阻于阶级”的主张，但事实又是，出生干部之家的润叶无法跟少安终成眷属，少安找了一个地道的农村姑娘作为伴侣，按这个逻辑分析下去，出生贫寒农村家庭的少平，也就更不可能跟父亲为省副书记、母亲为院长的晓霞结合了…… ​ 作者真的是个很清醒的人，他追求像晓霞这样的完美伴侣，把她送到少平身边，但却又受现实经历的影响，知道他们无法走到最后，唉……]]></content>
-      <categories>
-        <category>读后感</category>
-      </categories>
-      <tags>
-        <tag>随笔</tag>
-        <tag>读后感</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[noteJava]]></title>
-    <url>%2F20211119%2Fnote%E7%AE%97%E6%B3%95.html</url>
-    <content type="text"><![CDATA[多段图（动态规划题）最简单的数据结构是邻接矩阵，java参考代码]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>算法</tag>
-        <tag>笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[notePython]]></title>
-    <url>%2F20211119%2FnotePython.html</url>
-    <content type="text"><![CDATA[输出格式化字符串参考资料https://blog.csdn.net/weixin_30737363/article/details/99632126 概念在py3.6新增的功能，print字符串前面加f表示格式化字符串，加f后可以可以在字符串里面使用花括号括起来表示变量和表达式。 实例123a = "format str"print(f'a = &#123;a&#125;')print(f"a = &#123;a&#125;") #这里用单引号或双引号都可以，并不影响输出结果。 数据类型元组概念py中的元组与list类似，不同之处在于元组的元素不能修改。 元组使用小括号()，列表使用方括号[]。]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>笔记</tag>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[noteMarkDown]]></title>
-    <url>%2F20211119%2FnoteMarkDown.html</url>
-    <content type="text"><![CDATA[添加图片格式： 路径可以填写网络路径，也可以添加本地路径，但是，填写本地路径，并不支持绝对路径，只支持相对路径。 添加链接格式：文本]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>笔记</tag>
-        <tag>MarkDown</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[noteLinux]]></title>
-    <url>%2F20211119%2FnoteLinux.html</url>
-    <content type="text"><![CDATA[常见命令手册菜鸟教程 mv全拼：move file，用来为文件或文件夹改名、或移到其他位置。 语法：mv [options] src des 为文件改名：mv firstname.txt secondname.txt touch网上介绍： Linux touch命令用于修改文件或者目录的时间属性，包括存取时间和更改时间。若文件不存在，系统会建立一个新的文件。 目前是用来创建新文件。]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>笔记</tag>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[noteJava]]></title>
-    <url>%2F20211119%2FnoteJava.html</url>
-    <content type="text"><![CDATA[单引号和双引号单引号的数据是char类型，双引号是String数据。 用单引号的时候，有时会遇到这种奇怪的情况： 123System.out.println(4 + ",");System.out.println(4 + ',');System.out.println(3 + ','); 结果： 1234,4847 无穷大参考资料 整数的：Integer.MAX_VALUE]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>笔记</tag>
-        <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[noteGit]]></title>
-    <url>%2F20211119%2FnoteGit.html</url>
-    <content type="text"><![CDATA[参考教程廖雪峰教程 菜鸟教程 Git的诞生Linux之父Linus花了两周时间自己用C写了一个分布式版本控制系统，这就是Git！ Git的优点GIt是分布式版本控制系统，是程序猿协同合作的利器。跟集中式版本控制系统相比，有如下优势： ·工作时无需联网。在集中式中，用户需要先从中央服务器下载文件再进行修改，而在分布式中，每个人的电脑都是一个完整的版本库。 ·安全性更高。即使用户的电脑损坏了，要获取原来的版本库，只需要从协作者那里copy一份即可。 ·Git如何实现协同合作？ 对方只要把他对文件的修改发送给我们，我们在本地的版本库中对文件进行修改即可。 GIthub实际情况往往是这样，找一台电脑充当服务器的角色，每天24小时开机，其他每个人都从这个“服务器”仓库克隆一份到自己的电脑上，并且各自把各自的提交推送到服务器仓库里，也从服务器仓库中拉取别人的提交。 而github网站就算提供git仓库托管服务的。 github支持多种协议，给出的仓库url不止一个，默认的git://使用ssh，但也可以使用https等其他协议。 Github仓库地址 ssh地址格式：`git@github.com:[user-name]/[repository-name].git` Github为何需要SSH-KEY？因为GitHub需要识别出你推送的提交确实是你推送的，而不是别人冒充的，而Git支持SSH协议，所以，GitHub只要知道了你的公钥，就可以确认只有你自己才能推送。 当然，GitHub允许你添加多个Key。假定你有若干电脑，你一会儿在公司提交，一会儿在家里提交，只要把每台电脑的Key都添加到GitHub，就可以在每台电脑上往GitHub推送了。 Git的局限性Git只能记录文本文件的改动： 首先这里再明确一下，所有的版本控制系统，其实只能跟踪文本文件的改动，比如TXT文件，网页，所有的程序代码等等，Git也不例外。版本控制系统可以告诉你每次的改动，比如在第5行加了一个单词“Linux”，在第8行删了一个单词“Windows”。而图片、视频这些二进制文件，虽然也能由版本控制系统管理，但没法跟踪文件的变化，只能把二进制文件每次改动串起来，也就是只知道图片从100KB改成了120KB，但到底改了啥，版本控制系统不知道，也没法知道。 基本概念工作区也就是当前目录，文件从工作区添加到暂存区。 版本库.git文件就是版本库。 版本库里存了很多东西，最重要的有暂存区（stage或index），以及系统为我们自动创建的第一个分支master、指向master的一个指针HEAD。 master和HEAD两者都是指针。 在提交版本的时候，git会将所有的版本串成一条时间线，这条时间线就是一个分支。master分支就是一条时间线，master指向最新的提交。 HEAD指向的是当前分支。 知道了HEAD和master，系统就知道命令要处理的是哪个分支的哪个提交了。 Git指令本地基本指令本地仓库初始化：git init 执行完该命令，系统会在当前目录生成一个.git文件夹，该文件夹一般是隐藏的。 查看隐藏文件：ls -ah。 添加文件到缓冲区：git add .，这个命令是把当前目录的所有文件都添加到缓冲区，也可以指定某个文件。 将文件提交到仓库：git commit -m &quot;your message&quot;，实际上，就是添加到分支当中。这个命令的参数-m让用户提交时留下能够留下说明。据说在网上有办法让我们使用commit命令时不用提交说明，但是不建议这样做。 在提交之前，查看状态：git status 可以看到，我们修改了’readme.txt’这个文件，同时，在下面一行可以知道，我们未add任何修改。 查看文件的修改情况：git diff readme.txt 个人理解，那个a代表暂存区的文件，b代表工作区的文件。 再看下面，a的前面有三个-，以及下面有abcdefg，这并不代表对内容删去，只是代表暂存区文件而已，而+代表工作区文件。 红色代表暂存区文件文本，绿色代表工作区的，对比一下，就可以知道，我们在文本末添加了h。 若修改都提交了，则将无回显。 查看版本系统历史记录（顺序：由近到远）：git log 如果嫌信息太多，可以用：git log --pretty=online，省略作者、日期，但会保留commit id（版本号）和commit message。 版本回退一次：git reset --hard HEAD^ 按版本号回退：git reset --hard commitid 查看输入的每一条命令（包含所有的版本号）：git reflog 对单个文件的修改进行撤销：git checkout -- file，该命令能够将file返回到最近一次git commit或git add时的状态。 从版本库中删除某个文件：git rm file，随后，要git commit 若本地误删了文件，可以从版本库中进行恢复：git checkout -- file，git checkout的作用是用版本库里的版本替换工作区的版本。 删除本地仓库：find . -name &quot;.git&quot; | xargs rm -Rf 参考资料 远程命令关联远程库：git remote add origin https://github.com/Zheng-Jay/Zheng-Jay.github.io.git 关联后，远程库的名字就是origin，这是默认叫法。 git push命令格式：git push 远程主机名 本地分支名:远程分支名 将当前master分支推送到远程库的master分支：git push origin master 廖雪峰和github在第一次提交时，用的是git push -u origin master，加入-u的作用是除推送到远程外，还会把本地的master分支和远程的master分支关联起来，这样在以后的拉取和推送时就可以简化命令，可以直接用git push代替git push origin master。 此时，远程主机是origin，本地分支是master，由于远程分支名和本地分支相同，故省略。 若想push到远程的save分支，应这样写：git push origin master:save clone远程库：git clone https://github.com/ipyker/hexo-next-theme 查看远程库信息：git remote -v 与远程库解绑（此处实例为origin）：git remote rm origin 分支重新命名（将当前分支命名为main，该命令出现在github初始化仓库中）： git branch -M main 分支创建、查看与切换创建并切换（加上-b参数)：git checkout -b dev，该命令相当于以下两条命令： git branch dev+git checkout dev 查看所有分支：git branch 切换到dev分支后，此时再提交文件，将不会影响master分支： git鼓励用户创建新分支完成某个任务，然后再合并分支并删除，这和直接在master分支上工作效果是一样的，但过程更安全（试想如果master分支是由一个10人的团队共同维护的）。 合并指定分支到当前分支：git merge dev 用该命令进行合并，会显示Fast-forward，该合并模式为快进模式，就是直接将master指向dev的当前提交，速度非常快。 合并完之后，并可删除dev分支：git branch -d dev 由于前面用chectout既进行了撤销修改，又进行了分支切换，导致该命令有点难以理解，故推荐使用switch进行分支切换。 创建并切换到新的dev分支：git switch -c dev 直接切换到已有分支：git switch master 其他命令：]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>笔记</tag>
-        <tag>Git</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[noteCMD]]></title>
-    <url>%2F20211119%2FnoteCMD.html</url>
-    <content type="text"><![CDATA[查看当前目录的文件和文件夹dir]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>笔记</tag>
-        <tag>cmd</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[noteC&C++]]></title>
-    <url>%2F20211119%2FnoteC%26C%2B%2B.html</url>
-    <content type="text"><![CDATA[函数传二维数组参考资料 必须指定高维的大小在传参的时候，第一维的大小可用不指定，但必须指定第二维的大小。 原因：实参传递进来的实际上是一个指针，指向数组的起始地址，在内存中，所有的元素都是线性排列的，并不区分行列，若不指定高维大小，则系统无法知道该数组每一维的大小。 实例该例子一维和二维的大小都指定了，但一维大小可以省略。 123void test(int Available[NumPro][NumSrc]) &#123; int (*work)[NumSrc] = Available;&#125; 传递进来的是指针注意：传递进来的是指针，在函数内，若将该指针赋值给一个变量，然后再在该变量指向的内存上进行修改，原数组将会被修改到。 解决的方法是，将数组复制给一个新的数组，例如，对于上面的例子，我们将Available复制给work： 1234567891011121314151617void test(int Available[NumPro][NumSrc]) &#123; int (*work)[NumSrc] = Available; //对数组进行拷贝，并且修改拷贝后的数组元素的值 for (int i = 0; i &lt; NumPro; i++) &#123; for (int j = 0; j &lt; NumSrc; j++) &#123; work[i][j] = Available[i][j]; work[i][j] ++; printf("work[%d][%d]:%d\n", i, j, work[i][j]); &#125; &#125; //验证对复制后的数组进行修改后，原数组是否发生改变 for (int i = 0; i &lt; NumPro; i++) &#123; for (int j = 0; j &lt; NumSrc; j++) &#123; printf("work2[%d][%d]:%d\n", i, j, Available[i][j]); &#125; &#125;&#125;]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>笔记</tag>
-        <tag>C</tag>
-        <tag>C++</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[第一篇博客]]></title>
-    <url>%2F20211119%2Fmy-first-blog.html</url>
-    <content type="text"><![CDATA[第一篇博客​ 这是我的第一篇blog，折腾了两天，虽然还有很多设置没有弄完，但个人blog算初步建成了吧。 ​ 这里不仅将像CSDN一样，些一些技术文章，还将记录一些生活blog，像是小说读后感啊，随笔啊，吐槽啊…… ​ 对了，差点忘了说写个人blog的目的。 ​ 一个原因是想要拥有自己的一片创作天地，记录自己的点滴，让自己能够坚持学习下去，另外，要写技术性文章，就必须把技术的原理、应用各方面都讲清楚，那这也可以促进自己的学习和表达能力。 ​ 另外一个原因，说来有点可笑。听说在应聘的时候，有些面试官要看应聘者的能力，会看应聘者平时有没有写文章，在github都保存些什么代码。听说，有的人就是在知乎等社交平台不断推广自己的文章，为自己引流，塑造技术大牛的形象，从而为自己增分的。 ​ 我想，或许我也来搞一个，不求高热度，只要能帮到自己，帮到别人就够了。]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-      <tags>
-        <tag>生活</tag>
-        <tag>随笔</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[it英语]]></title>
-    <url>%2F20211119%2Fit%E8%8B%B1%E8%AF%AD.html</url>
-    <content type="text"><![CDATA[单词deploy[dɪˈplɔɪ] vt 部署，调度，安排 download vt 下载 upload vt 上传]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>笔记</tag>
-        <tag>英语</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[ctf文件上传]]></title>
-    <url>%2F20211119%2Fctf%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0.html</url>
-    <content type="text"><![CDATA[客户端校验最简单的文件校验是本地js校验，一般都是要求只能上传jpg，png，gif图片格式： 应对措施：在本地禁用js。 服务端校验服务端校验比较棘手一点。 MIME类型校验虽然我们在客户端同过禁用js上传了文件，但服务端还会再对文件类型进行校验，并且校验的是MIME。 我们在开发者工具中，虽然看到文件发送成功: 但如果服务端对我们请求的数据中的MIME类型进行校验，发现并非image类型，仍会丢弃。 所以，我们要修改请求包中的MIME类型（使用burp suit），常见的MIME类型： 修改MIME类型： 文件头校验有些题目中，服务端还会对上传的文件头进行校验，如果我们的文件头非图片格式，依然会被舍弃。 这时，我们就要用到图片码了！ 在windos中，我们可以在cmd中用copy将文件进行捆绑。 我们只要将一张png图片和我们的php文件捆绑，不就有了png文件头，绕过服务端的校验了吗？ copy 1.png/b+2.php give_me_flag.php 照着这条指令，将文件进行修改就行了。 在用这条指令的时候，要注意关闭windows自带的病毒防护，不然会将一句话木马文件清掉。 后缀黑名单校验在参考资料中，还看到服务端有这种校验，但笔者还未遇到，等遇到了再记录。 参考资料一句话图片码 文件上传]]></content>
+    <title>ctf文件上传</title>
+    <url>/20211119/ctf%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="客户端校验"><a href="#客户端校验" class="headerlink" title="客户端校验"></a>客户端校验</h1><p>最简单的文件校验是<code>本地js校验</code>，一般都是要求只能上传jpg，png，gif<code>图片格式</code>：</p>
+<p><img src="https://i.loli.net/2021/11/15/lhFPZ1RdmijMBab.jpg" alt="本地校验.jpg"></p>
+<p>应对措施：在本地<code>禁用js</code>。</p>
+<p><img src="https://i.loli.net/2021/11/15/ib1trSMOZ2sVvH3.jpg" alt="本地禁用js.jpg"></p>
+<h1 id="服务端校验"><a href="#服务端校验" class="headerlink" title="服务端校验"></a>服务端校验</h1><p>服务端校验比较棘手一点。</p>
+<h2 id="MIME类型校验"><a href="#MIME类型校验" class="headerlink" title="MIME类型校验"></a>MIME类型校验</h2><p>虽然我们在客户端同过禁用js上传了文件，但服务端还会再对文件类型进行校验，并且校验的是<code>MIME</code>。</p>
+<p><img src="https://i.loli.net/2021/11/15/WkGHwtmN9fFpuzc.jpg" alt="MIME校验.jpg"></p>
+<p>我们在开发者工具中，虽然看到文件发送成功:</p>
+<p><img src="https://i.loli.net/2021/11/15/qtRHP2394MosFJB.jpg" alt="文件上传成功.jpg"></p>
+<p>但如果服务端对我们请求的数据中的MIME类型进行校验，发现并非image类型，仍会丢弃。</p>
+<p>所以，我们要修改请求包中的MIME类型（使用burp suit），常见的MIME类型：</p>
+<p><img src="https://i.loli.net/2021/11/15/cYKwPhJZ7xpVuQk.jpg" alt="MIME类型.jpg"></p>
+<p>修改MIME类型：</p>
+<p><img src="https://i.loli.net/2021/11/15/Dc1YzT7FMsRifLv.jpg" alt="修改MIME类型.jpg"></p>
+<h2 id="文件头校验"><a href="#文件头校验" class="headerlink" title="文件头校验"></a>文件头校验</h2><p>有些题目中，服务端还会对上传的<code>文件头</code>进行校验，如果我们的文件头非图片格式，依然会被舍弃。</p>
+<p>这时，我们就要用到<code>图片码</code>了！</p>
+<p>在windos中，我们可以在cmd中用<code>copy</code>将文件进行捆绑。</p>
+<p>我们只要将一张png图片和我们的php文件捆绑，不就有了png文件头，绕过服务端的校验了吗？</p>
+<p><code>copy 1.png/b+2.php give_me_flag.php</code></p>
+<p>照着这条指令，将文件进行修改就行了。</p>
+<p>在用这条指令的时候，要注意<code>关闭windows自带的病毒防护</code>，不然会将一句话木马文件清掉。</p>
+<p><img src="https://i.loli.net/2021/11/15/L8l3kbuGU1WpymD.jpg" alt="图片码.jpg"></p>
+<h2 id="后缀黑名单校验"><a href="#后缀黑名单校验" class="headerlink" title="后缀黑名单校验"></a>后缀黑名单校验</h2><p>在参考资料中，还看到服务端有这种校验，但笔者还未遇到，等遇到了再记录。</p>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p><a href="https://blog.csdn.net/qq_40657585/article/details/83792824">一句话图片码</a></p>
+<p><a href="https://www.aqniu.com/vendor/54889.html">文件上传</a></p>
+]]></content>
       <categories>
         <category>ctfWeb</category>
       </categories>
@@ -199,17 +39,491 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[burp suit使用指南]]></title>
-    <url>%2F20211119%2Fburp%20suit%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.html</url>
-    <content type="text"><![CDATA[burp suit使用前提开代理 发送get修改请求类型，加入参数。 图片 发送POST修改请求类型，加入Content-Type: application/x-www-form-urlencoded。 然后再空一行，再加入参数。 Conent-Type:请求体中的内容类型，在上述参数中，代表请求的内容将会使用url编码。 图片 特别注意：无论是发送get请求，还是post请求，报文的最后都要空两行！]]></content>
+    <title>第一篇博客</title>
+    <url>/20211119/my-first-blog.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="第一篇博客"><a href="#第一篇博客" class="headerlink" title="第一篇博客"></a>第一篇博客</h1><p>​    这是我的第一篇blog，折腾了两天，虽然还有很多设置没有弄完，但个人blog算初步建成了吧。</p>
+<p>​    这里不仅将像CSDN一样，些一些技术文章，还将记录一些生活blog，像是小说读后感啊，随笔啊，吐槽啊……</p>
+<p>​    对了，差点忘了说写个人blog的目的。</p>
+<p>​    一个原因是想要拥有自己的一片创作天地，记录自己的点滴，让自己能够坚持学习下去，另外，要写技术性文章，就必须把技术的原理、应用各方面都讲清楚，那这也可以促进自己的学习和表达能力。</p>
+<p>​    另外一个原因，说来有点可笑。听说在应聘的时候，有些面试官要看应聘者的能力，会看应聘者平时有没有写文章，在github都保存些什么代码。听说，有的人就是在知乎等社交平台不断推广自己的文章，为自己引流，塑造技术大牛的形象，从而为自己增分的。</p>
+<p>​    我想，或许我也来搞一个，不求高热度，只要能帮到自己，帮到别人就够了。</p>
+]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>生活</tag>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>burp suit使用指南</title>
+    <url>/20211119/burp%20suit%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="burp-suit"><a href="#burp-suit" class="headerlink" title="burp suit"></a>burp suit</h1><h2 id="使用前提"><a href="#使用前提" class="headerlink" title="使用前提"></a>使用前提</h2><p><code>开代理</code></p>
+<h2 id="发送get"><a href="#发送get" class="headerlink" title="发送get"></a>发送get</h2><p>修改请求类型，加入参数。</p>
+<p>图片</p>
+<h2 id="发送POST"><a href="#发送POST" class="headerlink" title="发送POST"></a>发送POST</h2><p>修改请求类型，加入<code>Content-Type: application/x-www-form-urlencoded</code>。</p>
+<p>然后再<code>空一行</code>，再加入参数。</p>
+<p>Conent-Type:请求体中的内容类型，在上述参数中，代表请求的内容将会使用url编码。</p>
+<p>图片</p>
+<p>特别注意：无论是发送get请求，还是post请求，<code>报文的最后都要空两行</code>！</p>
+]]></content>
       <categories>
         <category>笔记&#39;</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
         <tag>ctf</tag>
         <tag>web</tag>
+        <tag>笔记</tag>
         <tag>burp suit</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>it英语</title>
+    <url>/20211119/it%E8%8B%B1%E8%AF%AD.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="单词"><a href="#单词" class="headerlink" title="单词"></a>单词</h1><p>deploy[dɪˈplɔɪ] vt 部署，调度，安排</p>
+<p>download vt 下载</p>
+<p>upload vt 上传</p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+        <tag>英语</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>noteC&amp;C++</title>
+    <url>/20211119/noteC&amp;C++.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="函数传二维数组"><a href="#函数传二维数组" class="headerlink" title="函数传二维数组"></a>函数传二维数组</h1><p><a href="https://blog.csdn.net/fireflylane/article/details/84097611">参考资料</a></p>
+<h2 id="必须指定高维的大小"><a href="#必须指定高维的大小" class="headerlink" title="必须指定高维的大小"></a>必须指定高维的大小</h2><p>在传参的时候，<code>第一维的大小可用不指定，但必须指定第二维的大小。</code></p>
+<p>原因：实参传递进来的实际上是一个<code>指针</code>，指向数组的起始地址，在内存中，所有的元素都是<code>线性排列</code>的，并不区分行列，若不指定高维大小，则系统无法知道该数组每一维的大小。</p>
+<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><p>该例子一维和二维的大小都指定了，但一维大小可以省略。</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">test</span><span class="params">(<span class="keyword">int</span> Available[NumPro][NumSrc])</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> (*work)[NumSrc] = Available;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="传递进来的是指针"><a href="#传递进来的是指针" class="headerlink" title="传递进来的是指针"></a>传递进来的是指针</h2><p>注意：传递进来的是指针，在函数内，若将该指针赋值给一个变量，然后再在该变量指向的内存上进行修改，<code>原数组将会被修改到</code>。</p>
+<p>解决的方法是，将数组<code>复制</code>给一个新的数组，例如，对于上面的例子，我们将Available复制给work：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">test</span><span class="params">(<span class="keyword">int</span> Available[NumPro][NumSrc])</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> (*work)[NumSrc] = Available;</span><br><span class="line">    <span class="comment">//对数组进行拷贝，并且修改拷贝后的数组元素的值</span></span><br><span class="line"> 	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; NumPro; i++) &#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; NumSrc; j++) &#123;</span><br><span class="line">				work[i][j] = Available[i][j];</span><br><span class="line">				work[i][j] ++;</span><br><span class="line">				<span class="built_in">printf</span>(<span class="string">&quot;work[%d][%d]:%d\n&quot;</span>, i, j, work[i][j]);</span><br><span class="line">            &#125;</span><br><span class="line">     &#125;</span><br><span class="line">    <span class="comment">//验证对复制后的数组进行修改后，原数组是否发生改变</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; NumPro; i++) &#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; NumSrc; j++) &#123;</span><br><span class="line">				<span class="built_in">printf</span>(<span class="string">&quot;work2[%d][%d]:%d\n&quot;</span>, i, j, Available[i][j]);</span><br><span class="line">			&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+        <tag>C</tag>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>noteCMD</title>
+    <url>/20211119/noteCMD.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="查看当前目录的文件和文件夹"><a href="#查看当前目录的文件和文件夹" class="headerlink" title="查看当前目录的文件和文件夹"></a>查看当前目录的文件和文件夹</h1><p>dir</p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+        <tag>cmd</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>noteJava</title>
+    <url>/20211119/noteJava.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="单引号和双引号"><a href="#单引号和双引号" class="headerlink" title="单引号和双引号"></a>单引号和双引号</h1><p>单引号的数据是char类型，双引号是String数据。</p>
+<p>用单引号的时候，有时会遇到这种奇怪的情况：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">System.out.println(<span class="number">4</span> + <span class="string">&quot;,&quot;</span>);</span><br><span class="line">System.out.println(<span class="number">4</span> + <span class="string">&#x27;,&#x27;</span>);</span><br><span class="line">System.out.println(<span class="number">3</span> + <span class="string">&#x27;,&#x27;</span>);</span><br></pre></td></tr></table></figure>
+<p>结果：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">4,</span><br><span class="line">48</span><br><span class="line">47</span><br></pre></td></tr></table></figure>
+<h1 id="无穷大"><a href="#无穷大" class="headerlink" title="无穷大"></a>无穷大</h1><p><a href="https://zhidao.baidu.com/question/327948017.html">参考资料</a></p>
+<p>整数的：<code>Integer.MAX_VALUE</code></p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>noteGit</title>
+    <url>/20211119/noteGit.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h1><p><a href="https://www.liaoxuefeng.com/wiki/896043488029600/900004111093344">廖雪峰教程</a></p>
+<p><a href="https://www.runoob.com/git/git-basic-operations.html">菜鸟教程</a></p>
+<h1 id="Git的诞生"><a href="#Git的诞生" class="headerlink" title="Git的诞生"></a>Git的诞生</h1><p>Linux之父Linus花了两周时间自己用C写了一个分布式版本控制系统，这就是Git！</p>
+<h1 id="Git的优点"><a href="#Git的优点" class="headerlink" title="Git的优点"></a>Git的优点</h1><p>GIt是分布式版本控制系统，是程序猿协同合作的利器。跟集中式版本控制系统相比，有如下优势：</p>
+<p>·工作时无需联网。在集中式中，用户需要先从中央服务器下载文件再进行修改，而在分布式中，每个人的电脑都是一个完整的版本库。</p>
+<p>·安全性更高。即使用户的电脑损坏了，要获取原来的版本库，只需要从协作者那里copy一份即可。</p>
+<p>·Git如何实现协同合作？</p>
+<p>对方只要把他对文件的修改发送给我们，我们在本地的版本库中对文件进行修改即可。</p>
+<h1 id="GIthub"><a href="#GIthub" class="headerlink" title="GIthub"></a>GIthub</h1><p>实际情况往往是这样，找一台电脑充当服务器的角色，每天24小时开机，其他每个人都从这个“服务器”仓库克隆一份到自己的电脑上，并且各自把各自的提交推送到服务器仓库里，也从服务器仓库中拉取别人的提交。</p>
+<p>而github网站就算提供git仓库托管服务的。</p>
+<p>github支持多种协议，给出的仓库url不止一个，默认的<code>git://</code>使用ssh，但也可以使用<code>https</code>等其他协议。</p>
+<p><img src="D:\myblog\备份\images\noteGit\不同协议.png" alt=""></p>
+<h1 id="Github仓库地址"><a href="#Github仓库地址" class="headerlink" title="Github仓库地址"></a>Github仓库地址</h1><p><img src="D:\myblog\备份\images\noteGit\仓库地址.png" alt=""></p>
+<p>ssh地址格式：<a href="mailto:`git@github.com">`git@github.com</a>:[user-name]/[repository-name].git`</p>
+<h1 id="Github为何需要SSH-KEY？"><a href="#Github为何需要SSH-KEY？" class="headerlink" title="Github为何需要SSH-KEY？"></a>Github为何需要SSH-KEY？</h1><p>因为GitHub需要识别出你推送的提交确实是你推送的，而不是别人冒充的，而Git支持SSH协议，所以，GitHub只要知道了你的公钥，就可以确认只有你自己才能推送。</p>
+<p>当然，GitHub允许你添加多个Key。假定你有若干电脑，你一会儿在公司提交，一会儿在家里提交，只要把每台电脑的Key都添加到GitHub，就可以在每台电脑上往GitHub推送了。</p>
+<h1 id="Git的局限性"><a href="#Git的局限性" class="headerlink" title="Git的局限性"></a>Git的局限性</h1><p>Git只能记录文本文件的改动：</p>
+<p>首先这里再明确一下，所有的版本控制系统，其实只能跟踪文本文件的改动，比如TXT文件，网页，所有的程序代码等等，Git也不例外。版本控制系统可以告诉你每次的改动，比如在第5行加了一个单词“Linux”，在第8行删了一个单词“Windows”。而图片、视频这些二进制文件，虽然也能由版本控制系统管理，但没法跟踪文件的变化，只能把二进制文件每次改动串起来，也就是只知道图片从100KB改成了120KB，但到底改了啥，版本控制系统不知道，也没法知道。</p>
+<h1 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h1><h2 id="工作区"><a href="#工作区" class="headerlink" title="工作区"></a>工作区</h2><p>也就是当前目录，文件从工作区添加到暂存区。</p>
+<h2 id="版本库"><a href="#版本库" class="headerlink" title="版本库"></a>版本库</h2><p><code>.git</code>文件就是版本库。</p>
+<p>版本库里存了很多东西，最重要的有<code>暂存区</code>（stage或index），以及系统为我们自动创建的第一个<code>分支master</code>、指向master的一个指针<code>HEAD</code>。</p>
+<h2 id="master和HEAD"><a href="#master和HEAD" class="headerlink" title="master和HEAD"></a>master和HEAD</h2><p>两者都是指针。</p>
+<p>在提交版本的时候，git会将所有的版本串成一条<code>时间线</code>，这条<code>时间线就是一个分支</code>。master分支就是一条时间线，<code>master指向最新的提交</code>。</p>
+<p><code>HEAD指向的是当前分支</code>。</p>
+<p>知道了HEAD和master，系统就知道命令要处理的是哪个分支的哪个提交了。</p>
+<p><img src="D:\myblog\备份\images\noteGit\master&amp;HEAD.png" alt=""></p>
+<h1 id="Git指令"><a href="#Git指令" class="headerlink" title="Git指令"></a>Git指令</h1><h2 id="本地基本指令"><a href="#本地基本指令" class="headerlink" title="本地基本指令"></a>本地基本指令</h2><p>本地仓库初始化：<code>git init</code></p>
+<p>执行完该命令，系统会在当前目录生成一个<code>.git</code>文件夹，该文件夹一般是隐藏的。</p>
+<p>查看隐藏文件：<code>ls -ah</code>。</p>
+<p><code>添加文件</code>到缓冲区：<code>git add .</code>，这个命令是把当前目录的所有文件都添加到缓冲区，也可以指定某个文件。</p>
+<p>将文件<code>提交</code>到仓库：<code>git commit -m &quot;your message&quot;</code>，实际上，就是添加到分支当中。这个命令的参数<code>-m</code>让用户提交时留下能够留下说明。据说在网上有办法让我们使用commit命令时不用提交说明，但是不建议这样做。</p>
+<p><img src="D:\myblog\备份\images\noteGit\add&amp;commit.jpg" alt=""></p>
+<p>在提交之前，查看状态：<code>git status</code></p>
+<p><img src="D:\myblog\备份\images\noteGit\git status.png" alt=""></p>
+<p>可以看到，我们修改了’readme.txt’这个文件，同时，在下面一行可以知道，我们未<code>add</code>任何修改。</p>
+<p>查看文件的修改情况：<code>git diff readme.txt</code></p>
+<p><img src="D:\myblog\备份\images\noteGit\git diff.png" alt=""></p>
+<p>个人理解，那个a代表暂存区的文件，b代表工作区的文件。</p>
+<p>再看下面，<code>a</code>的前面有<code>三个-</code>，以及下面有<code>abcdefg</code>，这并不代表对内容删去，只是代表暂存区文件而已，而<code>+</code>代表工作区文件。</p>
+<p>红色代表暂存区文件文本，绿色代表工作区的，对比一下，就可以知道，我们在文本末添加了<code>h</code>。</p>
+<p>若修改都提交了，则将无回显。</p>
+<p>查看版本系统历史记录（顺序：由近到远）：<code>git log</code></p>
+<p>若出现冒号，说明还有更多内容可以查看，按<code>enter</code>继续打印</p>
+<p><img src="D:\myblog\备份\images\noteGit\git回车.png" alt=""></p>
+<p>展开版本间内容的差异：<code>git log -p</code>，看上一张图，从这里我们可以看出，工作区的字符串比暂存区的要短，说明被删除部分文本。</p>
+<p>如果嫌信息太多，可以用：<code>git log --pretty=online</code>，省略作者、日期，但会保留<code>commit id（版本号）</code>和commit message。</p>
+<p>版本回退一次：<code>git reset --hard HEAD^</code></p>
+<p>按版本号回退：<code>git reset --hard commitid</code></p>
+<p>查看输入的每一条命令（包含所有的版本号）：<code>git reflog</code></p>
+<p>对单个文件的修改进行撤销：<code>git checkout -- file</code>，该命令能够将file返回到最近一次<code>git commit</code>或<code>git add</code>时的状态。</p>
+<p>从版本库中删除某个文件：<code>git rm file</code>，随后，要<code>git commit</code></p>
+<p>若本地误删了文件，可以从版本库中进行恢复：<code>git checkout -- file</code>，<code>git checkout</code>的作用是用版本库里的版本替换工作区的版本。</p>
+<p>删除本地仓库：<code>find . -name &quot;.git&quot; | xargs rm -Rf</code></p>
+<p><a href="https://blog.csdn.net/wq6ylg08/article/details/88789501">参考资料</a></p>
+<h2 id="远程命令"><a href="#远程命令" class="headerlink" title="远程命令"></a>远程命令</h2><p>关联远程库：<code>git remote add origin https://github.com/Zheng-Jay/Zheng-Jay.github.io.git</code></p>
+<p>关联后，远程库的名字就是<code>origin</code>，这是默认叫法。</p>
+<p>git push命令格式：<code>git push 远程主机名 本地分支名:远程分支名</code></p>
+<p>将当前<code>master分支</code>推送到远程库的master分支：<code>git push origin master</code></p>
+<p>廖雪峰和github在第一次提交时，用的是<code>git push -u origin master</code>，加入<code>-u</code>的作用是除推送到远程外，还会把本地的master分支和远程的master分支关联起来，这样在以后的拉取和推送时就可以简化命令，可以直接用<code>git push</code>代替<code>git push origin master</code>。</p>
+<p>此时，远程主机是<code>origin</code>，本地分支是<code>master</code>，由于远程分支名和本地分支相同，故省略。</p>
+<p>若想push到远程的save分支，应这样写：<code>git push origin master:save</code></p>
+<p>clone远程库：<code>git clone https://github.com/ipyker/hexo-next-theme</code></p>
+<p>查看远程库信息：<code>git remote -v</code></p>
+<p>与远程库解绑（此处实例为origin）：<code>git remote rm origin</code></p>
+<p>分支重新命名（将当前分支命名为<code>main</code>，该命令出现在github初始化仓库中）：</p>
+<p><code>git branch -M main</code></p>
+<h2 id="分支创建、查看与切换"><a href="#分支创建、查看与切换" class="headerlink" title="分支创建、查看与切换"></a>分支创建、查看与切换</h2><p>创建并切换（加上<code>-b</code>参数)：<code>git checkout -b dev</code>，该命令相当于以下两条命令：</p>
+<p><code>git branch dev</code>+<code>git checkout dev</code></p>
+<p>查看所有分支：<code>git branch</code></p>
+<p>切换到dev分支后，此时再提交文件，将不会影响master分支：</p>
+<p><img src="D:\myblog\备份\images\noteGit\newBranch.png" alt=""></p>
+<p>git鼓励用户创建新分支完成某个任务，然后再合并分支并删除，这和直接在master分支上工作效果是一样的，但过程更安全（试想如果master分支是由一个10人的团队共同维护的）。</p>
+<p>合并指定分支到当前分支：<code>git merge dev</code></p>
+<p>用该命令进行合并，会显示<code>Fast-forward</code>，该合并模式为<code>快进模式</code>，就是直接将master指向dev的当前提交，速度非常快。</p>
+<p>合并完之后，并可<code>删除dev分支</code>：<code>git branch -d dev</code></p>
+<p>由于前面用<code>chectout</code>既进行了撤销修改，又进行了分支切换，导致该命令有点难以理解，故推荐使用<code>switch</code>进行分支切换。</p>
+<p>创建并切换到新的<code>dev</code>分支：<code>git switch -c dev</code></p>
+<p>直接切换到已有分支：<code>git switch master</code></p>
+<p>其他命令：</p>
+<p><img src="D:\myblog\备份\images\noteGit\分支命令.png" alt=""></p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>noteLinux</title>
+    <url>/20211119/noteLinux.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="常见命令"><a href="#常见命令" class="headerlink" title="常见命令"></a>常见命令</h1><h2 id="手册"><a href="#手册" class="headerlink" title="手册"></a>手册</h2><p><a href="https://www.runoob.com/linux/linux-command-manual.html">菜鸟教程</a></p>
+<h2 id="mv"><a href="#mv" class="headerlink" title="mv"></a>mv</h2><p>全拼：move file，用来为文件或文件夹改名、或移到其他位置。</p>
+<p>语法：<code>mv [options] src des</code></p>
+<p>为文件改名：<code>mv firstname.txt secondname.txt</code></p>
+<h2 id="touch"><a href="#touch" class="headerlink" title="touch"></a>touch</h2><p>网上介绍：</p>
+<blockquote>
+<p>Linux touch命令用于修改文件或者目录的时间属性，包括存取时间和更改时间。若文件不存在，系统会建立一个新的文件。</p>
+</blockquote>
+<p>目前是用来创建新文件。</p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>notePython</title>
+    <url>/20211119/notePython.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="输出格式化字符串"><a href="#输出格式化字符串" class="headerlink" title="输出格式化字符串"></a>输出格式化字符串</h1><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://blog.csdn.net/weixin_30737363/article/details/99632126">https://blog.csdn.net/weixin_30737363/article/details/99632126</a></p>
+<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>在py3.6新增的功能，<code>print</code>字符串前面加<code>f</code>表示格式化字符串，加f后可以可以在字符串里面使用<code>花括号</code>括起来表示<code>变量和表达式</code>。</p>
+<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a = <span class="string">&quot;format str&quot;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;a = <span class="subst">&#123;a&#125;</span>&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;a = <span class="subst">&#123;a&#125;</span>&quot;</span>)	<span class="comment">#这里用单引号或双引号都可以，并不影响输出结果。</span></span><br></pre></td></tr></table></figure>
+<h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><h2 id="元组"><a href="#元组" class="headerlink" title="元组"></a>元组</h2><h3 id="概念-1"><a href="#概念-1" class="headerlink" title="概念"></a>概念</h3><p>py中的元组与list类似，不同之处在于元组的<code>元素不能修改</code>。</p>
+<p>元组使用小括号<code>()</code>，列表使用方括号<code>[]</code>。</p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>noteMarkDown</title>
+    <url>/20211119/noteMarkDown.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="添加图片"><a href="#添加图片" class="headerlink" title="添加图片"></a>添加图片</h1><p>格式：<img src="" alt="名称"></p>
+<p>路径可以填写网络路径，也可以添加本地路径，但是，填写本地路径，并不支持绝对路径，只支持相对路径。</p>
+<h1 id="添加链接"><a href="#添加链接" class="headerlink" title="添加链接"></a>添加链接</h1><p>格式：<a href="url">文本</a></p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+        <tag>MarkDown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《平凡的世界》读后感</title>
+    <url>/20211119/%E3%80%8A%E5%B9%B3%E5%87%A1%E7%9A%84%E4%B8%96%E7%95%8C%E3%80%8B%E8%AF%BB%E5%90%8E%E6%84%9F.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>  没想到除了古侠科幻和悬疑小说外，竟然还有其他类型的小说能够让我如痴如醉。<br>  这学期刚开始，就去图书馆借来这本书。读这本书可比之前读的短篇小说集有趣多了，我在九个星期内，就把三部曲全部读完了。<br>  这本书吸引人的地方太多了，有历史教材里看不到的文革时期那段荒唐的历史、为官者处理政治的手段、平凡的人面对困境时的内心挣扎、还有刻骨铭心的爱情…..<br>  这本书给人最大的感受是，写得太现实太真实，但又不失温情。<br>  作者描绘的旧时代中国社会里，几乎所有人都在为生存挣扎，连吃饭都成了问题，所有人都在想方设法的活下去。在这种环境下，只有亲情和友情，能够让人看到生活中温暖的一面。<br>  在书中形形色色的人物中，最吸引人的当然是我们的主角孙少平和孙少安两兄弟。<br>  即使家庭是全村最贫穷的家庭，即使生活看不到出头的日子，孙少安也要跳上生活的马车，坐在驾车的位置上，绷紧全身的肌肉和神经，为一家子的生存保驾护航。<br>  他累吗？他当然累，他累得每天头一沾枕头，人就睡死过去。他苦吗？他也很苦，面对生存的压力，这个双水村有名的强人，不止一次独自落泪。但即使又苦又累，他也绝不会撒手不管家里人，因为他是家里的顶梁柱，是上至八十多岁奶奶，下至十岁出头妹妹的太阳。他深爱着这个家庭，这个家庭给了他无限的温暖和美好记忆，他愿意为了这个家庭，付出所有。<br>  再说孙少平，他跟少安一样，也是一个很能吃苦的人，同时，跟少安相比，他的思想更丰富。这得益于他在少安的扶持下，能够去读高中（相信如果少安生存压力没有那么大，能够去高中读书，他也会有更广阔的思想境界），以及和晓霞相识，形成了爱读书爱思考的好习惯。<br>  读到少平在家务农时憋得慌，想要趁年轻，到城市里去碰运气，看能不能成就一番事业这一段的时候，我不禁联想到了爸爸。想来，爸爸年轻的时候为了讨生活，到深圳去给人干苦力活，一定也跟少平一样艰辛吧。<br>  书中的润叶和晓霞让人难以忘怀。我想，如果少安能够态度坚决一点，当面回绝润叶，或许润叶就可以少受点折磨了。<br>  晓霞的死真的震惊到我了，读到她风风火火地赶往灾区报道时，我以为她会在那里出色地完成工作，根本就没想过她会出有什么生命危险，更别提她竟会死！<br>  晓霞真的是绝大部分男性的理想伴侣，美丽大方，俏皮活泼，特立独行，又有很高思想境界，同时，又对爱情忠贞。</p>
+<p>  她的出现，真的是给这本沉重的作品，增添了很多鲜艳的色彩，读到她的片段，眼前总是浮现出一个活泼俏皮却又知性的形象。</p>
+<p>  然而，在这朵美丽的花朵开放到最艳丽的时候，作者突然笔锋一转，让她瞬间枯萎凋零了！<br>  真的，让人意难平……<br>  后面上网查阅了作者路遥的经历，了解到作者年轻的时候家境贫寒，阶级观念根深蒂固，情路坎坷，甚至因为跟前妻身份的悬殊而没能走到最后。<br>  作者的经历跟他笔下的少平十分相似，我严重怀疑作者是以自己为模板，创造了少平这个角色。<br>  在资料中写到，有一天，作者发了一通紧急通电给兄长，让兄长赶紧去找他，兄长以为他身子出了问题，火急火燎地赶到他家，开门后，路遥痛哭流涕地对兄长说：“田晓霞死了！”。</p>
+<p>​    从这件事上，就足以看出作者对田晓霞这个角色的喜爱之深。那作者为什么要把她写死呢？</p>
+<p>​    这或许跟作者的经历和爱情观有关吧，尽管作者借润叶、少平之口，一再发出“爱情不因受阻于阶级”的主张，但事实又是，出生干部之家的润叶无法跟少安终成眷属，少安找了一个地道的农村姑娘作为伴侣，按这个逻辑分析下去，出生贫寒农村家庭的少平，也就更不可能跟父亲为省副书记、母亲为院长的晓霞结合了……</p>
+<p>​    作者真的是个很清醒的人，他追求像晓霞这样的完美伴侣，把她送到少平身边，但却又受现实经历的影响，知道他们无法走到最后，唉……</p>
+]]></content>
+      <categories>
+        <category>读后感</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
+        <tag>读后感</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>noteJava</title>
+    <url>/20211119/note%E7%AE%97%E6%B3%95.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="多段图（动态规划题）"><a href="#多段图（动态规划题）" class="headerlink" title="多段图（动态规划题）"></a>多段图（动态规划题）</h1><p>最简单的数据结构是邻接矩阵，<a href="https://blog.csdn.net/u011212549/article/details/53423870">java参考代码</a></p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+        <tag>算法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>专业知识</title>
+    <url>/20211119/%E4%B8%93%E4%B8%9A%E7%9F%A5%E8%AF%86.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="引擎（指在计算机领域）"><a href="#引擎（指在计算机领域）" class="headerlink" title="引擎（指在计算机领域）"></a>引擎（指在计算机领域）</h1><p>参考资料：</p>
+<p>1、<a href="https://zhidao.baidu.com/question/583464440.html">https://zhidao.baidu.com/question/583464440.html</a></p>
+<p>2、<a href="https://www.zhihu.com/question/278942403">https://www.zhihu.com/question/278942403</a></p>
+<p>3、<a href="https://baike.baidu.com/item/%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E/620879?fr=aladdin">https://baike.baidu.com/item/%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E/620879?fr=aladdin</a></p>
+<p>联想日常生活中的例子，汽车想跑起来得有引擎，飞机想飞起来也得有引擎，这里的引擎是指发动机，是上述机器的动力来源，属于最重要的部分，没有它，机器无法工作。</p>
+<p>同样地，在计算机领域，引擎也是<code>最核心</code>的部分，它能够帮助用户完成<code>最基本的功能</code>，但与上面提到的发动机相比，计算机领域的引擎还存在一个<code>不一样的目的</code>：让开发者能够迅速地开发软件，而不用从零开始。从这个目的上看，个人认为，或许可以把引擎理解为<code>框架</code>。</p>
+<p>如游戏引擎，内含物理引擎、音效等，用同样的引擎制作出来的软件，可能外观不相同，但内核是一样的。</p>
+<p>还有微软的操作系统，说糙一点DOS就是它的引擎，windows就是同个改进DOS发展出来的。</p>
+]]></content>
+      <categories>
+        <category>杂项</category>
+      </categories>
+      <tags>
+        <tag>计算机</tag>
+        <tag>网络</tag>
+        <tag>定义</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>建站之路</title>
+    <url>/20211119/%E5%BB%BA%E7%AB%99%E4%B9%8B%E8%B7%AF.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>为了搭建个人博客，在网上查阅了大量的资料，遇到了许多没有用过的技术或工具，一些是之前用过但是不熟练的，像git。在这期间,踩了不少坑,绕了许多弯,终于在第三天，完成了个站的创建！<a href="http://zhengjay.com">点击查看效果</a></p>
+<h1 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h1><p><a href="https://www.cnblogs.com/quellanan/p/11613109.html">教程1,内附作者已配置好的主题源码</a></p>
+<p>若clone作者的源码,好像得在目录输入<code>npm install</code></p>
+<p><a href="https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html">教程2，这篇教程在关于绑定域名那块好像讲错了，建议这块换别的教程看</a></p>
+<h1 id="架构"><a href="#架构" class="headerlink" title="架构"></a>架构</h1><p>静态网站托管服务:github pages</p>
+<p>博客模板:<code>hexo</code></p>
+<p>工具:<code>git、node.js</code></p>
+<h2 id="github-pages"><a href="#github-pages" class="headerlink" title="github pages"></a>github pages</h2><p>每一个github用户都能够申请一个<code>username.github.io</code>仓库，该仓库能够用于存放静态文件，任何用户都可以通过<code>https://username.github.io</code>访问你的页面，所以，可以将该功能用于<code>博客托管</code>，省了买云服务器的钱😁。</p>
+<p>不过,既然是github提供的服务,那国内的用户如果没梯子没加速器,访问速度应该挺慢的吧?</p>
+<h2 id="hexo"><a href="#hexo" class="headerlink" title="hexo"></a>hexo</h2><p>一个专门提供<code>博客模板服务</code>的网站,有大量的模板主题可以选择.</p>
+<p>我选择的是 <code>next</code>.</p>
+<h1 id="下载环境"><a href="#下载环境" class="headerlink" title="下载环境"></a>下载环境</h1><h2 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h2><p>git是分布式版本控制系统,通过在本地运行git命令,将本地代码上传到github仓库,或者将仓库拉取到本地.</p>
+<h2 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h2><p>网上的定义是:</p>
+<blockquote>
+<p>简单的说 Node.js 就是运行在服务端的 JavaScript。</p>
+<p>Node.js 是一个基于Chrome JavaScript 运行时建立的一个平台。</p>
+<p>Node.js是一个事件驱动I/O服务端JavaScript环境，基于Google的V8引擎，V8引擎执行Javascript的速度非常快，性能非常好。</p>
+</blockquote>
+<p>之前在写小程序的时候,也用到node.js.</p>
+<p>但说实话,一直都是复制别人的命令来运行,没想过要去弄懂,因为觉得这东西更多的是跟开发有关,我以后又不搞开发😬</p>
+<p>对了,跟node.js经常一块出现的还有<code>npm</code>,这东西是node.js的管理工具,用来安装各种扩展的.</p>
+<p>关于node.js的安装,直接百度查教程就行了.</p>
+<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><p>装完npm后,输入<code>npm install -g hexo</code>即可.</p>
+<h1 id="配置SSH密钥"><a href="#配置SSH密钥" class="headerlink" title="配置SSH密钥"></a>配置SSH密钥</h1><h2 id="什么是SSH"><a href="#什么是SSH" class="headerlink" title="什么是SSH?"></a>什么是SSH?</h2><p>SSH全称Secure Shell,是建立在应用层上的安全协议,能够为通信双方的数据提供加密服务,防止中间人攻击.</p>
+<p>SSH有两种级别的安全验证,一种是基于口令,这种验证安全性不高,另一种是基于密钥.</p>
+<p>在对github仓库进行代码管理前,需要配置SSH密钥,只有本地拥有账户上添加的公钥对应私钥的主机,才有权限管理仓库.</p>
+<h2 id="配置SSH密钥-1"><a href="#配置SSH密钥-1" class="headerlink" title="配置SSH密钥"></a>配置SSH密钥</h2><p>在<code>git bash</code>输入命令<code>ssh-keygen -t rsa -C &quot;邮件地址&quot;</code>.</p>
+<p>该命令将在本地生成rsa的私钥\密钥,还有一个用来记录通信主机公钥的文件:</p>
+<p><img src="https://pic1.58cdn.com.cn/nowater/webim/big/n_v252713e82596a4383bc56158f385fc444.png" alt=""></p>
+<p>然后在github个人首页的setting里,将公钥复制到文本框内保存.</p>
+<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p>首先,配置全局用户名和邮箱:</p>
+<p><code>git config --global user.name &quot;nameVal&quot;</code></p>
+<p><code>git config --global user.email &quot;eamil@qq.com&quot;</code></p>
+<p>输入<code>ssh -T git@github.com</code>,注意:这里不用修改邮箱.</p>
+<h3 id="bug"><a href="#bug" class="headerlink" title="bug"></a>bug</h3><p>在配置过程中,遇到这个bug:</p>
+<p><img src="https://pic8.58cdn.com.cn/nowater/webim/big/n_v20d1a24738e604235bd610e48bed80252.png" alt=""></p>
+<p>原因是在known_hosts里没有添加github的公钥,输入yes添加即可.</p>
+<h1 id="搭建博客"><a href="#搭建博客" class="headerlink" title="搭建博客"></a>搭建博客</h1><h2 id="基础框架"><a href="#基础框架" class="headerlink" title="基础框架"></a>基础框架</h2><p>创建<code>blog</code>文件夹,在该目录打开git bash,输入:</p>
+<p><code>hexo init</code>和<code>npm install</code></p>
+<p>将自动搭建基本框架,这时,就可以本地运行看下效果了</p>
+<p>先来认识一下hexo的基本命令.</p>
+<h2 id="hexo基本命令"><a href="#hexo基本命令" class="headerlink" title="hexo基本命令"></a>hexo基本命令</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo new &quot;postName&quot; #新建文章</span><br><span class="line">hexo new page &quot;pageName&quot; #新建页面</span><br><span class="line">hexo generate #生成静态页面至public目录</span><br><span class="line">hexo server #开启预览访问端口（默认端口4000，&#x27;ctrl + c&#x27;关闭server）</span><br><span class="line">hexo deploy #部署到GitHub</span><br><span class="line">hexo help  # 查看帮助</span><br><span class="line">hexo version  #查看Hexo的版本</span><br></pre></td></tr></table></figure>
+<p>可缩写为:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo n == hexo new</span><br><span class="line">hexo g == hexo generate</span><br><span class="line">hexo s == hexo server</span><br><span class="line">hexo d == hexo deploy</span><br></pre></td></tr></table></figure>
+<p>组合为:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo s -g #生成并本地预览</span><br><span class="line">hexo d -g #生成并上传</span><br></pre></td></tr></table></figure>
+<h2 id="本地运行"><a href="#本地运行" class="headerlink" title="本地运行"></a>本地运行</h2><p>搭好框架之后,输入<code>hexo s -g</code>并可本地运行,在浏览器中输入localhost:4000查看博客.</p>
+<h2 id="修改主题"><a href="#修改主题" class="headerlink" title="修改主题"></a>修改主题</h2><p>默认的主题比较丑,可以上hexo官网找自己喜欢的主题,然后<code>git clone</code>到blog目录.clone下来后,根据仓库里的<code>readme.md</code>进行修改即可.</p>
+<p>我选择的是<code>next</code></p>
+<p>next主题的配置手册在这:<a href="http://theme-next.iissnan.com/getting-started.html#sidebar-settings">官方文档</a></p>
+<p>官方的文档并不全,我还找到<a href="https://blog.csdn.net/nightmare_dimple/article/details/86661502">这份</a></p>
+<h2 id="hexo-bug"><a href="#hexo-bug" class="headerlink" title="hexo bug"></a>hexo bug</h2><p>在运行hexo的时候,遇到bug: The “mode” argument must be integer. Received an instance of Object</p>
+<p>原因:node.js和hexo存在<code>版本适配</code>的关系,<code>将node换成低版本</code>可以解决该问题,如何换?</p>
+<p>下载nvm,专门用来管理node版本的工具,<a href="https://www.jb51.net/article/202124.htm">具体看这篇教程</a></p>
+<p>其他hexo上的bug,看这篇<a href="https://blog.csdn.net/as403045314/article/details/101337145">博客</a></p>
+<h1 id="上传到github"><a href="#上传到github" class="headerlink" title="上传到github"></a>上传到github</h1><h2 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h2><p><code>_config.yml</code>是hexo的配置文件,分为站点和主题两种,这里打开站点配置,修改<code>deploy</code>为如下:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line"> type: git</span><br><span class="line"> repository: </span><br><span class="line">   github: git@github.com:username/username.github.io.git</span><br><span class="line"> branch: master</span><br></pre></td></tr></table></figure>
+<h2 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h2><p>上传很简单,输入<code>hexo d</code>即可,以后修改后要上传也是直接运行该命令就行.</p>
+<p>忘了用不用在blog目录先进行git仓库的初始化了,姑且记下来:</p>
+<p>git仓库初始化:<code>git init</code>.</p>
+<p>关联远程仓库:<code>git remote add origin https://github.com/Zheng-Jay/Zheng-Jay.github.io.git</code></p>
+<h2 id="源码备份"><a href="#源码备份" class="headerlink" title="源码备份"></a>源码备份</h2><p><code>hexo d</code>上传的文件好像跟本地文件不太一样,因此有必要进行源码的备份</p>
+<p>在仓库创建save分支</p>
+<p>运行<code>git push origin save</code>,运行前记得先关联远程库.</p>
+<h2 id="仓库文件删除"><a href="#仓库文件删除" class="headerlink" title="仓库文件删除"></a>仓库文件删除</h2><p>顺便记下删除仓库文件的办法,在github只能删除仓库,不能删除某个文件或者文件夹,所以必须先把文件都pull到本地进行删除,再上交(这也太麻烦了吧,泪目).</p>
+<p><a href="https://blog.csdn.net/weixin_42152081/article/details/80635777">参考资料</a></p>
+<p>首先,拉取仓库到本地:<code>git pull origin master</code></p>
+<p>在本地进行修改</p>
+<p>然后输入<code>git add .</code>将修改上传到暂存区.</p>
+<p>再运行<code>git commit -m &#39;del&#39;提交到本地仓库</code></p>
+<p>最后,才是<code>git push origin master</code>把修改提交到origin的master分支.</p>
+<h1 id="绑定自定义域名"><a href="#绑定自定义域名" class="headerlink" title="绑定自定义域名"></a>绑定自定义域名</h1><h2 id="购买域名"><a href="#购买域名" class="headerlink" title="购买域名"></a>购买域名</h2><p>github pages给的域名<code>https://username.github.io</code>有点捞,可以上网买个,价格还可以.</p>
+<p>网友推荐<code>godday</code>和<code>阿里云</code>,个人推荐阿里云.</p>
+<p>一是阿里云是国内大厂,既方便,也信得过</p>
+<p>二是价格便宜,同样一个域名,在godday要80元/年,而阿里云63元/年,这还用选?</p>
+<h2 id="域名实名制认证"><a href="#域名实名制认证" class="headerlink" title="域名实名制认证"></a>域名实名制认证</h2><p>这应该就是传说中的<code>域名备案</code>吧</p>
+<h2 id="将域名和ip进行绑定"><a href="#将域名和ip进行绑定" class="headerlink" title="将域名和ip进行绑定"></a>将域名和ip进行绑定</h2><p>这里有必要先了解下<code>A记录</code>和<code>CNAME</code>。</p>
+<p>当我们拥有多个域名，并且要让它们都指向同个ip时，我们先将一个域名作为A记录与ip绑定，再让其他域名作为别名（即CNAME）指向A记录的域名上。这样，所有的域名就都指向ip了。</p>
+<p>并且，当我们想要改变这些域名的指向时，只需修改A记录的指向，其他域名也会跟着它一块改变。</p>
+<p>回到将我们买的域名绑定到github pages上，这时，我们需要到购买的云平台进行<code>域名解析配置</code>，将购买的域名作为<code>CNAME</code>，绑定到<code>username.github.io</code>。一共添加两条：</p>
+<p><img src="https://pic5.58cdn.com.cn/nowater/webim/big/n_v20c5a61a993b24add863d108e1401dcf2.png" alt=""></p>
+<p>随便记下前缀的含义：</p>
+<p><img src="https://pic6.58cdn.com.cn/nowater/webim/big/n_v2df397effa26c4579867a74c2e036e655.png" alt=""></p>
+<p>而我们的<code>username.github.io</code>就将作为<code>A记录</code>，指向我们的blog。</p>
+<p>当然，我们还要到github进行配置，为什么？</p>
+<p>假如不用在github进行配置，那么试想，是不是任何人都能将他的域名随意地指向你的域名了呢？也就是说，域名的绑定需要<code>双方同意</code>。</p>
+<p>这个时候，需要到github仓库的settings里的<code>pages</code>输入购买的域名，系统将自动生成<code>CNAME</code>文件夹在根目录，完成域名的绑定！</p>
+<h1 id="写文章"><a href="#写文章" class="headerlink" title="写文章"></a>写文章</h1><p>文章是用<code>markdown</code>下的,用的编辑器是<code>typora</code>,要写文章,在blog文件夹输入<code>hexo new &quot;title&quot;</code>即可在<code>source/_posts</code>创建文章.</p>
+<p>创建的文章带有模板,不过这里有个问题,在模板写入文章的标签,在编译的时候会报错.</p>
+<p>图个方便,就复制了教程1的文章作为<code>模板</code>,以后要写,就直接复制一份进行修改就行.</p>
+<p>另外,我的typora也有些问题,在写的时候输入不了中文标点符号,像是句号,顿号,都是英文的.不过这样倒方便了我在输入特殊字符的时候不用进行中英文切换.</p>
+<p>markdown语法教程:</p>
+<p><a href="https://www.runoob.com/markdown/md-code.html">菜鸟教程</a></p>
+<p><a href="https://www.jianshu.com/p/815788f4b01d">另外一个</a></p>
+<h1 id="SEO"><a href="#SEO" class="headerlink" title="SEO"></a>SEO</h1><h2 id="什么是SEO"><a href="#什么是SEO" class="headerlink" title="什么是SEO?"></a>什么是SEO?</h2><p>百科解释</p>
+<blockquote>
+<p>SEO（Search Engine Optimization）：汉译为搜索引擎优化。是一种方式：利用<a href="https://baike.baidu.com/item/搜索引擎/104812">搜索引擎</a>的规则提高网站在有关搜索引擎内的<a href="https://baike.baidu.com/item/自然排名/2092669">自然排名</a>。目的是让其在行业内占据领先地位，获得<a href="https://baike.baidu.com/item/品牌/235720">品牌</a>收益。很大程度上是网站经营者的一种商业行为，将自己或自己公司的排名前移。</p>
+</blockquote>
+<p>说简单点,就是使我们的网站能够更容易被搜索引擎搜索爬取,从而提高流量热度.</p>
+<h2 id="在搜索引擎提交我们的站点"><a href="#在搜索引擎提交我们的站点" class="headerlink" title="在搜索引擎提交我们的站点"></a>在搜索引擎提交我们的站点</h2><p>根据教程1，我们可以在<code>google</code>和<code>baidu</code>提交我们的站点，但因为我没有梯子，只能在baidu提交。</p>
+<p><a href="https://ziyuan.baidu.com/site/index">https://ziyuan.baidu.com/site/index</a></p>
+<p>提交前，需要验证网点是我们的，这里有三种验证方式：</p>
+<p><img src="https://pic1.58cdn.com.cn/nowater/webim/big/n_v2ddd078dcc6b245be9141fcc906da5830.png" alt=""></p>
+<p>这里推荐用<code>第三种</code>，第三种直接把它提供的网站在我们的云服务平台上解析下就可以了。</p>
+<p>第一种我试过，把它给的文件放在public文件夹内，理论上是可以，但我怎么试都不可以。</p>
+<h1 id="一些小工具"><a href="#一些小工具" class="headerlink" title="一些小工具"></a>一些小工具</h1><h2 id="不蒜子"><a href="#不蒜子" class="headerlink" title="不蒜子"></a>不蒜子</h2><p>这是一个博客网站访问人数和浏览人数的<code>计数小工具</code>,说是小工具,其实也就几行代码,引入脚本后调用标签就完了,非常轻量.</p>
+<p>工作原理大概是这样的:</p>
+<blockquote>
+<p>在引入的JS(JavaScript)脚本中，会把当前页面url（或某种唯一标识）注册到其第三方服务器，服务器上保存着url与对应的计数值，点击页面后通过JS更新服务器上的计数值，并在页面初始化时在本地标签加载、显示计数值。</p>
+</blockquote>
+<h2 id="图床"><a href="#图床" class="headerlink" title="图床"></a>图床</h2><p>写文章的时候用到的图片在<a href="https://www.hualigs.cn/">这里</a>上传就好了.</p>
+<h2 id="live2d"><a href="#live2d" class="headerlink" title="live2d"></a>live2d</h2><p>就是经常在别人博客里看到的左下角的看板娘,但其实除了二次元美少女(为什么这么多人喜欢这种,而且还都是大佬…),还有其他卡通形象,如我这个:</p>
+<p><img src="https://pic2.58cdn.com.cn/nowater/webim/big/n_v2bae32754b10842a1b3173f3c3f3363ad.png" alt=""></p>
+<p>添加方法看这篇<a href="https://www.jianshu.com/p/5b5c61323772">blog</a></p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>虽然在搭建个站的过程中，遇到了许多麻烦，但了确确实实地学到了很多东西。</p>
+<p>首先，是git的基本命令，算会敲了，然后对github的仓库托管也搞清楚了，这应该属于程序员的必备技能吧😋？</p>
+<p>其次，是对域名解析、SSH密钥验证这些，有了一定的认识。</p>
+<p>最最重要的是，以后有了一个平台来托管我的文章，促进自己的学习了！</p>
+]]></content>
+      <categories>
+        <category>杂项</category>
+      </categories>
+      <tags>
+        <tag>建站</tag>
+        <tag>hexo</tag>
+        <tag>github pages</tag>
+        <tag>SSH</tag>
+        <tag>github命令</tag>
+        <tag>绑定域名</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>文章模板</title>
+    <url>/20211119/%E6%96%87%E7%AB%A0%E6%A8%A1%E6%9D%BF.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>]]></content>
+      <categories>
+        <category>杂项</category>
+      </categories>
+      <tags>
+        <tag>模板</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>用Python处理excel数据 xlwt xlrd</title>
+    <url>/20211119/%E7%94%A8Python%E5%A4%84%E7%90%86excel%E6%95%B0%E6%8D%AE.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>之前在学爬虫的时候，有学到用Python将爬取的数据保存在excel中，不过只是用<code>xlwt库</code>进行写操作。</p>
+<p>昨天，一个<code>应用数学专业</code>同学来找我，说晚上要交期中作业，让我帮他处理点数据，数据是保存在<code>excel文件</code>，本着助人为乐的精神，帮他写了个py脚本，随便学到了如何用<code>xlwt</code>（实现写操作）和<code>xlrd</code>（实现读操作）两个第三方库处理excel文件。</p>
+<h1 id="第三方库"><a href="#第三方库" class="headerlink" title="第三方库"></a>第三方库</h1><p>其实，不止有xlwt和xlrd这两个库能够处理excel数据，只不过是我用过xlwt这个库，比较熟悉，所以就接着用了。</p>
+<p>各个库对比：</p>
+<p><img src="https://i.loli.net/2021/11/14/GS1VFyJrZEMgpYa.jpg" alt=""></p>
+<h1 id="xls文件和xlsx文件"><a href="#xls文件和xlsx文件" class="headerlink" title="xls文件和xlsx文件"></a>xls文件和xlsx文件</h1><p>从图可以看出，我用到的库只能处理xls文件，而不能处理xlsx文件，这两种文件格式有何差别？</p>
+<blockquote>
+<p>文件核心结构不同：</p>
+<p>xls核心结构是复合文档类型的；</p>
+<p>xlsx 的核心结构是 XML 类型的结构，并且基于XML进行压缩（占用空间更小），所以也可以看做zip文件，将一个“.xlsx”文件的后缀改为ZIP后，用解压软件解压，可以看到里面有一个xml文件和文件的主要内容。</p>
+</blockquote>
+<blockquote>
+<p>最大行列得数量不同：</p>
+<p>xls最大只有65536行、256列</p>
+<p>xlsx可以有1048576行、16384列</p>
+</blockquote>
+<p>根据网上的解释，xlsx文件能够保存的数据量更大，并且占用空间更小，毕竟是后来推出的文件格式。</p>
+<p>要使用我们的xlwt和xlrd库，就得先将xlsx文件转换为xls文件，大家可以在<code>wps</code>或<code>office</code>的<code>另存为</code>中进行转换。</p>
+<p>注意：xls文件最多支持256列，转换的时候要留心自己的xlsx文件列数是否超出。</p>
+<h1 id="安装库"><a href="#安装库" class="headerlink" title="安装库"></a>安装库</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pip install xlwt</span><br><span class="line">pip install xlrd</span><br></pre></td></tr></table></figure>
+<h1 id="xlwt库"><a href="#xlwt库" class="headerlink" title="xlwt库"></a>xlwt库</h1><p>该库能够实现excel文件的写操作。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">workbook=xlwt.Workbook(encoding=<span class="string">&quot;utf-8&quot;</span>)<span class="comment">#创建workbook对象</span></span><br><span class="line">worksheet=workbook.add_sheet(<span class="string">&quot;sheet1&quot;</span>)<span class="comment">#创建工作表</span></span><br><span class="line">worksheet.write(<span class="number">0</span>,<span class="number">2</span>,<span class="string">&quot;hi&quot;</span>)<span class="comment">#在第0行第2列写入&quot;hi&quot;字符串</span></span><br><span class="line">workbook.save(<span class="string">&quot;myData.xls&quot;</span>)<span class="comment">#保存数据</span></span><br></pre></td></tr></table></figure>
+<h1 id="xlrd库"><a href="#xlrd库" class="headerlink" title="xlrd库"></a>xlrd库</h1><p>该库能够实现excel文件的读操作。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">   workbook = xlrd.open_workbook(<span class="string">&quot;myData.xls&quot;</span>)<span class="comment">#打开文件</span></span><br><span class="line">sheet_name = workbokk.sheet_names()<span class="comment">#获取所有sheet名称</span></span><br><span class="line">   sheet = workbook.sheet_by_index(<span class="number">0</span>)<span class="comment">#根据索引获取sheet</span></span><br><span class="line">   <span class="comment">#sheet = workbook.sheet_by_name(&#x27;shee1&#x27;)#根据名字获取sheet</span></span><br><span class="line">   <span class="comment"># sheet1的名称，行数，列数</span></span><br><span class="line"><span class="built_in">print</span>(sheet1.name, sheet1.nrows, sheet1.ncols)</span><br><span class="line"><span class="comment"># 获取整行和整列的值（数组）</span></span><br><span class="line">rows = sheet1.row_values(<span class="number">2</span>) <span class="comment"># 获取第三行内容</span></span><br><span class="line">cols = sheet1.col_values(<span class="number">0</span>) <span class="comment"># 获取第1列内容</span></span><br></pre></td></tr></table></figure>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p><a href="https://jingyan.baidu.com/article/1974b289c9aaefb5b0f7746b.html">excel后缀.xls和.xlsx有什么区别</a></p>
+<p><a href="https://www.cnblogs.com/paul-liang/p/9187503.html"><a href="https://www.cnblogs.com/paul-liang/p/9187503.html">python处理excel总结</a></a></p>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>excel</tag>
       </tags>
   </entry>
 </search>

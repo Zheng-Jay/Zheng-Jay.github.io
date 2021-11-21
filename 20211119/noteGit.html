@@ -14,13 +14,13 @@
   
 
 
-<html class="theme-next mist use-motion" lang="zh-CN">
+<html class="theme-next pisces use-motion" lang="zh-CN">
 
-<head><meta name="generator" content="Hexo 3.9.0">
-  <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222"/>
 
 
 
@@ -30,7 +30,7 @@
     
     
   <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
-  <link rel="stylesheet" href="/lib/pace/pace-theme-bounce.min.css?v=1.0.2">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-bounce.min.css?v=1.0.2"/>
 
 
 
@@ -48,7 +48,7 @@
 
   
   
-  <link rel="stylesheet" href="/lib/fancybox/source/jquery.fancybox.css">
+  <link rel="stylesheet" href="/lib/fancybox/source/jquery.fancybox.css"/>
 
 
 
@@ -56,23 +56,11 @@
   
   
   
-  
-
-  
-    
-    
   
 
   
     
-      
     
-
-    
-  
-
-  
-
   
 
   
@@ -84,9 +72,21 @@
   
 
   
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
     
     
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Roboto Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Roboto Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext"/>
   
 
 
@@ -94,9 +94,9 @@
 
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2"/>
 
-<link rel="stylesheet" href="/css/main.css?v=7.1.1">
+<link rel="stylesheet" href="/css/main.css?v=7.1.1"/>
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.1">
@@ -119,8 +119,8 @@
 <script id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
-    root: '/',
-    scheme: 'Mist',
+    root: '',
+    scheme: 'Pisces',
     version: '7.1.1',
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":true,"dimmer":false},
     back2top: true,
@@ -155,36 +155,38 @@
   </script>
 
   <meta name="description" content="参考教程廖雪峰教程 菜鸟教程 Git的诞生Linux之父Linus花了两周时间自己用C写了一个分布式版本控制系统，这就是Git！ Git的优点GIt是分布式版本控制系统，是程序猿协同合作的利器。跟集中式版本控制系统相比，有如下优势： ·工作时无需联网。在集中式中，用户需要先从中央服务器下载文件再进行修改，而在分布式中，每个人的电脑都是一个完整的版本库。 ·安全性更高。即使用户的电脑损坏了，要获取原">
-<meta name="keywords" content="笔记,Git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="noteGit">
 <meta property="og:url" content="https://zhengjay.com/20211119/noteGit.html">
 <meta property="og:site_name" content="Jay&#39; s blog">
 <meta property="og:description" content="参考教程廖雪峰教程 菜鸟教程 Git的诞生Linux之父Linus花了两周时间自己用C写了一个分布式版本控制系统，这就是Git！ Git的优点GIt是分布式版本控制系统，是程序猿协同合作的利器。跟集中式版本控制系统相比，有如下优势： ·工作时无需联网。在集中式中，用户需要先从中央服务器下载文件再进行修改，而在分布式中，每个人的电脑都是一个完整的版本库。 ·安全性更高。即使用户的电脑损坏了，要获取原">
-<meta property="og:locale" content="zh-CN">
+<meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="d:/myblog/备份/images/noteGit/不同协议.png">
 <meta property="og:image" content="d:/myblog/备份/images/noteGit/仓库地址.png">
-<meta property="og:image" content="d:/myblog/备份/images/noteGit/master&HEAD.png">
-<meta property="og:image" content="d:/myblog/备份/images/noteGit/add&commit.jpg">
+<meta property="og:image" content="d:/myblog/备份/images/noteGit/master&amp;HEAD.png">
+<meta property="og:image" content="d:/myblog/备份/images/noteGit/add&amp;commit.jpg">
 <meta property="og:image" content="d:/myblog/备份/images/noteGit/git%20status.png">
 <meta property="og:image" content="d:/myblog/备份/images/noteGit/git%20diff.png">
+<meta property="og:image" content="d:/myblog/备份/images/noteGit/git回车.png">
 <meta property="og:image" content="d:/myblog/备份/images/noteGit/newBranch.png">
 <meta property="og:image" content="d:/myblog/备份/images/noteGit/分支命令.png">
-<meta property="og:updated_time" content="2021-11-19T12:36:38.116Z">
+<meta property="article:published_time" content="2021-11-19T13:28:38.156Z">
+<meta property="article:modified_time" content="2021-11-20T02:15:45.231Z">
+<meta property="article:author" content="Jay">
+<meta property="article:tag" content="笔记">
+<meta property="article:tag" content="Git">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="noteGit">
-<meta name="twitter:description" content="参考教程廖雪峰教程 菜鸟教程 Git的诞生Linux之父Linus花了两周时间自己用C写了一个分布式版本控制系统，这就是Git！ Git的优点GIt是分布式版本控制系统，是程序猿协同合作的利器。跟集中式版本控制系统相比，有如下优势： ·工作时无需联网。在集中式中，用户需要先从中央服务器下载文件再进行修改，而在分布式中，每个人的电脑都是一个完整的版本库。 ·安全性更高。即使用户的电脑损坏了，要获取原">
 <meta name="twitter:image" content="d:/myblog/备份/images/noteGit/不同协议.png">
 
 
 
-  <link rel="alternate" href="/atom.xml" title="Jay' s blog" type="application/atom+xml">
+  <link rel="alternate" href="/atom.xml" title="Jay' s blog" type="application/atom+xml"/>
 
 
 
   
   
-  <link rel="canonical" href="https://zhengjay.com/20211119/noteGit">
+  <link rel="canonical" href="https://zhengjay.com/20211119/noteGit"/>
 
 
 
@@ -206,7 +208,7 @@
     var _hmt = _hmt || [];
     (function() {
       var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?34325eeadca4daa53a3ae649c0c5eb20";
+      hm.src = "https://hm.baidu.com/hm.js?2095a169c5818f784d737fd3b7f03ba4";
       var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(hm, s);
     })();
@@ -243,7 +245,7 @@
   </style>
 </noscript>
  
-</head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
@@ -300,7 +302,7 @@
 
     
 
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br/>首页</a>
 
   </li>
         
@@ -317,7 +319,7 @@
 
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br/>标签</a>
 
   </li>
         
@@ -334,7 +336,7 @@
 
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-bookmark"></i> <br>分类</a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-bookmark"></i> <br/>分类</a>
 
   </li>
         
@@ -351,7 +353,7 @@
 
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>归档</a>
 
   </li>
         
@@ -368,7 +370,7 @@
 
     
 
-    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br/>关于</a>
 
   </li>
         
@@ -385,7 +387,7 @@
 
     
 
-    <a href="/guestbook/" rel="section"><i class="menu-item-icon fa fa-fw fa-comments"></i> <br>互动</a>
+    <a href="/guestbook/" rel="section"><i class="menu-item-icon fa fa-fw fa-comments"></i> <br/>互动</a>
 
   </li>
 
@@ -396,14 +398,11 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br/>搜索</a>
         </li>
       
     </ul>
   
-
-  
-    
 
   
 
@@ -419,7 +418,9 @@
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -447,6 +448,9 @@
       <div class="main-inner">
         <div class="content-wrap">
           
+            
+
+          
           <div id="content" class="content">
             
 
@@ -466,16 +470,16 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://zhengjay.com/20211119/noteGit.html">
+    <link itemprop="mainEntityOfPage" href="https://zhengjay.com/20211119/noteGit.html"/>
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jay">
-      <meta itemprop="description" content="生活本无意义，需要自己去寻找活着的意义。:)">
-      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Jay"/>
+      <meta itemprop="description" content="生活本无意义，需要自己去寻找活着的意义。:)"/>
+      <meta itemprop="image" content="/images/avatar.jpg"/>
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Jay' s blog">
+      <meta itemprop="name" content="Jay' s blog"/>
     </span>
 
     
@@ -509,12 +513,24 @@
                 
               
 
-              <time title="创建时间：2021-11-19 21:28:38 / 修改时间：20:36:38" itemprop="dateCreated datePublished" datetime="2021-11-19T21:28:38+08:00">2021-11-19</time>
+              <time title="创建时间：2021-11-19 21:28:38" itemprop="dateCreated datePublished" datetime="2021-11-19T21:28:38+08:00">2021-11-19</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2021-11-20 10:15:45" itemprop="dateModified" datetime="2021-11-20T10:15:45+08:00">2021-11-20</time>
               
             
           </span>
@@ -531,7 +547,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/笔记/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a></span>
 
                 
                 
@@ -549,7 +565,8 @@
 
           
             <span class="post-meta-divider">|</span>
-            <span class="post-meta-item-icon">
+            <span class="post-meta-item-icon"
+            >
             <i class="fa fa-eye"></i>
              阅读次数： 
             <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
@@ -567,7 +584,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">3.3k</span>
+                <span title="本文字数">3.4k</span>
               
 
               
@@ -601,8 +618,8 @@
       
 
       
-        <h1 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h1><p><a href="https://www.liaoxuefeng.com/wiki/896043488029600/900004111093344" target="_blank" rel="noopener">廖雪峰教程</a></p>
-<p><a href="https://www.runoob.com/git/git-basic-operations.html" target="_blank" rel="noopener">菜鸟教程</a></p>
+        <h1 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h1><p><a target="_blank" rel="noopener" href="https://www.liaoxuefeng.com/wiki/896043488029600/900004111093344">廖雪峰教程</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.runoob.com/git/git-basic-operations.html">菜鸟教程</a></p>
 <h1 id="Git的诞生"><a href="#Git的诞生" class="headerlink" title="Git的诞生"></a>Git的诞生</h1><p>Linux之父Linus花了两周时间自己用C写了一个分布式版本控制系统，这就是Git！</p>
 <h1 id="Git的优点"><a href="#Git的优点" class="headerlink" title="Git的优点"></a>Git的优点</h1><p>GIt是分布式版本控制系统，是程序猿协同合作的利器。跟集中式版本控制系统相比，有如下优势：</p>
 <p>·工作时无需联网。在集中式中，用户需要先从中央服务器下载文件再进行修改，而在分布式中，每个人的电脑都是一个完整的版本库。</p>
@@ -612,9 +629,9 @@
 <h1 id="GIthub"><a href="#GIthub" class="headerlink" title="GIthub"></a>GIthub</h1><p>实际情况往往是这样，找一台电脑充当服务器的角色，每天24小时开机，其他每个人都从这个“服务器”仓库克隆一份到自己的电脑上，并且各自把各自的提交推送到服务器仓库里，也从服务器仓库中拉取别人的提交。</p>
 <p>而github网站就算提供git仓库托管服务的。</p>
 <p>github支持多种协议，给出的仓库url不止一个，默认的<code>git://</code>使用ssh，但也可以使用<code>https</code>等其他协议。</p>
-<p><img src="D:\myblog\备份\images\noteGit\不同协议.png" alt></p>
-<h1 id="Github仓库地址"><a href="#Github仓库地址" class="headerlink" title="Github仓库地址"></a>Github仓库地址</h1><p><img src="D:\myblog\备份\images\noteGit\仓库地址.png" alt></p>
-<p>ssh地址格式：<a href="mailto:`git@github.com" target="_blank" rel="noopener">`git@github.com</a>:[user-name]/[repository-name].git`</p>
+<p><img src="D:\myblog\备份\images\noteGit\不同协议.png" alt=""></p>
+<h1 id="Github仓库地址"><a href="#Github仓库地址" class="headerlink" title="Github仓库地址"></a>Github仓库地址</h1><p><img src="D:\myblog\备份\images\noteGit\仓库地址.png" alt=""></p>
+<p>ssh地址格式：<a href="mailto:`git@github.com">`git@github.com</a>:[user-name]/[repository-name].git`</p>
 <h1 id="Github为何需要SSH-KEY？"><a href="#Github为何需要SSH-KEY？" class="headerlink" title="Github为何需要SSH-KEY？"></a>Github为何需要SSH-KEY？</h1><p>因为GitHub需要识别出你推送的提交确实是你推送的，而不是别人冒充的，而Git支持SSH协议，所以，GitHub只要知道了你的公钥，就可以确认只有你自己才能推送。</p>
 <p>当然，GitHub允许你添加多个Key。假定你有若干电脑，你一会儿在公司提交，一会儿在家里提交，只要把每台电脑的Key都添加到GitHub，就可以在每台电脑上往GitHub推送了。</p>
 <h1 id="Git的局限性"><a href="#Git的局限性" class="headerlink" title="Git的局限性"></a>Git的局限性</h1><p>Git只能记录文本文件的改动：</p>
@@ -626,23 +643,26 @@
 <p>在提交版本的时候，git会将所有的版本串成一条<code>时间线</code>，这条<code>时间线就是一个分支</code>。master分支就是一条时间线，<code>master指向最新的提交</code>。</p>
 <p><code>HEAD指向的是当前分支</code>。</p>
 <p>知道了HEAD和master，系统就知道命令要处理的是哪个分支的哪个提交了。</p>
-<p><img src="D:\myblog\备份\images\noteGit\master&amp;HEAD.png" alt></p>
+<p><img src="D:\myblog\备份\images\noteGit\master&amp;HEAD.png" alt=""></p>
 <h1 id="Git指令"><a href="#Git指令" class="headerlink" title="Git指令"></a>Git指令</h1><h2 id="本地基本指令"><a href="#本地基本指令" class="headerlink" title="本地基本指令"></a>本地基本指令</h2><p>本地仓库初始化：<code>git init</code></p>
 <p>执行完该命令，系统会在当前目录生成一个<code>.git</code>文件夹，该文件夹一般是隐藏的。</p>
 <p>查看隐藏文件：<code>ls -ah</code>。</p>
 <p><code>添加文件</code>到缓冲区：<code>git add .</code>，这个命令是把当前目录的所有文件都添加到缓冲区，也可以指定某个文件。</p>
 <p>将文件<code>提交</code>到仓库：<code>git commit -m &quot;your message&quot;</code>，实际上，就是添加到分支当中。这个命令的参数<code>-m</code>让用户提交时留下能够留下说明。据说在网上有办法让我们使用commit命令时不用提交说明，但是不建议这样做。</p>
-<p><img src="D:\myblog\备份\images\noteGit\add&amp;commit.jpg" alt></p>
+<p><img src="D:\myblog\备份\images\noteGit\add&amp;commit.jpg" alt=""></p>
 <p>在提交之前，查看状态：<code>git status</code></p>
-<p><img src="D:\myblog\备份\images\noteGit\git status.png" alt></p>
+<p><img src="D:\myblog\备份\images\noteGit\git status.png" alt=""></p>
 <p>可以看到，我们修改了’readme.txt’这个文件，同时，在下面一行可以知道，我们未<code>add</code>任何修改。</p>
 <p>查看文件的修改情况：<code>git diff readme.txt</code></p>
-<p><img src="D:\myblog\备份\images\noteGit\git diff.png" alt></p>
+<p><img src="D:\myblog\备份\images\noteGit\git diff.png" alt=""></p>
 <p>个人理解，那个a代表暂存区的文件，b代表工作区的文件。</p>
 <p>再看下面，<code>a</code>的前面有<code>三个-</code>，以及下面有<code>abcdefg</code>，这并不代表对内容删去，只是代表暂存区文件而已，而<code>+</code>代表工作区文件。</p>
 <p>红色代表暂存区文件文本，绿色代表工作区的，对比一下，就可以知道，我们在文本末添加了<code>h</code>。</p>
 <p>若修改都提交了，则将无回显。</p>
 <p>查看版本系统历史记录（顺序：由近到远）：<code>git log</code></p>
+<p>若出现冒号，说明还有更多内容可以查看，按<code>enter</code>继续打印</p>
+<p><img src="D:\myblog\备份\images\noteGit\git回车.png" alt=""></p>
+<p>展开版本间内容的差异：<code>git log -p</code>，看上一张图，从这里我们可以看出，工作区的字符串比暂存区的要短，说明被删除部分文本。</p>
 <p>如果嫌信息太多，可以用：<code>git log --pretty=online</code>，省略作者、日期，但会保留<code>commit id（版本号）</code>和commit message。</p>
 <p>版本回退一次：<code>git reset --hard HEAD^</code></p>
 <p>按版本号回退：<code>git reset --hard commitid</code></p>
@@ -651,7 +671,7 @@
 <p>从版本库中删除某个文件：<code>git rm file</code>，随后，要<code>git commit</code></p>
 <p>若本地误删了文件，可以从版本库中进行恢复：<code>git checkout -- file</code>，<code>git checkout</code>的作用是用版本库里的版本替换工作区的版本。</p>
 <p>删除本地仓库：<code>find . -name &quot;.git&quot; | xargs rm -Rf</code></p>
-<p><a href="https://blog.csdn.net/wq6ylg08/article/details/88789501" target="_blank" rel="noopener">参考资料</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/wq6ylg08/article/details/88789501">参考资料</a></p>
 <h2 id="远程命令"><a href="#远程命令" class="headerlink" title="远程命令"></a>远程命令</h2><p>关联远程库：<code>git remote add origin https://github.com/Zheng-Jay/Zheng-Jay.github.io.git</code></p>
 <p>关联后，远程库的名字就是<code>origin</code>，这是默认叫法。</p>
 <p>git push命令格式：<code>git push 远程主机名 本地分支名:远程分支名</code></p>
@@ -668,7 +688,7 @@
 <p><code>git branch dev</code>+<code>git checkout dev</code></p>
 <p>查看所有分支：<code>git branch</code></p>
 <p>切换到dev分支后，此时再提交文件，将不会影响master分支：</p>
-<p><img src="D:\myblog\备份\images\noteGit\newBranch.png" alt></p>
+<p><img src="D:\myblog\备份\images\noteGit\newBranch.png" alt=""></p>
 <p>git鼓励用户创建新分支完成某个任务，然后再合并分支并删除，这和直接在master分支上工作效果是一样的，但过程更安全（试想如果master分支是由一个10人的团队共同维护的）。</p>
 <p>合并指定分支到当前分支：<code>git merge dev</code></p>
 <p>用该命令进行合并，会显示<code>Fast-forward</code>，该合并模式为<code>快进模式</code>，就是直接将master指向dev的当前提交，速度非常快。</p>
@@ -677,7 +697,7 @@
 <p>创建并切换到新的<code>dev</code>分支：<code>git switch -c dev</code></p>
 <p>直接切换到已有分支：<code>git switch master</code></p>
 <p>其他命令：</p>
-<p><img src="D:\myblog\备份\images\noteGit\分支命令.png" alt></p>
+<p><img src="D:\myblog\备份\images\noteGit\分支命令.png" alt=""></p>
 
       
     </div>
@@ -702,24 +722,6 @@
   </button>
   <div id="qr" style="display: none;">
 
-    
-      
-      
-        
-      
-      <div style="display: inline-block">
-        <img src="/images/reward/wechatpay.png" alt="Jay 微信支付">
-        <p>微信支付</p>
-      </div>
-    
-      
-      
-        
-      
-      <div style="display: inline-block">
-        <img src="/images/reward/alipay.png" alt="Jay 支付宝">
-        <p>支付宝</p>
-      </div>
     
 
   </div>
@@ -767,7 +769,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/笔记/" rel="tag"><i class="fa fa-tag"></i> 笔记</a>
+            <a href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag"><i class="fa fa-tag"></i> 笔记</a>
           
             <a href="/tags/Git/" rel="tag"><i class="fa fa-tag"></i> Git</a>
           
@@ -857,7 +859,9 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="Jay">
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="Jay"/>
             
               <p class="site-author-name" itemprop="name">Jay</p>
               <div class="site-description motion-element" itemprop="description">生活本无意义，需要自己去寻找活着的意义。:)</div>
@@ -868,7 +872,7 @@
               
                 <div class="site-state-item site-state-posts">
                 
-                  <a href="/archives/">
+                  <a href="/archives/%20%7C%7C%20archive">
                 
                     <span class="site-state-item-count">17</span>
                     <span class="site-state-item-name">日志</span>
@@ -882,36 +886,10 @@
                 <div class="site-state-item site-state-categories">
                   
                     
-                      <a href="/categories/">
+                      <a href="/categories/%20%7C%7C%20bookmark">
                     
                   
                     
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
                     
                       
                     
@@ -939,76 +917,10 @@
                 <div class="site-state-item site-state-tags">
                   
                     
-                      <a href="/tags/">
+                      <a href="/tags/%20%7C%7C%20tags">
                     
                   
                     
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
                     
                       
                     
@@ -1098,7 +1010,7 @@
                   
                     
                   
-                  <a href="https://github.com/quellanan" title="GitHub &rarr; https://github.com/quellanan" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  <a href="https://github.com/Zheng-Jay" title="GitHub &rarr; https://github.com/Zheng-Jay" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
                 </span>
               
                 <span class="links-of-author-item">
@@ -1109,7 +1021,7 @@
                   
                     
                   
-                  <a href="https://blog.csdn.net/qq_27790011" title="CSDN &rarr; https://blog.csdn.net/qq_27790011" rel="noopener" target="_blank"><i class="fa fa-fw fa-CSDN"></i>CSDN</a>
+                  <a href="https://blog.csdn.net/Zheng_Jay" title="CSDN &rarr; https://blog.csdn.net/Zheng_Jay" rel="noopener" target="_blank"><i class="fa fa-fw fa-CSDN"></i>CSDN</a>
                 </span>
               
                 <span class="links-of-author-item">
@@ -1120,40 +1032,7 @@
                   
                     
                   
-                  <a href="https://www.cnblogs.com/quellanan/" title="博客园 &rarr; https://www.cnblogs.com/quellanan/" rel="noopener" target="_blank"><i class="fa fa-fw fa-globe"></i>博客园</a>
-                </span>
-              
-                <span class="links-of-author-item">
-                  
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="https://www.jianshu.com/u/50ba1aa097c8" title="简书 &rarr; https://www.jianshu.com/u/50ba1aa097c8" rel="noopener" target="_blank"><i class="fa fa-fw fa-globe"></i>简书</a>
-                </span>
-              
-                <span class="links-of-author-item">
-                  
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="https://juejin.im/user/5bfb4ce9f265da611204b096" title="掘金 &rarr; https://juejin.im/user/5bfb4ce9f265da611204b096" rel="noopener" target="_blank"><i class="fa fa-fw fa-globe"></i>掘金</a>
-                </span>
-              
-                <span class="links-of-author-item">
-                  
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="tencent://message/?uin=1186154608&Site=&menu=yes" title="QQ &rarr; tencent://message/?uin=1186154608&Site=&menu=yes" rel="noopener" target="_blank"><i class="fa fa-fw fa-qq"></i>QQ</a>
+                  <a href="tencent://message/?uin=417941858&Site=&menu=yes" title="QQ &rarr; tencent://message/?uin=417941858&Site=&menu=yes" rel="noopener" target="_blank"><i class="fa fa-fw fa-qq"></i>QQ</a>
                 </span>
               
             </div>
@@ -1200,7 +1079,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#参考教程"><span class="nav-number">1.</span> <span class="nav-text">参考教程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Git的诞生"><span class="nav-number">2.</span> <span class="nav-text">Git的诞生</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Git的优点"><span class="nav-number">3.</span> <span class="nav-text">Git的优点</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#GIthub"><span class="nav-number">4.</span> <span class="nav-text">GIthub</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Github仓库地址"><span class="nav-number">5.</span> <span class="nav-text">Github仓库地址</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Github为何需要SSH-KEY？"><span class="nav-number">6.</span> <span class="nav-text">Github为何需要SSH-KEY？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Git的局限性"><span class="nav-number">7.</span> <span class="nav-text">Git的局限性</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#基本概念"><span class="nav-number">8.</span> <span class="nav-text">基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#工作区"><span class="nav-number">8.1.</span> <span class="nav-text">工作区</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#版本库"><span class="nav-number">8.2.</span> <span class="nav-text">版本库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#master和HEAD"><span class="nav-number">8.3.</span> <span class="nav-text">master和HEAD</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Git指令"><span class="nav-number">9.</span> <span class="nav-text">Git指令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#本地基本指令"><span class="nav-number">9.1.</span> <span class="nav-text">本地基本指令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#远程命令"><span class="nav-number">9.2.</span> <span class="nav-text">远程命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分支创建、查看与切换"><span class="nav-number">9.3.</span> <span class="nav-text">分支创建、查看与切换</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%95%99%E7%A8%8B"><span class="nav-number">1.</span> <span class="nav-text">参考教程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Git%E7%9A%84%E8%AF%9E%E7%94%9F"><span class="nav-number">2.</span> <span class="nav-text">Git的诞生</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Git%E7%9A%84%E4%BC%98%E7%82%B9"><span class="nav-number">3.</span> <span class="nav-text">Git的优点</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#GIthub"><span class="nav-number">4.</span> <span class="nav-text">GIthub</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Github%E4%BB%93%E5%BA%93%E5%9C%B0%E5%9D%80"><span class="nav-number">5.</span> <span class="nav-text">Github仓库地址</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Github%E4%B8%BA%E4%BD%95%E9%9C%80%E8%A6%81SSH-KEY%EF%BC%9F"><span class="nav-number">6.</span> <span class="nav-text">Github为何需要SSH-KEY？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Git%E7%9A%84%E5%B1%80%E9%99%90%E6%80%A7"><span class="nav-number">7.</span> <span class="nav-text">Git的局限性</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-number">8.</span> <span class="nav-text">基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%A5%E4%BD%9C%E5%8C%BA"><span class="nav-number">8.1.</span> <span class="nav-text">工作区</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%89%88%E6%9C%AC%E5%BA%93"><span class="nav-number">8.2.</span> <span class="nav-text">版本库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#master%E5%92%8CHEAD"><span class="nav-number">8.3.</span> <span class="nav-text">master和HEAD</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Git%E6%8C%87%E4%BB%A4"><span class="nav-number">9.</span> <span class="nav-text">Git指令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%AC%E5%9C%B0%E5%9F%BA%E6%9C%AC%E6%8C%87%E4%BB%A4"><span class="nav-number">9.1.</span> <span class="nav-text">本地基本指令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4"><span class="nav-number">9.2.</span> <span class="nav-text">远程命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E6%94%AF%E5%88%9B%E5%BB%BA%E3%80%81%E6%9F%A5%E7%9C%8B%E4%B8%8E%E5%88%87%E6%8D%A2"><span class="nav-number">9.3.</span> <span class="nav-text">分支创建、查看与切换</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1228,11 +1107,11 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" style=" text-align:center;">&copy; 2017 – <span itemprop="copyrightYear">2021</span>
+        <div class="copyright" style=" text-align:center;">&copy; <span itemprop="copyrightYear">2021</span>
   <span class="with-love" id="animate">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Quellanan</span>
+  <span class="author" itemprop="copyrightHolder">ZhengJay</span>
 
   
     <span class="post-meta-divider">|</span>
@@ -1240,12 +1119,9 @@
       <i class="fa fa-area-chart"> 站点字数合计:</i>
     </span>
     
-    <span title="站点总字数">14k</span>
+    <span title="站点总字数">15k</span>
   
   
-  <span class="post-meta-divider">|</span>
-  <a href="http://www.beian.miit.gov.cn" rel="noopener" target="_blank">鄂ICP备20002824号 </a>
-
 </div>
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
@@ -1355,7 +1231,7 @@
       
     
   
-  <script color="255,0,255" opacity="0.7" zindex="-1" count="140" src="//cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-nest@1.0.0/canvas-nest.min.js"></script>
+  <script color='255,0,255' opacity='0.7' zIndex='-1' count='140' src="//cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-nest@1.0.0/canvas-nest.min.js"></script>
 
 
 
@@ -1367,7 +1243,7 @@
 
   
   
-  <script id="ribbon" size="300" alpha="0.1" zindex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  <script id="ribbon" size="300" alpha="0.1" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
 
 
 
@@ -1405,8 +1281,9 @@
   
 
 
-  <script src="/js/schemes/muse.js?v=7.1.1"></script>
+  <script src="/js/affix.js?v=7.1.1"></script>
 
+  <script src="/js/schemes/pisces.js?v=7.1.1"></script>
 
 
 
