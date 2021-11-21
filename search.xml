@@ -428,6 +428,11 @@
 <p>然后输入<code>git add .</code>将修改上传到暂存区.</p>
 <p>再运行<code>git commit -m &#39;del&#39;提交到本地仓库</code></p>
 <p>最后,才是<code>git push origin master</code>把修改提交到origin的master分支.</p>
+<h2 id="上传后远程无变化"><a href="#上传后远程无变化" class="headerlink" title="上传后远程无变化"></a>上传后远程无变化</h2><p>网上说是命令用反了。。。</p>
+<p><a href="https://tieba.baidu.com/p/6040845451"></a></p>
+<blockquote>
+<p>命令反了…是hexo clean, 回车，hexo g -d<br>这才是正确顺序</p>
+</blockquote>
 <h1 id="绑定自定义域名"><a href="#绑定自定义域名" class="headerlink" title="绑定自定义域名"></a>绑定自定义域名</h1><h2 id="购买域名"><a href="#购买域名" class="headerlink" title="购买域名"></a>购买域名</h2><p>github pages给的域名<code>https://username.github.io</code>有点捞,可以上网买个,价格还可以.</p>
 <p>网友推荐<code>godday</code>和<code>阿里云</code>,个人推荐阿里云.</p>
 <p>一是阿里云是国内大厂,既方便,也信得过</p>
