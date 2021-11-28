@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zhengjay.com/"/>
-  <updated>2021-11-15T04:57:47.398Z</updated>
+  <updated>2021-11-24T12:41:26.181Z</updated>
   <id>https://zhengjay.com/</id>
   
   <author>
@@ -15,6 +15,332 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>note正则</title>
+    <link href="https://zhengjay.com/20211124/note%E6%AD%A3%E5%88%99.html"/>
+    <id>https://zhengjay.com/20211124/note正则.html</id>
+    <published>2021-11-24T11:13:07.408Z</published>
+    <updated>2021-11-24T12:41:26.181Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="笔记" scheme="https://zhengjay.com/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="笔记" scheme="https://zhengjay.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="ctf" scheme="https://zhengjay.com/tags/ctf/"/>
+    
+      <category term="正则" scheme="https://zhengjay.com/tags/%E6%AD%A3%E5%88%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>noteSQL</title>
+    <link href="https://zhengjay.com/20211124/noteSQL.html"/>
+    <id>https://zhengjay.com/20211124/noteSQL.html</id>
+    <published>2021-11-24T11:04:05.316Z</published>
+    <updated>2021-11-24T12:41:20.151Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="‘笔记&#39;" scheme="https://zhengjay.com/categories/%E2%80%98%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="笔记" scheme="https://zhengjay.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="ctf" scheme="https://zhengjay.com/tags/ctf/"/>
+    
+      <category term="sql注入" scheme="https://zhengjay.com/tags/sql%E6%B3%A8%E5%85%A5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>建站之路</title>
+    <link href="https://zhengjay.com/20211122/%E5%BB%BA%E7%AB%99%E4%B9%8B%E8%B7%AF.html"/>
+    <id>https://zhengjay.com/20211122/建站之路.html</id>
+    <published>2021-11-22T09:53:09.668Z</published>
+    <updated>2021-11-15T04:57:47.398Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="杂项" scheme="https://zhengjay.com/categories/%E6%9D%82%E9%A1%B9/"/>
+    
+    
+      <category term="建站" scheme="https://zhengjay.com/tags/%E5%BB%BA%E7%AB%99/"/>
+    
+      <category term="hexo" scheme="https://zhengjay.com/tags/hexo/"/>
+    
+      <category term="github pages" scheme="https://zhengjay.com/tags/github-pages/"/>
+    
+      <category term="SSH" scheme="https://zhengjay.com/tags/SSH/"/>
+    
+      <category term="github命令" scheme="https://zhengjay.com/tags/github%E5%91%BD%E4%BB%A4/"/>
+    
+      <category term="绑定域名" scheme="https://zhengjay.com/tags/%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>文章模板</title>
+    <link href="https://zhengjay.com/20211122/note%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7.html"/>
+    <id>https://zhengjay.com/20211122/note开发者工具.html</id>
+    <published>2021-11-22T09:53:09.610Z</published>
+    <updated>2021-11-20T06:20:56.642Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="笔记" scheme="https://zhengjay.com/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="笔记" scheme="https://zhengjay.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="开发者工具" scheme="https://zhengjay.com/tags/%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>notePython</title>
+    <link href="https://zhengjay.com/20211122/notePython.html"/>
+    <id>https://zhengjay.com/20211122/notePython.html</id>
+    <published>2021-11-22T09:53:09.598Z</published>
+    <updated>2021-11-25T14:25:31.393Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="笔记" scheme="https://zhengjay.com/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="笔记" scheme="https://zhengjay.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="Python" scheme="https://zhengjay.com/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>文章模板</title>
+    <link href="https://zhengjay.com/20211122/notePHP.html"/>
+    <id>https://zhengjay.com/20211122/notePHP.html</id>
+    <published>2021-11-22T09:53:09.585Z</published>
+    <updated>2021-11-23T15:28:22.298Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="笔记" scheme="https://zhengjay.com/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="笔记" scheme="https://zhengjay.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="php" scheme="https://zhengjay.com/tags/php/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>noteJava</title>
+    <link href="https://zhengjay.com/20211122/noteJava.html"/>
+    <id>https://zhengjay.com/20211122/noteJava.html</id>
+    <published>2021-11-22T09:53:09.544Z</published>
+    <updated>2021-11-28T08:39:56.252Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="笔记" scheme="https://zhengjay.com/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="笔记" scheme="https://zhengjay.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="Java" scheme="https://zhengjay.com/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>noteGit</title>
+    <link href="https://zhengjay.com/20211122/noteGit.html"/>
+    <id>https://zhengjay.com/20211122/noteGit.html</id>
+    <published>2021-11-22T09:53:09.532Z</published>
+    <updated>2021-11-21T02:34:58.657Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="笔记" scheme="https://zhengjay.com/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="笔记" scheme="https://zhengjay.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="Git" scheme="https://zhengjay.com/tags/Git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>noteCtfCrypto</title>
+    <link href="https://zhengjay.com/20211122/noteCtfCrypto.html"/>
+    <id>https://zhengjay.com/20211122/noteCtfCrypto.html</id>
+    <published>2021-11-22T09:53:09.508Z</published>
+    <updated>2021-11-25T05:32:14.200Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="笔记" scheme="https://zhengjay.com/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="笔记" scheme="https://zhengjay.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="Crypto" scheme="https://zhengjay.com/tags/Crypto/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ctf文件上传</title>
+    <link href="https://zhengjay.com/20211122/ctf%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0.html"/>
+    <id>https://zhengjay.com/20211122/ctf文件上传.html</id>
+    <published>2021-11-22T09:53:09.426Z</published>
+    <updated>2021-11-23T13:59:25.271Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="ctfWeb" scheme="https://zhengjay.com/categories/ctfWeb/"/>
+    
+    
+      <category term="ctf" scheme="https://zhengjay.com/tags/ctf/"/>
+    
+      <category term="web" scheme="https://zhengjay.com/tags/web/"/>
+    
+      <category term="F12开发者工具" scheme="https://zhengjay.com/tags/F12%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>burp suit使用指南</title>
+    <link href="https://zhengjay.com/20211122/burp%20suit%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.html"/>
+    <id>https://zhengjay.com/20211122/burp suit使用指南.html</id>
+    <published>2021-11-22T09:53:09.411Z</published>
+    <updated>2021-11-28T08:48:04.657Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="笔记&#39;" scheme="https://zhengjay.com/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="笔记" scheme="https://zhengjay.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="ctf" scheme="https://zhengjay.com/tags/ctf/"/>
+    
+      <category term="web" scheme="https://zhengjay.com/tags/web/"/>
+    
+      <category term="burp suit" scheme="https://zhengjay.com/tags/burp-suit/"/>
+    
+  </entry>
   
   <entry>
     <title>用Python处理excel数据 xlwt xlrd</title>
@@ -67,42 +393,6 @@
     
     
       <category term="模板" scheme="https://zhengjay.com/tags/%E6%A8%A1%E6%9D%BF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>建站之路</title>
-    <link href="https://zhengjay.com/20211119/%E5%BB%BA%E7%AB%99%E4%B9%8B%E8%B7%AF.html"/>
-    <id>https://zhengjay.com/20211119/建站之路.html</id>
-    <published>2021-11-19T13:28:38.183Z</published>
-    <updated>2021-11-21T02:48:57.957Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="杂项" scheme="https://zhengjay.com/categories/%E6%9D%82%E9%A1%B9/"/>
-    
-    
-      <category term="建站" scheme="https://zhengjay.com/tags/%E5%BB%BA%E7%AB%99/"/>
-    
-      <category term="hexo" scheme="https://zhengjay.com/tags/hexo/"/>
-    
-      <category term="github pages" scheme="https://zhengjay.com/tags/github-pages/"/>
-    
-      <category term="SSH" scheme="https://zhengjay.com/tags/SSH/"/>
-    
-      <category term="github命令" scheme="https://zhengjay.com/tags/github%E5%91%BD%E4%BB%A4/"/>
-    
-      <category term="绑定域名" scheme="https://zhengjay.com/tags/%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D/"/>
     
   </entry>
   
@@ -193,34 +483,6 @@
   </entry>
   
   <entry>
-    <title>notePython</title>
-    <link href="https://zhengjay.com/20211119/notePython.html"/>
-    <id>https://zhengjay.com/20211119/notePython.html</id>
-    <published>2021-11-19T13:28:38.170Z</published>
-    <updated>2021-11-15T04:57:47.397Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="笔记" scheme="https://zhengjay.com/categories/%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="笔记" scheme="https://zhengjay.com/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="Python" scheme="https://zhengjay.com/tags/Python/"/>
-    
-  </entry>
-  
-  <entry>
     <title>noteMarkDown</title>
     <link href="https://zhengjay.com/20211119/noteMarkDown.html"/>
     <id>https://zhengjay.com/20211119/noteMarkDown.html</id>
@@ -273,62 +535,6 @@
       <category term="笔记" scheme="https://zhengjay.com/tags/%E7%AC%94%E8%AE%B0/"/>
     
       <category term="Linux" scheme="https://zhengjay.com/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>noteJava</title>
-    <link href="https://zhengjay.com/20211119/noteJava.html"/>
-    <id>https://zhengjay.com/20211119/noteJava.html</id>
-    <published>2021-11-19T13:28:38.159Z</published>
-    <updated>2021-11-18T14:48:03.786Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="笔记" scheme="https://zhengjay.com/categories/%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="笔记" scheme="https://zhengjay.com/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="Java" scheme="https://zhengjay.com/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>noteGit</title>
-    <link href="https://zhengjay.com/20211119/noteGit.html"/>
-    <id>https://zhengjay.com/20211119/noteGit.html</id>
-    <published>2021-11-19T13:28:38.156Z</published>
-    <updated>2021-11-20T02:15:45.231Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="笔记" scheme="https://zhengjay.com/categories/%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="笔记" scheme="https://zhengjay.com/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="Git" scheme="https://zhengjay.com/tags/Git/"/>
     
   </entry>
   
@@ -387,124 +593,6 @@
       <category term="C" scheme="https://zhengjay.com/tags/C/"/>
     
       <category term="C++" scheme="https://zhengjay.com/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>第一篇博客</title>
-    <link href="https://zhengjay.com/20211119/my-first-blog.html"/>
-    <id>https://zhengjay.com/20211119/my-first-blog.html</id>
-    <published>2021-11-19T13:28:38.144Z</published>
-    <updated>2021-11-15T04:57:47.397Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="随笔" scheme="https://zhengjay.com/categories/%E9%9A%8F%E7%AC%94/"/>
-    
-    
-      <category term="生活" scheme="https://zhengjay.com/tags/%E7%94%9F%E6%B4%BB/"/>
-    
-      <category term="随笔" scheme="https://zhengjay.com/tags/%E9%9A%8F%E7%AC%94/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>it英语</title>
-    <link href="https://zhengjay.com/20211119/it%E8%8B%B1%E8%AF%AD.html"/>
-    <id>https://zhengjay.com/20211119/it英语.html</id>
-    <published>2021-11-19T13:28:38.141Z</published>
-    <updated>2021-11-15T04:57:47.396Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="笔记" scheme="https://zhengjay.com/categories/%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="笔记" scheme="https://zhengjay.com/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="英语" scheme="https://zhengjay.com/tags/%E8%8B%B1%E8%AF%AD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ctf文件上传</title>
-    <link href="https://zhengjay.com/20211119/ctf%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0.html"/>
-    <id>https://zhengjay.com/20211119/ctf文件上传.html</id>
-    <published>2021-11-19T13:28:38.138Z</published>
-    <updated>2021-11-15T15:15:07.616Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="ctfWeb" scheme="https://zhengjay.com/categories/ctfWeb/"/>
-    
-    
-      <category term="ctf" scheme="https://zhengjay.com/tags/ctf/"/>
-    
-      <category term="web" scheme="https://zhengjay.com/tags/web/"/>
-    
-      <category term="F12开发者工具" scheme="https://zhengjay.com/tags/F12%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>burp suit使用指南</title>
-    <link href="https://zhengjay.com/20211119/burp%20suit%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.html"/>
-    <id>https://zhengjay.com/20211119/burp suit使用指南.html</id>
-    <published>2021-11-19T13:28:38.133Z</published>
-    <updated>2021-11-15T15:15:52.837Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="笔记&#39;" scheme="https://zhengjay.com/categories/%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="笔记" scheme="https://zhengjay.com/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="ctf" scheme="https://zhengjay.com/tags/ctf/"/>
-    
-      <category term="web" scheme="https://zhengjay.com/tags/web/"/>
-    
-      <category term="burp suit" scheme="https://zhengjay.com/tags/burp-suit/"/>
     
   </entry>
   

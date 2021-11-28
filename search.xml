@@ -2,14 +2,14 @@
 <search>
   <entry>
     <title>burp suit使用指南</title>
-    <url>/20211119/burp%20suit%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.html</url>
+    <url>/20211122/burp%20suit%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="burp-suit"><a href="#burp-suit" class="headerlink" title="burp suit"></a>burp suit</h1><h2 id="使用前提"><a href="#使用前提" class="headerlink" title="使用前提"></a>使用前提</h2><p><code>开代理</code></p>
 <h2 id="发送get"><a href="#发送get" class="headerlink" title="发送get"></a>发送get</h2><p>修改请求类型，加入参数。</p>
-<p>图片</p>
+<p><img src="../../../备份/images/burp suit使用指南/burpsuit_Get.png" alt=""></p>
 <h2 id="发送POST"><a href="#发送POST" class="headerlink" title="发送POST"></a>发送POST</h2><p>修改请求类型，加入<code>Content-Type: application/x-www-form-urlencoded</code>。</p>
 <p>然后再<code>空一行</code>，再加入参数。</p>
 <p>Conent-Type:请求体中的内容类型，在上述参数中，代表请求的内容将会使用url编码。</p>
-<p>图片</p>
+<p><img src="../../../备份/images/burp suit使用指南/burpsuit_Post.png" alt=""></p>
 <p>特别注意：无论是发送get请求，还是post请求，<code>报文的最后都要空两行</code>！</p>
 ]]></content>
       <categories>
@@ -39,12 +39,21 @@
   </entry>
   <entry>
     <title>ctf文件上传</title>
-    <url>/20211119/ctf%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0.html</url>
+    <url>/20211122/ctf%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="客户端校验"><a href="#客户端校验" class="headerlink" title="客户端校验"></a>客户端校验</h1><p>最简单的文件校验是<code>本地js校验</code>，一般都是要求只能上传jpg，png，gif<code>图片格式</code>：</p>
 <p><img src="https://i.loli.net/2021/11/15/lhFPZ1RdmijMBab.jpg" alt="本地校验.jpg"></p>
 <p>应对措施：在本地<code>禁用js</code>。</p>
 <p><img src="https://i.loli.net/2021/11/15/ib1trSMOZ2sVvH3.jpg" alt="本地禁用js.jpg"></p>
 <h1 id="服务端校验"><a href="#服务端校验" class="headerlink" title="服务端校验"></a>服务端校验</h1><p>服务端校验比较棘手一点。</p>
+<h2 id="黑名单"><a href="#黑名单" class="headerlink" title="黑名单"></a>黑名单</h2><h3 id="常用php函数"><a href="#常用php函数" class="headerlink" title="常用php函数"></a>常用php函数</h3><h4 id="trim"><a href="#trim" class="headerlink" title="trim()"></a>trim()</h4><p><code>trim(string,charlist)</code>移除字符串两侧的字符,ltrim()和rtrim()则分别是移除字符串左右侧的。</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="variable">$str</span> = <span class="string">&quot;Hello World!&quot;</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="variable">$str</span> . PHP_EOL;</span><br><span class="line"><span class="keyword">echo</span> trim(<span class="variable">$str</span>,<span class="string">&quot;Hed!&quot;</span>);</span><br><span class="line"><span class="meta">?&gt;</span></span><br><span class="line"><span class="comment">#Hello World!</span></span><br><span class="line"><span class="comment">#llo Worl</span></span><br></pre></td></tr></table></figure>
+<h4 id="strrchr"><a href="#strrchr" class="headerlink" title="strrchr()"></a>strrchr()</h4><p><code>strrchr(string,char)</code>，该函数查找字符串在另一个字符串中最后一次出现的位置，并返回从该字符串开始到末尾的字符串。</p>
+<h4 id="str-ireplace"><a href="#str-ireplace" class="headerlink" title="str_ireplace()"></a>str_ireplace()</h4><p><code>str_ireplace(find,replace,string,count)</code>，该函数替换字符串中的一些字符（不区分大小写）。</p>
+<h3 id="初级"><a href="#初级" class="headerlink" title="初级"></a>初级</h3><p><a href="https://blog.csdn.net/weixin_42250835/article/details/119444097?utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_ecpm_v1~rank_v31_ecpm-1-119444097.pc_agg_new_rank&amp;utm_term=%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E5%90%8E%E7%BC%80%E9%BB%91%E5%90%8D%E5%8D%95&amp;spm=1000.2123.3001.4430">修改后缀绕过</a></p>
+<p>文件的修改不用在本地修改，抓包修改即可。</p>
+<h3 id="中级"><a href="#中级" class="headerlink" title="中级"></a>中级</h3><p>若把大小写、空格、点等都过滤了，则考虑其他办法。</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="variable">$file_ext</span> = str_ireplace(<span class="variable">$blacklist</span>, <span class="string">&quot;&quot;</span>, <span class="variable">$file_ext</span>);</span><br></pre></td></tr></table></figure>
+<p><code>str_ireplace()</code>只会替换一次，所以可以构造<code>a.pphphp</code>文件名，执行后变为<code>a.php</code>。</p>
 <h2 id="MIME类型校验"><a href="#MIME类型校验" class="headerlink" title="MIME类型校验"></a>MIME类型校验</h2><p>虽然我们在客户端同过禁用js上传了文件，但服务端还会再对文件类型进行校验，并且校验的是<code>MIME</code>。</p>
 <p><img src="https://i.loli.net/2021/11/15/WkGHwtmN9fFpuzc.jpg" alt="MIME校验.jpg"></p>
 <p>我们在开发者工具中，虽然看到文件发送成功:</p>
@@ -129,7 +138,7 @@
   </entry>
   <entry>
     <title>noteGit</title>
-    <url>/20211119/noteGit.html</url>
+    <url>/20211122/noteGit.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h1><p><a href="https://www.liaoxuefeng.com/wiki/896043488029600/900004111093344">廖雪峰教程</a></p>
 <p><a href="https://www.runoob.com/git/git-basic-operations.html">菜鸟教程</a></p>
 <h1 id="Git的诞生"><a href="#Git的诞生" class="headerlink" title="Git的诞生"></a>Git的诞生</h1><p>Linux之父Linus花了两周时间自己用C写了一个分布式版本控制系统，这就是Git！</p>
@@ -141,7 +150,7 @@
 <h1 id="GIthub"><a href="#GIthub" class="headerlink" title="GIthub"></a>GIthub</h1><p>实际情况往往是这样，找一台电脑充当服务器的角色，每天24小时开机，其他每个人都从这个“服务器”仓库克隆一份到自己的电脑上，并且各自把各自的提交推送到服务器仓库里，也从服务器仓库中拉取别人的提交。</p>
 <p>而github网站就算提供git仓库托管服务的。</p>
 <p>github支持多种协议，给出的仓库url不止一个，默认的<code>git://</code>使用ssh，但也可以使用<code>https</code>等其他协议。</p>
-<p><img src="D:\myblog\备份\images\noteGit\不同协议.png" alt=""></p>
+<p><img src="../../../备份/images/noteGit/不同协议.png" alt=""></p>
 <h1 id="Github仓库地址"><a href="#Github仓库地址" class="headerlink" title="Github仓库地址"></a>Github仓库地址</h1><p><img src="D:\myblog\备份\images\noteGit\仓库地址.png" alt=""></p>
 <p>ssh地址格式：<a href="mailto:`git@github.com">`git@github.com</a>:[user-name]/[repository-name].git`</p>
 <h1 id="Github为何需要SSH-KEY？"><a href="#Github为何需要SSH-KEY？" class="headerlink" title="Github为何需要SSH-KEY？"></a>Github为何需要SSH-KEY？</h1><p>因为GitHub需要识别出你推送的提交确实是你推送的，而不是别人冒充的，而Git支持SSH协议，所以，GitHub只要知道了你的公钥，就可以确认只有你自己才能推送。</p>
@@ -172,9 +181,6 @@
 <p>红色代表暂存区文件文本，绿色代表工作区的，对比一下，就可以知道，我们在文本末添加了<code>h</code>。</p>
 <p>若修改都提交了，则将无回显。</p>
 <p>查看版本系统历史记录（顺序：由近到远）：<code>git log</code></p>
-<p>若出现冒号，说明还有更多内容可以查看，按<code>enter</code>继续打印</p>
-<p><img src="D:\myblog\备份\images\noteGit\git回车.png" alt=""></p>
-<p>展开版本间内容的差异：<code>git log -p</code>，看上一张图，从这里我们可以看出，工作区的字符串比暂存区的要短，说明被删除部分文本。</p>
 <p>如果嫌信息太多，可以用：<code>git log --pretty=online</code>，省略作者、日期，但会保留<code>commit id（版本号）</code>和commit message。</p>
 <p>版本回退一次：<code>git reset --hard HEAD^</code></p>
 <p>按版本号回退：<code>git reset --hard commitid</code></p>
@@ -221,7 +227,7 @@
   </entry>
   <entry>
     <title>noteJava</title>
-    <url>/20211119/noteJava.html</url>
+    <url>/20211122/noteJava.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="单引号和双引号"><a href="#单引号和双引号" class="headerlink" title="单引号和双引号"></a>单引号和双引号</h1><p>单引号的数据是char类型，双引号是String数据。</p>
 <p>用单引号的时候，有时会遇到这种奇怪的情况：</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line">System.out.println(<span class="number">4</span> + <span class="string">&quot;,&quot;</span>);</span><br><span class="line">System.out.println(<span class="number">4</span> + <span class="string">&#x27;,&#x27;</span>);</span><br><span class="line">System.out.println(<span class="number">3</span> + <span class="string">&#x27;,&#x27;</span>);</span><br></pre></td></tr></table></figure>
@@ -229,6 +235,72 @@
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">4,</span><br><span class="line">48</span><br><span class="line">47</span><br></pre></td></tr></table></figure>
 <h1 id="无穷大"><a href="#无穷大" class="headerlink" title="无穷大"></a>无穷大</h1><p><a href="https://zhidao.baidu.com/question/327948017.html">参考资料</a></p>
 <p>整数的：<code>Integer.MAX_VALUE</code></p>
+<h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><h2 id="系统数组"><a href="#系统数组" class="headerlink" title="系统数组"></a>系统数组</h2><p>定义：数组是指一组数据的<code>集合</code>，数组中的每个数据被称作<code>元素</code>。在数组中，可以存放<code>任意类型</code>的元素，但同一数组里只能存放<code>同一类型</code>的元素。</p>
+<p>数组类型：int、String、Object</p>
+<p>分类：一维数组和多维数组。</p>
+<p>局限：数组的长度在定义的时候就确定了。</p>
+<p>定义数组的语法格式：</p>
+<p><img src="../../../备份/images/noteJava/数组语法格式.png" alt=""></p>
+<p>注意：java的数组元素是放在大括号。</p>
+<p>基本操作：数组的遍历、最值的获取、数组的排序等。</p>
+<h2 id="数组和列表的区别"><a href="#数组和列表的区别" class="headerlink" title="数组和列表的区别"></a>数组和列表的区别</h2><p><a href="https://www.cnblogs.com/yanyufeng/p/9852299.html">参考博客</a></p>
+<p>根据网上的说法，数组和列表有两点不同（这个说法是否适用于所有语言有待考证）：</p>
+<p>1、数组的长度是不可变的，在定义时就已经确定。而列表的长度是可以动态改变的。</p>
+<p>2、数组内存放的元素数据类型必须相同，列表则没有这个硬性要求。</p>
+<h3 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//比较两个数组是否相同</span></span><br><span class="line"><span class="keyword">int</span>[] sCount = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">26</span>];</span><br><span class="line"><span class="keyword">int</span>[] pCount = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">26</span>];</span><br><span class="line"><span class="keyword">if</span> (Arrays.equals(sCount, pCount)) &#123;</span><br><span class="line">         </span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//求最值</span></span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line">Arrays.stream(nums).min().getAsInt();</span><br></pre></td></tr></table></figure>
+<h1 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h1><p><a href="https://www.cnblogs.com/lighten/tag/Java%E4%B9%8B%E9%9B%86%E5%90%88/default.html?page=2">参考资料</a></p>
+<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>集合跟系统数组一样，可以存储任意类型的数据，同时，还能补充系统数组的缺陷，可以动态修改数组长度。集合有很多类，这些类全部放在<code>java.util</code>包中。</p>
+<p><img src="../../../备份/images/noteJava/集合体系核心结构.png" alt=""></p>
+<h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><h3 id="单列集合Collection"><a href="#单列集合Collection" class="headerlink" title="单列集合Collection"></a>单列集合Collection</h3><p>单列集合根接口，用于存储一系列符合某种规则的元素。</p>
+<p>主要方法：</p>
+<p><img src="../../../备份/images/noteJava/collection主要方法.png" alt=""></p>
+<p>Collection集合有两个重要的子接口，分别是List和Set。</p>
+<h4 id="List"><a href="#List" class="headerlink" title="List"></a>List</h4><p>List集合特点：元素有序、可重复。主要实现类：ArrayList和LinkedList。</p>
+<p>List主要方法：</p>
+<p><img src="../../../备份/images/noteJava/List主要方法.png" alt=""></p>
+<h5 id="ArrayList"><a href="#ArrayList" class="headerlink" title="ArrayList"></a>ArrayList</h5><p>特点：在内存中线性存储。</p>
+<p>优点：遍历和查找元素时非常高效。</p>
+<p>缺点：增删操作时，需要移动数组，效率很低。</p>
+<h6 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h6><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//一般这样用，在尖叫号内可指定数据类型</span></span><br><span class="line">List&lt;String&gt; set = <span class="keyword">new</span> ArrayList&lt;String&gt;();</span><br><span class="line"><span class="comment">//也可以这样用：</span></span><br><span class="line">ArrayList list = <span class="keyword">new</span> ArrayList();</span><br><span class="line">list.add(<span class="string">&quot;stu1&quot;</span>);                    </span><br><span class="line">list.add(<span class="string">&quot;stu2&quot;</span>);</span><br><span class="line">System.out.println(<span class="string">&quot;集合的长度：&quot;</span> + list.size()); </span><br><span class="line">System.out.println(<span class="string">&quot;第2个元素是：&quot;</span> + list.get(<span class="number">1</span>));</span><br><span class="line"><span class="comment">//定义二维数组</span></span><br><span class="line">List&lt;List&lt;String&gt;&gt; res = <span class="keyword">new</span> ArrayList&lt;List&lt;String&gt;&gt;();</span><br><span class="line"><span class="comment">//添加数组作为元素</span></span><br><span class="line">List&lt;String&gt; subset = <span class="keyword">new</span> ArrayList&lt;String&gt;();</span><br><span class="line">res.add(subset);</span><br></pre></td></tr></table></figure>
+<h5 id="LinkedList"><a href="#LinkedList" class="headerlink" title="LinkedList"></a>LinkedList</h5><p>特点：在内存中的存储形式是双向循环链表结构，内部包含两个Node类型的first和last属性。</p>
+<p>它的优缺点和ArrayList完全相反。</p>
+<p>优点：增删操作效率高。缺点：遍历和查找效率低。</p>
+<p>增删操作示意图：</p>
+<p><img src="../../../备份/images/noteJava/LinkedList增删操作.png" alt=""></p>
+<p>方法：</p>
+<p><img src="../../../备份/images/noteJava/LinkedList方法1.png" alt=""></p>
+<p><img src="../../../备份/images/noteJava/LinkedList方法2.png" alt=""></p>
+<p>操作参考ArrayList。</p>
+<h5 id="Iterator遍历集合"><a href="#Iterator遍历集合" class="headerlink" title="Iterator遍历集合"></a>Iterator遍历集合</h5><p>定义：Iterator接口是Java集合框架中的一员，主要用于迭代访问（即遍历）Collection中的元素，因此Iterator对象也被称为迭代器。</p>
+<p>实例：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.Iterator;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        ArrayList list = <span class="keyword">new</span> ArrayList();</span><br><span class="line">        list.add(<span class="string">&quot;stu1&quot;</span>);                    </span><br><span class="line">        list.add(<span class="string">&quot;stu2&quot;</span>);</span><br><span class="line"><span class="comment">//    	这种不可以</span></span><br><span class="line"><span class="comment">//      String[] list = &#123;&quot;a&quot;, &quot;b&quot;, &quot;c&quot;&#125;;</span></span><br><span class="line">        Iterator iterator = list.iterator(); </span><br><span class="line">        <span class="keyword">while</span> (iterator.hasNext()) &#123;         </span><br><span class="line">              Object obj = iterator.next();   <span class="comment">// 取出ArrayList集合中的元素</span></span><br><span class="line">              System.out.println(obj);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>工作原理</p>
+<p>Iterator遍历集合时，内部采用指针的形式来跟踪集合中的元素，刚开始，指针指向第一个元素之前，即不指向任意元素，首先调用hasNext()方法，判断有没有下个元素，接着调用next()方法后，索引会往后移一位，指向某个元素并将其返回。</p>
+<p><img src="../../../备份/images/noteJava/Iterator工作原理.png" alt=""></p>
+<h5 id="foreach遍历集合"><a href="#foreach遍历集合" class="headerlink" title="foreach遍历集合"></a>foreach遍历集合</h5><p>foreach循环遍历集合和数组时，只能访问集合中的元素，不能对其中的元素进行修改。</p>
+<h4 id="Set"><a href="#Set" class="headerlink" title="Set"></a>Set</h4><p>特点：元素无序且不重复，主要实现类：HashSet和TreeSet</p>
+<h3 id="双列集合Map"><a href="#双列集合Map" class="headerlink" title="双列集合Map"></a>双列集合Map</h3><h1 id="哈希表Hashtable"><a href="#哈希表Hashtable" class="headerlink" title="哈希表Hashtable"></a>哈希表Hashtable</h1><p><a href="https://www.runoob.com/java/java-hashtable-class.html">菜鸟教程</a></p>
+<h2 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h2><p>Hashtable是原始的java.util的一部分，是一个Dictionary具体的实现，用于存储键值对。</p>
+<p>为什么成为哈希表？因为键会经过哈希处理，得到一个散列码，这个散列码就是存储在该表中值的索引。</p>
+<p>将哈希表作为参数传入函数后，在函数内对哈希表的操作，会影响原哈希表。</p>
+<h1 id="基本操作-1"><a href="#基本操作-1" class="headerlink" title="基本操作"></a>基本操作</h1><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//创建。	</span></span><br><span class="line">Hashtable table1 = <span class="keyword">new</span> Hashtable();</span><br><span class="line"><span class="comment">//存储键值对。</span></span><br><span class="line">table1.put(<span class="string">&quot;key&quot;</span>, <span class="number">1</span>);</span><br><span class="line"><span class="comment">//输入键返回值，若不存在返回null。</span></span><br><span class="line">table1.get(<span class="string">&quot;key&quot;</span>);</span><br><span class="line"><span class="comment">//遍历所有键值对</span></span><br><span class="line">Enumeration keys1 = table1.keys();</span><br><span class="line">String key;</span><br><span class="line"><span class="keyword">while</span>(keys1.hasMoreElements()) &#123;</span><br><span class="line">	key = (String) keys1.nextElement();</span><br><span class="line">	System.out.println(key + <span class="string">&quot;: &quot;</span> + table1.get(ch));</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//对某个键的值进行加1操作（若键原本不存在，则需创建）</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">addToTable</span><span class="params">(Hashtable table, <span class="keyword">char</span> key)</span> </span>&#123;</span><br><span class="line">		Enumeration keys;</span><br><span class="line">		<span class="keyword">char</span> ch;</span><br><span class="line">		<span class="keyword">int</span> value = table.getOrDefault(key, <span class="number">0</span>));</span><br><span class="line">		value ++;</span><br><span class="line">		table.put(key, value);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="与HashMap的区别"><a href="#与HashMap的区别" class="headerlink" title="与HashMap的区别"></a>与HashMap的区别</h2><p><a href="https://blog.csdn.net/yang13563758128/article/details/86655574">详细资料</a></p>
+<blockquote>
+<p>区别:  </p>
+<ul>
+<li><p>1.HashMap是线程不安全的，效率高，JDK1.2版本 </p>
+</li>
+<li><p>Hashtable是线程安全的，效率低，JDK1.0版本 </p>
+</li>
+<li>2.HashMap可以存储null键和null值 </li>
+<li>Hashtable不可以存储null键和null值</li>
+</ul>
+</blockquote>
+<h1 id="Enumeration"><a href="#Enumeration" class="headerlink" title="Enumeration"></a>Enumeration</h1><p><a href="https://www.runoob.com/java/java-enumeration-interface.html">参考资料</a></p>
+<p>该接口可以枚举一个对象集合中的元素。</p>
+<p>现在已经很少用了，基本被迭代器取代了。</p>
+<p>实例见上面。</p>
+<h1 id="遍历字符串中的每一个字符"><a href="#遍历字符串中的每一个字符" class="headerlink" title="遍历字符串中的每一个字符"></a>遍历字符串中的每一个字符</h1><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">String p = <span class="string">&quot;abcd&quot;</span>;		</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; p.length(); i ++) &#123;</span><br><span class="line"><span class="comment">//			遍历每个字符</span></span><br><span class="line">			<span class="keyword">char</span> ch = p.charAt(i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>笔记</category>
@@ -276,12 +348,26 @@
   </entry>
   <entry>
     <title>notePython</title>
-    <url>/20211119/notePython.html</url>
+    <url>/20211122/notePython.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="输出格式化字符串"><a href="#输出格式化字符串" class="headerlink" title="输出格式化字符串"></a>输出格式化字符串</h1><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="https://blog.csdn.net/weixin_30737363/article/details/99632126">https://blog.csdn.net/weixin_30737363/article/details/99632126</a></p>
 <h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>在py3.6新增的功能，<code>print</code>字符串前面加<code>f</code>表示格式化字符串，加f后可以可以在字符串里面使用<code>花括号</code>括起来表示<code>变量和表达式</code>。</p>
 <h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a = <span class="string">&quot;format str&quot;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;a = <span class="subst">&#123;a&#125;</span>&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;a = <span class="subst">&#123;a&#125;</span>&quot;</span>)	<span class="comment">#这里用单引号或双引号都可以，并不影响输出结果。</span></span><br></pre></td></tr></table></figure>
 <h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><h2 id="元组"><a href="#元组" class="headerlink" title="元组"></a>元组</h2><h3 id="概念-1"><a href="#概念-1" class="headerlink" title="概念"></a>概念</h3><p>py中的元组与list类似，不同之处在于元组的<code>元素不能修改</code>。</p>
 <p>元组使用小括号<code>()</code>，列表使用方括号<code>[]</code>。</p>
+<h1 id="json库"><a href="#json库" class="headerlink" title="json库"></a>json库</h1><h2 id="json-loads"><a href="#json-loads" class="headerlink" title="json.loads()"></a>json.loads()</h2><p>用于解码json数据。该函数返回py字段的数据类型。</p>
+<p><img src="D:\myblog\备份\images\notePython\json loads.png" alt=""></p>
+<p>如图，将一个长得像<code>dict</code>的<code>string</code>转换为了<code>dict</code>。</p>
+<h1 id="unicode解码"><a href="#unicode解码" class="headerlink" title="unicode解码"></a>unicode解码</h1><p><a href="https://www.cnblogs.com/technologylife/p/6071787.html"></a></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">str</span> = <span class="string">U&quot;\u5956\u90fd\u6ca1\u62ff\u5230\u5c31\u60f3\u8981flag?&quot;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">str</span>)</span><br></pre></td></tr></table></figure>
+<p>结果：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">奖都没拿到就想要flag?</span><br></pre></td></tr></table></figure>
+<h1 id="字符串方法"><a href="#字符串方法" class="headerlink" title="字符串方法"></a>字符串方法</h1><h2 id="index"><a href="#index" class="headerlink" title="index"></a>index</h2><p>功能：检测子串在主串中的位置，若无，则抛出异常。（在list中也有这个方法）</p>
+<p>格式：</p>
+<blockquote>
+<p>myStr.index(str, beg=0, end=len(string))</p>
+</blockquote>
+<h1 id="用wel安装第三方库"><a href="#用wel安装第三方库" class="headerlink" title="用wel安装第三方库"></a>用wel安装第三方库</h1><p><a href="https://blog.csdn.net/qq_26591517/article/details/79080787">教程</a></p>
+<p><a href="https://www.lfd.uci.edu/~gohlke/pythonlibs/#gmpy">wel下载网站</a></p>
 ]]></content>
       <categories>
         <category>笔记</category>
@@ -356,7 +442,7 @@
   </entry>
   <entry>
     <title>建站之路</title>
-    <url>/20211119/%E5%BB%BA%E7%AB%99%E4%B9%8B%E8%B7%AF.html</url>
+    <url>/20211122/%E5%BB%BA%E7%AB%99%E4%B9%8B%E8%B7%AF.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>为了搭建个人博客，在网上查阅了大量的资料，遇到了许多没有用过的技术或工具，一些是之前用过但是不熟练的，像git。在这期间,踩了不少坑,绕了许多弯,终于在第三天，完成了个站的创建！<a href="http://zhengjay.com">点击查看效果</a></p>
 <h1 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h1><p><a href="https://www.cnblogs.com/quellanan/p/11613109.html">教程1,内附作者已配置好的主题源码</a></p>
 <p>若clone作者的源码,好像得在目录输入<code>npm install</code></p>
@@ -428,11 +514,6 @@
 <p>然后输入<code>git add .</code>将修改上传到暂存区.</p>
 <p>再运行<code>git commit -m &#39;del&#39;提交到本地仓库</code></p>
 <p>最后,才是<code>git push origin master</code>把修改提交到origin的master分支.</p>
-<h2 id="上传后远程无变化"><a href="#上传后远程无变化" class="headerlink" title="上传后远程无变化"></a>上传后远程无变化</h2><p>网上说是命令用反了。。。</p>
-<p><a href="https://tieba.baidu.com/p/6040845451"></a></p>
-<blockquote>
-<p>命令反了…是hexo clean, 回车，hexo g -d<br>这才是正确顺序</p>
-</blockquote>
 <h1 id="绑定自定义域名"><a href="#绑定自定义域名" class="headerlink" title="绑定自定义域名"></a>绑定自定义域名</h1><h2 id="购买域名"><a href="#购买域名" class="headerlink" title="购买域名"></a>购买域名</h2><p>github pages给的域名<code>https://username.github.io</code>有点捞,可以上网买个,价格还可以.</p>
 <p>网友推荐<code>godday</code>和<code>阿里云</code>,个人推荐阿里云.</p>
 <p>一是阿里云是国内大厂,既方便,也信得过</p>
@@ -529,6 +610,237 @@
       <tags>
         <tag>Python</tag>
         <tag>excel</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>noteCtfCrypto</title>
+    <url>/20211122/noteCtfCrypto.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="RSA"><a href="#RSA" class="headerlink" title="RSA"></a>RSA</h1><p>例子来源于21年新生热身赛</p>
+<h2 id="题目条件"><a href="#题目条件" class="headerlink" title="题目条件"></a>题目条件</h2><p>给了一个309位的n、一个e和一个c。</p>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>要解密c，必须知道d。</p>
+<p>要知道d，必须知道n的欧拉函数。</p>
+<p>要知道n的欧拉函数，必须知道p，q。</p>
+<h2 id="分解n"><a href="#分解n" class="headerlink" title="分解n"></a>分解n</h2><p>爆破分解几乎不可能，尝试去网上找是否有对n的分解。</p>
+<p><a href="http://www.factordb.com/index.php?id=1100000001382063076">FactorDB</a></p>
+<p>这是一个专门收集质质数的网站。</p>
+<p>同过分解，得到p、q。</p>
+<h2 id="计算欧拉函数"><a href="#计算欧拉函数" class="headerlink" title="计算欧拉函数"></a>计算欧拉函数</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">phi = (p - <span class="number">1</span>) * (q - <span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="计算d"><a href="#计算d" class="headerlink" title="计算d"></a>计算d</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> inverse</span><br><span class="line">d = inverse(e, phi)</span><br></pre></td></tr></table></figure>
+<h2 id="解出明文"><a href="#解出明文" class="headerlink" title="解出明文"></a>解出明文</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">m = pow(c, d, n)</span><br></pre></td></tr></table></figure>
+<p>解出来的明文是一串数字字符串，需要进行转换。</p>
+<h2 id="long-to-bytes"><a href="#long-to-bytes" class="headerlink" title="long_to_bytes"></a>long_to_bytes</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> long_to_bytes</span><br><span class="line"><span class="built_in">print</span>(long_to_bytes(m))</span><br></pre></td></tr></table></figure>
+<p>关于<code>long_to_bytes()</code>，网上没有找到资料，vscode对其解释为：</p>
+<blockquote>
+<p>Convert an integer to a byte string.</p>
+</blockquote>
+<p>目前个人的理解是，将解密出来的明文（int）作为参数，该函数将得到一个byte类型的字符串（关于byte可以去notePython查看），该字符串若是ascii编码，可以得到读得懂的信息，如：</p>
+<blockquote>
+<p>b’0x1337 ^ (-1) mod 0x18a39cb09e40671788a6b9221371e3f5455bbde2aff984e491c85f4f3ad309613 = ?’</p>
+</blockquote>
+<h2 id="模拟元"><a href="#模拟元" class="headerlink" title="模拟元"></a>模拟元</h2><p>根据提示，继续操作。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">flag = inverse(<span class="number">0x1337</span>, <span class="number">0x18a39cb09e40671788a6b9221371e3f5455bbde2aff984e491c85f4f3ad309613</span>)</span><br></pre></td></tr></table></figure>
+<p>同样地，得到的是一个int数据，还是调用long_to_bytes()，得到：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">b&#x27;flag&#123;456_easy_rsa_challenge_657&#125;&#x27;</span></span><br></pre></td></tr></table></figure>
+<h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><h3 id="在线分解网站datadb"><a href="#在线分解网站datadb" class="headerlink" title="在线分解网站datadb"></a>在线分解网站datadb</h3><p><a href="http://www.factordb.com/index.php?id=1100000001382063076">在线分解网站datadb</a></p>
+<h3 id="yafu"><a href="#yafu" class="headerlink" title="yafu"></a>yafu</h3><p><a href="https://blog.csdn.net/LYJ20010728/article/details/110354004">参考资料</a></p>
+<p>该工具似乎解密100位左右的比较快。</p>
+<p>路径已加入环境变量，直接在命令行输入<code>yafu-x64</code>即可进入程序，输入<code>factor()</code>进行分解。</p>
+<p>若n的位数比较大，将n放在文本文件test.txt中（注意，最后要打个换行符），然后输入</p>
+<p><code>yafu-x64 &quot;factor(@)&quot; -batchfile test.txt</code></p>
+<h1 id="LCG"><a href="#LCG" class="headerlink" title="LCG"></a>LCG</h1><h2 id="概念-amp-加密算法"><a href="#概念-amp-加密算法" class="headerlink" title="概念&amp;加密算法"></a>概念&amp;加密算法</h2><p>LCG(Linear Congruential Generator, 线性同余方法)是应用广泛的<code>伪随机数生成算法</code>，递归公式：</p>
+<p><code>Xn+1=(aXn+b)modn（a、b、n为参数）</code></p>
+<p>将某一个秘密数字（种子，在ctf中是flag）设置为初始值X0，然后再递归地求出其他伪随机数。</p>
+<p>这个算法其实就是嵌套地计算<code>仿射密码而已</code>。</p>
+<h2 id="解密算法"><a href="#解密算法" class="headerlink" title="解密算法"></a>解密算法</h2><p><code>Xn−1=a−1(Xn−b)modn</code></p>
+<p>所以，得先求出a的逆元，这个容易：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> inverse</span><br><span class="line">r = inverse(a, n)</span><br></pre></td></tr></table></figure>
+<p>然后，再写个循环即可，已写成py脚本保存。</p>
+<h2 id="用C进行更快地破解"><a href="#用C进行更快地破解" class="headerlink" title="用C进行更快地破解"></a>用C进行更快地破解</h2><p>循环的次数达到2 ** 30 + 1，由于py的运行速度慢，因此有必要写个C来跑。</p>
+<p><a href="https://github.com/xf1les/2019JNUCTF/blob/master/Crypto/lincoln/writeup/solve.c">代码</a></p>
+<p>C用到一个叫<code>GMP</code>的开源运算库：<a href="https://gmplib.org/">官网</a></p>
+<h1 id="一些方法"><a href="#一些方法" class="headerlink" title="一些方法"></a>一些方法</h1><h2 id="int-from-bytes"><a href="#int-from-bytes" class="headerlink" title="int.from_bytes"></a>int.from_bytes</h2><p><a href="https://blog.csdn.net/aic1999/article/details/80102433/">https://blog.csdn.net/aic1999/article/details/80102433/</a></p>
+<p>将字节串转换为int类型。</p>
+<p>实例：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="built_in">ord</span>(<span class="string">&#x27;1&#x27;</span>))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">int</span>.from_bytes(<span class="string">b&#x27;2&#x27;</span>, byteorder=<span class="string">&#x27;big&#x27;</span>, signed=<span class="literal">False</span>))</span><br><span class="line"><span class="comment">#49</span></span><br><span class="line"><span class="comment">#50</span></span><br></pre></td></tr></table></figure>
+<p>推测这里的<code>b&#39;2&#39;</code>代表用acsii编码的’2’的字节。</p>
+<h2 id="str-endswith"><a href="#str-endswith" class="headerlink" title="str.endswith"></a>str.endswith</h2><p>vscode:</p>
+<blockquote>
+<p>(method) endswith: (<strong>suffix: str | Tuple[str, …], </strong>start: SupportsIndex | None = …, __end: SupportsIndex | None = …) -&gt; bool</p>
+<hr>
+<p>S.endswith(suffix[, start[, end]]) -&gt; bool</p>
+<p>Return True if S ends with the specified suffix, False otherwise. With optional start, test S beginning at that position. With optional end, stop comparing S at that position. suffix can also be a tuple of strings to try.</p>
+</blockquote>
+<p>即判断字符串的结尾是否是给定的参数，是则返回true。</p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+        <tag>Crypto</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>文章模板</title>
+    <url>/20211122/notePHP.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p><a href="https://www.php.net/manual/zh/language.operators.array.php">官方教程</a></p>
+<h1 id="substr"><a href="#substr" class="headerlink" title="substr"></a>substr</h1><p>sub，有替补、替代、或附属的意思。这个函数的作用是返回字符串的一部分，也就是返回一个<code>子串</code>。</p>
+<p>格式：<code>substr(string, start, length)</code></p>
+<p>即，string[start]开始（包含0），返回一个长度为length的子串。</p>
+<h1 id="爆破seed"><a href="#爆破seed" class="headerlink" title="爆破seed"></a>爆破seed</h1><p>根据生成的已有数字序列，爆破seed。</p>
+<p><a href="https://www.freebuf.com/column/205240.html">教程</a></p>
+<h2 id="安装工具"><a href="#安装工具" class="headerlink" title="安装工具"></a>安装工具</h2><p><a href="https://www.openwall.com/php_mt_seed/">工具</a></p>
+<p>在linux中直接在目录下输入<code>make</code>即可生成可执行文件。</p>
+<h2 id="爆破的方法"><a href="#爆破的方法" class="headerlink" title="爆破的方法"></a>爆破的方法</h2><p>有两种，第一种是根据一串int来进行爆破，未遇到，另一种是用许多由4个数字组成一组的字符串进行爆破。</p>
+<p>格式：前两个数字是随机数的结果区间，若生成的是一个确定的数，则这两个数相同，后面两个数是生成时使用的区间，注意，这四个数必须用空格隔开。</p>
+<h2 id="ctf实例"><a href="#ctf实例" class="headerlink" title="ctf实例"></a>ctf实例</h2><p>该例题是21年新生杯的热身赛题目：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">header(<span class="string">&quot;Content-Type: text/html;charset=utf-8&quot;</span>);</span><br><span class="line">session_start();</span><br><span class="line"><span class="variable">$str</span> = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line"><span class="variable">$all_alpha</span> = <span class="string">&quot;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789&quot;</span>;</span><br><span class="line"><span class="keyword">if</span>(!<span class="keyword">isset</span>(<span class="variable">$_SESSION</span>[<span class="string">&#x27;random_num&#x27;</span>]))&#123;</span><br><span class="line">    <span class="variable">$_SESSION</span>[<span class="string">&#x27;random_num&#x27;</span>]=rand(<span class="number">0</span>,<span class="number">99999999999</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">mt_srand(<span class="variable">$_SESSION</span>[<span class="string">&#x27;random_num&#x27;</span>]);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="variable">$flag_len</span> = <span class="number">30</span>;</span><br><span class="line"><span class="keyword">for</span> ( <span class="variable">$i</span> = <span class="number">0</span>; <span class="variable">$i</span> &lt; <span class="variable">$flag_len</span>; <span class="variable">$i</span>++ )&#123;</span><br><span class="line">    <span class="variable">$str</span>.=substr(<span class="variable">$all_alpha</span>, mt_rand(<span class="number">0</span>, strlen(<span class="variable">$all_alpha</span>) - <span class="number">1</span>), <span class="number">1</span>);       </span><br><span class="line">&#125;</span><br><span class="line"><span class="variable">$flag_show</span> = substr(<span class="variable">$str</span>, <span class="number">0</span>, <span class="number">11</span>);</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;&lt;p&gt;&quot;</span>.<span class="string">&#x27;我偷看到了张三的一部分flag:&#x27;</span>.<span class="variable">$flag_show</span>.<span class="string">&quot;&lt;/p&gt;&quot;</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;<span class="subst">$str</span>&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<p>根据生成的序列，编写py脚本，获得数字在表中的索引：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">all_alpha = <span class="string">&quot;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789&quot;</span></span><br><span class="line">myStr = <span class="string">&quot;8q4yXlCThvl&quot;</span></span><br><span class="line">res = <span class="string">&quot;&quot;</span></span><br><span class="line"><span class="keyword">for</span> i, ele <span class="keyword">in</span> <span class="built_in">enumerate</span>(myStr):</span><br><span class="line">    res += <span class="built_in">str</span>(all_alpha.index(ele)) + <span class="string">&quot; &quot;</span> + <span class="built_in">str</span>(all_alpha.index(ele)) + <span class="string">&quot; &quot;</span> + <span class="string">&quot;0 &quot;</span> + <span class="built_in">str</span>(<span class="built_in">len</span>(all_alpha) - <span class="number">1</span>) + <span class="string">&quot; &quot;</span></span><br><span class="line"><span class="built_in">print</span>(res)</span><br></pre></td></tr></table></figure>
+<p>拿到索引后，再到linux，用命令:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./php_mt_seed 60 60 0 61 16 16 0 61 56 56 0 61 24 24 0 61 49 49 0 61 11 11 0 61 28 28 0 61 45 45 0 61 7 7 0 61 21 21 0 61 11 11 0 61</span><br></pre></td></tr></table></figure>
+<p>结果：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Pattern: EXACT-FROM-62 EXACT-FROM-62 EXACT-FROM-62 EXACT-FROM-62 EXACT-FROM-62 EXACT-FROM-62 EXACT-FROM-62 EXACT-FROM-62 EXACT-FROM-62 EXACT-FROM-62 EXACT-FROM-62</span><br><span class="line">Version: 3.0.7 to 5.2.0</span><br><span class="line">Found 0, trying 0xfc000000 - 0xffffffff, speed 462.6 Mseeds/s </span><br><span class="line">Version: 5.2.1+</span><br><span class="line">Found 0, trying 0xb6000000 - 0xb7ffffff, speed 25.2 Mseeds/s </span><br><span class="line">seed = 0xb6926c12 = 3063049234 (PHP 7.1.0+)</span><br><span class="line">Found 1, trying 0xfe000000 - 0xffffffff, speed 25.4 Mseeds/s </span><br><span class="line">Found 1</span><br></pre></td></tr></table></figure>
+<h1 id="echo"><a href="#echo" class="headerlink" title="echo"></a>echo</h1><p>格式可以用：<code>echo()</code>，但echo其实不是一个<code>函数</code>，可以不带括号，直接用：<code>echo &quot;&quot;;</code></p>
+<p>输出变量格式：<code>echo $param;</code></p>
+<h1 id="die"><a href="#die" class="headerlink" title="die"></a>die</h1><p>格式：<code>die(message)</code></p>
+<p>输出一条消息，停止当前程序，退出脚本。</p>
+<p>若要输出变量的值，格式：<code>die($param)</code></p>
+<p>若要输出<code>var_dump()</code>，格式：<code>die(var_dump($param))</code></p>
+<p>服务端输出的message，跟<code>echo</code>能够返回给客户端。</p>
+<h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><p>在php中，只有数组、字典都是同一种数据结构：<code>array</code></p>
+<h2 id="创建数组"><a href="#创建数组" class="headerlink" title="创建数组"></a>创建数组</h2><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="variable">$myArray</span> = <span class="keyword">array</span>(<span class="string">&quot;first&quot;</span>, <span class="string">&quot;second&quot;</span>, <span class="string">&quot;third&quot;</span>);</span><br><span class="line">var_dump(<span class="variable">$myArray</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">#array(3) &#123; [0]=&gt; string(5) &quot;first&quot; [1]=&gt; string(6) &quot;second&quot; [2]=&gt; string(5) &quot;third&quot; &#125;</span></span><br></pre></td></tr></table></figure>
+<p>虽然没有写明键值对，但系统还是会默认地为它创建键值对。</p>
+<h2 id="指定键值对"><a href="#指定键值对" class="headerlink" title="指定键值对"></a>指定键值对</h2><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="variable">$myArray</span> = <span class="keyword">array</span>(<span class="string">&quot;first&quot;</span> =&gt; <span class="string">&quot;apple&quot;</span>, <span class="string">&quot;second&quot;</span> =&gt; <span class="string">&quot;banana&quot;</span>, <span class="string">&quot;third&quot;</span> =&gt; <span class="string">&quot;tomato&quot;</span>);</span><br><span class="line">var_dump(<span class="variable">$myArray</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">#array(3) &#123; [&quot;first&quot;]=&gt; string(5) &quot;apple&quot; [&quot;second&quot;]=&gt; string(6) &quot;banana&quot; [&quot;third&quot;]=&gt; string(6) &quot;tomato&quot; &#125;</span></span><br></pre></td></tr></table></figure>
+<h2 id="数组的值还是数组"><a href="#数组的值还是数组" class="headerlink" title="数组的值还是数组"></a>数组的值还是数组</h2><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="variable">$b</span> = <span class="keyword">array</span>(<span class="number">1</span> =&gt; <span class="string">&quot;T&quot;</span>, <span class="number">0</span> =&gt;<span class="string">&quot;C&quot;</span>, <span class="number">2</span> =&gt; <span class="string">&quot;F&quot;</span>);</span><br><span class="line"><span class="variable">$post_data</span> = <span class="keyword">array</span>();</span><br><span class="line"><span class="variable">$post_data</span>[<span class="string">&#x27;b&#x27;</span>] = <span class="variable">$b</span>;</span><br></pre></td></tr></table></figure>
+<h1 id="传参"><a href="#传参" class="headerlink" title="传参"></a>传参</h1><p>用py和php都可以传参。</p>
+<h2 id="GET"><a href="#GET" class="headerlink" title="GET"></a>GET</h2><p>get很简单，直接在url的后面添加参数即可。</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="variable">$url</span>=<span class="string">&#x27;http://localhost/test.php?param=%E6%88%91%E7%9A%84&#x27;</span>;</span><br><span class="line"></span><br><span class="line"> <span class="variable">$html</span> = file_get_contents(<span class="variable">$url</span>);</span><br><span class="line"></span><br><span class="line"> <span class="keyword">echo</span> <span class="variable">$html</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="POST"><a href="#POST" class="headerlink" title="POST"></a>POST</h2><p><a href="https://www.cnblogs.com/mumublog/articles/6061233.html">参考资料</a></p>
+<p>post传参可以放在url中，也可以放在body中（即form），但是放在url长度有限，具体区别：</p>
+<p><a href="https://www.zhihu.com/question/64312188">post放在url或body的区别</a></p>
+<p>post比较麻烦，记录其中一种方法：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">send_post</span>(<span class="params"><span class="variable">$url</span>, <span class="variable">$post_data</span></span>) </span>&#123;</span><br><span class="line">  <span class="variable">$postdata</span> = http_build_query(<span class="variable">$post_data</span>);</span><br><span class="line">  <span class="variable">$options</span> = <span class="keyword">array</span>(</span><br><span class="line">    <span class="string">&#x27;http&#x27;</span> =&gt; <span class="keyword">array</span>(</span><br><span class="line">      <span class="string">&#x27;method&#x27;</span> =&gt; <span class="string">&#x27;POST&#x27;</span>,</span><br><span class="line">      <span class="string">&#x27;header&#x27;</span> =&gt; <span class="string">&#x27;Content-type:application/x-www-form-urlencoded&#x27;</span>,</span><br><span class="line">      <span class="string">&#x27;content&#x27;</span> =&gt; <span class="variable">$postdata</span>,</span><br><span class="line">      <span class="string">&#x27;timeout&#x27;</span> =&gt; <span class="number">15</span> * <span class="number">60</span> <span class="comment">// 超时时间（单位:s）</span></span><br><span class="line">    )</span><br><span class="line">  );</span><br><span class="line">  <span class="variable">$context</span> = stream_context_create(<span class="variable">$options</span>);</span><br><span class="line">  <span class="variable">$result</span> = file_get_contents(<span class="variable">$url</span>, <span class="literal">false</span>, <span class="variable">$context</span>);</span><br><span class="line">  <span class="keyword">return</span> <span class="variable">$result</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable">$url</span> = <span class="string">&quot;http://35.229.138.83:16219?num2=9e9&quot;</span>;</span><br><span class="line"><span class="variable">$result</span> = send_post(<span class="variable">$url2</span>, <span class="variable">$post_data</span>);</span><br><span class="line"><span class="keyword">echo</span> <span class="variable">$result</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="GET和POST同时进行"><a href="#GET和POST同时进行" class="headerlink" title="GET和POST同时进行"></a>GET和POST同时进行</h2><p>遇到一道ctf题目，既接收get请求的参数，又接收post请求的参数，对于这种，我们只需要将上面两种传参方式结合起来即可。</p>
+<p>用POST传参的模板，然后在url的后面添加上要用get请求的参数。</p>
+<h1 id="黑魔法"><a href="#黑魔法" class="headerlink" title="黑魔法"></a>黑魔法</h1><p>php是一门弱类型语言，在定义变量的时候不用声明它是什么类型。</p>
+<p>这既给程序员编写代码带来了便利，但也产生了一些绕过，带来了很多安全问题。</p>
+<h2 id="等于绕过"><a href="#等于绕过" class="headerlink" title="等于绕过"></a>等于绕过</h2><h1 id="科学计数"><a href="#科学计数" class="headerlink" title="科学计数"></a>科学计数</h1><p>格式：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="variable">$num2</span> = <span class="number">9e9</span>;</span><br></pre></td></tr></table></figure>
+<p>ctf案例：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="variable">$num1</span> = <span class="number">999999999</span>;</span><br><span class="line"><span class="keyword">if</span> (!(!<span class="keyword">empty</span>(<span class="variable">$_GET</span>[<span class="string">&#x27;num2&#x27;</span>]) &amp;&amp; <span class="variable">$_GET</span>[<span class="string">&#x27;num2&#x27;</span>] &gt; <span class="variable">$num1</span> &amp;&amp; strlen(<span class="variable">$_GET</span>[<span class="string">&#x27;num2&#x27;</span>]) &lt; <span class="number">4</span>)) &#123;</span><br><span class="line">    <span class="keyword">die</span>(<span class="string">&quot;Scientific notation!!!&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这道题，如果用传统的计数方式传参进去，由于脚本限定了<code>$num2</code>长度最大为3，所以肯定不行。</p>
+<p><code>payload:$num2 = 9e9;</code></p>
+<h1 id="md5"><a href="#md5" class="headerlink" title="md5"></a>md5</h1><h2 id="强碰撞"><a href="#强碰撞" class="headerlink" title="强碰撞"></a>强碰撞</h2><p><a href="https://blog.csdn.net/qq_19980431/article/details/83018232">参考资料</a></p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(<span class="keyword">empty</span>(<span class="variable">$_POST</span>[<span class="string">&#x27;md5a&#x27;</span>])||<span class="keyword">empty</span>(<span class="variable">$_POST</span>[<span class="string">&#x27;md5b&#x27;</span>])||is_array(<span class="variable">$_POST</span>[<span class="string">&#x27;md5a&#x27;</span>])||is_array(<span class="variable">$_POST</span>[<span class="string">&#x27;md5b&#x27;</span>])||(<span class="variable">$_POST</span>[<span class="string">&#x27;md5a&#x27;</span>]==<span class="variable">$_POST</span>[<span class="string">&#x27;md5b&#x27;</span>])||!(md5(<span class="variable">$_POST</span>[<span class="string">&#x27;md5a&#x27;</span>]) === md5(<span class="variable">$_POST</span>[<span class="string">&#x27;md5b&#x27;</span>]))) &#123;</span><br><span class="line">    <span class="keyword">die</span>(<span class="string">&quot;no no no&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这种情况下，就只能去找md5相同，但字符串不同的两个字符串了。</p>
+<p>产生方法：</p>
+<p>使用工具<code>fastcol</code>，用法：</p>
+<p><a href="https://www.cnblogs.com/hetianlab/p/14385563.html">参考资料</a></p>
+<p>创建一个文本文件，写入任意的文件内容，命名为ywj.txt （源文件）</p>
+<p>运行fastcoll输出以下参数。-p 是源文件，-o是输出文件</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">fastcoll_v1.0.0.5.exe -p ywj.txt -o 1.txt 2.txt</span><br></pre></td></tr></table></figure>
+<p>产生的两个文本文件里，存放的二进制数据就是我们要的，如果把它直接解码成ascii码，由于存在一些不可打印字符，因此无法直接传参，需要转换为url编码：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line"><span class="function"><span class="keyword">function</span>  <span class="title">readmyfile</span>(<span class="params"><span class="variable">$path</span></span>)</span>&#123;</span><br><span class="line">    <span class="variable">$fh</span> = fopen(<span class="variable">$path</span>, <span class="string">&quot;rb&quot;</span>);</span><br><span class="line">    <span class="variable">$data</span> = fread(<span class="variable">$fh</span>, filesize(<span class="variable">$path</span>));</span><br><span class="line">    fclose(<span class="variable">$fh</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="variable">$data</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;二进制md5加密:  &quot;</span>. md5( (readmyfile(<span class="string">&quot;1.txt&quot;</span>)));</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;\n&quot;</span>;<span class="keyword">echo</span> <span class="string">&quot;\n&quot;</span>;</span><br><span class="line"><span class="keyword">echo</span>  <span class="string">&#x27;url编码: &#x27;</span>. urlencode(readmyfile(<span class="string">&quot;1.txt&quot;</span>));</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;\n&quot;</span>;<span class="keyword">echo</span> <span class="string">&quot;\n&quot;</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&#x27;二进制md5加密: &#x27;</span>.md5( (readmyfile(<span class="string">&quot;2.txt&quot;</span>)));</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;\n&quot;</span>;<span class="keyword">echo</span> <span class="string">&quot;\n&quot;</span>;</span><br><span class="line"><span class="keyword">echo</span>  <span class="string">&#x27;url编码: &#x27;</span>.  urlencode(readmyfile(<span class="string">&quot;2.txt&quot;</span>));</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+<p>这时候，又牵扯出一个问题了，我们经过urlencode的两个字符串，需要在服务端经过一次urldecode()，而服务端只会对放在url种的参数进行urldecode，这样，我们就必须将这两个原本要post的参数放在url中。</p>
+<p>那么，又出现一个问题了，放在url中的参数，如果经过浏览器传参，会被浏览器自动进行一次urlencode，这样我们就经过了两次urlencode，而在服务端只又一次urldecode。</p>
+<p>所以，我们必须绕过浏览器，不让字符串再进行一次urlencode。</p>
+<p>答案是用<code>curl</code></p>
+<p><a href="http://www.ruanyifeng.com/blog/2019/09/curl-reference.html">参考资料</a></p>
+<blockquote>
+<p>curl的-d参数，用于发送post请求的数据体，使用<code>-d</code>参数以后，HTTP 请求会自动加上标头<code>Content-Type : application/x-www-form-urlencoded</code>。并且会自动将请求转为 POST 方法，因此可以省略<code>-X POST</code>。</p>
+</blockquote>
+<p><code>payload：curl -d &#39;b[1]=T&amp;b[0]=C&amp;b[2]=F&#39; -d &#39;md5a=&amp;md5b=&#39; -X POST http://35.229.138.83:16219/?num2=9e9</code></p>
+<p>这里，把post的参数放在-d后面，get参数放在url后面。</p>
+<p>注意：传递的参数为数组，在win不能用，在linux可以用。</p>
+<p>虽然，这里的md5a、md5b参数没有放在url后面，但是<code>Content-Type : application/x-www-form-urlencoded</code>会自动将参数放在url后面。</p>
+<p>md5强碰撞：</p>
+<p><code>a=%af%13%76%70%82%a0%a6%58%cb%3e%23%38%c4%c6%db%8b%60%2c%bb%90%68%a0%2d%e9%47%aa%78%49%6e%0a%c0%c0%31%d3%fb%cb%82%25%92%0d%cf%61%67%64%e8%cd%7d%47%ba%0e%5d%1b%9c%1c%5c%cd%07%2d%f7%a8%2d%1d%bc%5e%2c%06%46%3a%0f%2d%4b%e9%20%1d%29%66%a4%e1%8b%7d%0c%f5%ef%97%b6%ee%48%dd%0e%09%aa%e5%4d%6a%5d%6d%75%77%72%cf%47%16%a2%06%72%71%c9%a1%8f%00%f6%9d%ee%54%27%71%be%c8%c3%8f%93%e3%52%73%73%53%a0%5f%69%ef%c3%3b%ea%ee%70%71%ae%2a%21%c8%44%d7%22%87%9f%be%79%6d%c4%61%a4%08%57%02%82%2a%ef%36%95%da%ee%13%bc%fb%7e%a3%59%45%ef%25%67%3c%e0%27%69%2b%95%77%b8%cd%dc%4f%de%73%24%e8%ab%66%74%d2%8c%68%06%80%0c%dd%74%ae%31%05%d1%15%7d%c4%5e%bc%0b%0f%21%23%a4%96%7c%17%12%d1%2b%b3%10%b7%37%60%68%d7%cb%35%5a%54%97%08%0d%54%78%49%d0%93%c3%b3%fd%1f%0b%35%11%9d%96%1d%ba%64%e0%86%ad%ef%52%98%2d%84%12%77%bb%ab%e8%64%da%a3%65%55%5d%d5%76%55%57%46%6c%89%c9%df%b2%3c%85%97%1e%f6%38%66%c9%17%22%e7%ea%c9%f5%d2%e0%14%d8%35%4f%0a%5c%34%d3%73%a5%98%f7%66%72%aa%43%e3%bd%a2%cd%62%fd%69%1d%34%30%57%52%ab%41%b1%91%65%f2%30%7f%cf%c6%a1%8c%fb%dc%c4%8f%61%a5%93%40%1a%13%d1%09%c5%e0%f7%87%5f%48%e7%d7%b3%62%04%a7%c4%cb%fd%f4%ff%cf%3b%74%28%1c%96%8e%09%73%3a%9b%a6%2f%ed%b7%99%d5%b9%05%39%95%ab</code></p>
+<p><code>b=%af%13%76%70%82%a0%a6%58%cb%3e%23%38%c4%c6%db%8b%60%2c%bb%90%68%a0%2d%e9%47%aa%78%49%6e%0a%c0%c0%31%d3%fb%cb%82%25%92%0d%cf%61%67%64%e8%cd%7d%47%ba%0e%5d%1b%9c%1c%5c%cd%07%2d%f7%a8%2d%1d%bc%5e%2c%06%46%3a%0f%2d%4b%e9%20%1d%29%66%a4%e1%8b%7d%0c%f5%ef%97%b6%ee%48%dd%0e%09%aa%e5%4d%6a%5d%6d%75%77%72%cf%47%16%a2%06%72%71%c9%a1%8f%00%f6%9d%ee%54%27%71%be%c8%c3%8f%93%e3%52%73%73%53%a0%5f%69%ef%c3%3b%ea%ee%70%71%ae%2a%21%c8%44%d7%22%87%9f%be%79%6d%c4%61%a4%08%57%02%82%2a%ef%36%95%da%ee%13%bc%fb%7e%a3%59%45%ef%25%67%3c%e0%27%69%2b%95%77%b8%cd%dc%4f%de%73%24%e8%ab%66%74%d2%8c%68%06%80%0c%dd%74%ae%31%05%d1%15%7d%c4%5e%bc%0b%0f%21%23%a4%96%7c%17%12%d1%2b%b3%10%b7%37%60%68%d7%cb%35%5a%54%97%08%0d%54%78%49%d0%93%c3%b3%fd%1f%0b%35%11%9d%96%1d%ba%64%e0%86%ad%ef%52%98%2d%84%12%77%bb%ab%e8%64%da%a3%65%55%5d%d5%76%55%57%46%6c%89%c9%5f%b2%3c%85%97%1e%f6%38%66%c9%17%22%e7%ea%c9%f5%d2%e0%14%d8%35%4f%0a%5c%34%d3%f3%a5%98%f7%66%72%aa%43%e3%bd%a2%cd%62%fd%e9%1d%34%30%57%52%ab%41%b1%91%65%f2%30%7f%cf%c6%a1%8c%fb%dc%c4%8f%61%a5%13%40%1a%13%d1%09%c5%e0%f7%87%5f%48%e7%d7%b3%62%04%a7%c4%cb%fd%f4%ff%cf%3b%74%a8%1b%96%8e%09%73%3a%9b%a6%2f%ed%b7%99%d5%39%05%39%95%ab</code></p>
+<h1 id="url传参-编码"><a href="#url传参-编码" class="headerlink" title="url传参 编码"></a>url传参 编码</h1><h2 id="由来"><a href="#由来" class="headerlink" title="由来"></a>由来</h2><p>HTTP只能传输约定的ASCII字符（即ASCII码值127以内），若要传输其他字符和一些ASCII值在127以内的特殊字符，则需要对其转义——方法是在其十六进制ASCII值前加一个%，注意约定字符也可以编码但是效果一样。URL编码的临界值为%7F（127）。</p>
+<h2 id="编码范围"><a href="#编码范围" class="headerlink" title="编码范围"></a>编码范围</h2><blockquote>
+<p>**RFC3986文档规定，Url中只允许包含英文字母（a-zA-Z）、数字（0-9）、-_.~4个特殊字符以及所有保留字符。</p>
+<p>保留字符：!$&amp;’()*+,;=😕?#[]@</p>
+</blockquote>
+<p>除了上述规定的字符外，其他的字符都要放在url中，都需经过编码。</p>
+<p>若保留字符不是起到特殊作用，则需进行编码转移：</p>
+<p><img src="../../../备份/images/notePHP/url编码字符.png" alt=""></p>
+<p>注意，这里<code>%</code>也进行了编码。</p>
+<h2 id="浏览器自动编码-amp-服务端解码"><a href="#浏览器自动编码-amp-服务端解码" class="headerlink" title="浏览器自动编码&amp;服务端解码"></a>浏览器自动编码&amp;服务端解码</h2><p>但这并不意味着合法字符不存在url编码，7位ascii码对应的url编码就是十六进制前加个”%”，如urlencode(‘a’) = %61，这里’a’的ascii码为97，转换为16进制便为61，这里，严格讲，应该算经过了两次编码，a通过ascii编码为61，再经过url编码为%61。</p>
+<p>据龙哥说，通过url进行传参时，浏览器会自动进行一次urlencode（对%也会进行编码），服务端接收到参数时，apache会进行一次urldecode。</p>
+<h2 id="py脚本对7位ascii码编码"><a href="#py脚本对7位ascii码编码" class="headerlink" title="py脚本对7位ascii码编码"></a>py脚本对7位ascii码编码</h2><p>php urlencode()不会对7位ascii码转url码，用py写了个（听说有第三方库）：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">myStr = <span class="string">&quot;Longlone&quot;</span></span><br><span class="line"></span><br><span class="line">finStr = <span class="string">&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span>(str(hex(<span class="number">111</span>))[<span class="number">2</span>:])</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i in myStr:</span><br><span class="line"></span><br><span class="line">  finStr += <span class="string">&#x27;%&#x27;</span> + str(hex(ord(i)))[<span class="number">2</span>:]</span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span>(finStr)</span><br></pre></td></tr></table></figure>
+<h1 id="数组绕过"><a href="#数组绕过" class="headerlink" title="数组绕过"></a>数组绕过</h1><p><a href="https://www.php.net/manual/zh/language.operators.array.php">参考资料</a></p>
+<p>题目：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="variable">$a</span> = <span class="keyword">array</span>(<span class="string">&quot;C&quot;</span>, <span class="string">&quot;T&quot;</span>, <span class="string">&quot;F&quot;</span>);</span><br><span class="line"><span class="keyword">if</span> (!(<span class="variable">$a</span> == <span class="variable">$_POST</span>[<span class="string">&#x27;b&#x27;</span>] <span class="keyword">and</span> <span class="variable">$a</span> !== <span class="variable">$_POST</span>[<span class="string">&#x27;b&#x27;</span>])) &#123;</span><br><span class="line">    <span class="keyword">die</span>(<span class="string">&quot;maybe you can learn something from https://www.php.net/manual/zh/language.operators.array.php&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这里，要求两个数组相等但不全相等，也就是两个变量必须具有相同的键值对（相等），但是，键值对的顺序或类型不能相等。</p>
+<h1 id="FILES"><a href="#FILES" class="headerlink" title="$_FILES"></a>$_FILES</h1><p><a href="http://c.biancheng.net/view/6187.html">参考资料</a></p>
+<p>$_FILES是一个预定义的数组，用来获取通过post方法上次的文件的相关信息。</p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+        <tag>php</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>noteSQL</title>
+    <url>/20211124/noteSQL.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="常用函数"><a href="#常用函数" class="headerlink" title="常用函数"></a>常用函数</h1><h2 id="database"><a href="#database" class="headerlink" title="database()"></a>database()</h2><p>返回当前数据库名。</p>
+<h2 id="ascii"><a href="#ascii" class="headerlink" title="ascii()"></a>ascii()</h2><p>返回字符的编码。</p>
+<h1 id="盲注"><a href="#盲注" class="headerlink" title="盲注"></a>盲注</h1><h2 id="延时注入（收藏的两个平台都可）"><a href="#延时注入（收藏的两个平台都可）" class="headerlink" title="延时注入（收藏的两个平台都可）"></a>延时注入（收藏的两个平台都可）</h2><p><a href="https://blog.csdn.net/ruigeling/article/details/108672859">参考资料</a></p>
+<p><code>select Score from Scores where id=1 and sleep(1)</code></p>
+<p>结果：</p>
+<p><code>Record Count: 0; Execution Time: 1009ms</code></p>
+<h1 id="闭合"><a href="#闭合" class="headerlink" title="闭合"></a>闭合</h1><p><a href="https://blog.csdn.net/qq_41631806/article/details/105453071">参考资料</a></p>
+]]></content>
+      <categories>
+        <category>‘笔记&#39;</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+        <tag>ctf</tag>
+        <tag>sql注入</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>文章模板</title>
+    <url>/20211122/note%E5%BC%80%E5%8F%91%E8%80%85%E5%B7%A5%E5%85%B7.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p><a href="https://blog.csdn.net/IT_charge/article/details/107184811">参考资料</a></p>
+<p><img src="D:\myblog\备份\images\note开发者工具\Snipaste_2021-11-20_14-09-42.png" alt=""></p>
+<h1 id="Headers"><a href="#Headers" class="headerlink" title="Headers"></a>Headers</h1><p>这部分包含<code>General</code>、<code>Response Headers</code>、<code>Request Headers</code>三部分。</p>
+<h2 id="Response-Headers"><a href="#Response-Headers" class="headerlink" title="Response Headers"></a>Response Headers</h2><p>Response Headers是响应头，这部分的内容是由<code>服务器</code>填写的，里边的<code>date</code>字段是服务器的响应时间。但是，注意，这个时间的后面有<code>GMT</code>，这里的时间是<code>格林尼治时间</code>：</p>
+<p><img src="D:\myblog\备份\images\note开发者工具\response date.png" alt=""></p>
+<p>与北京时间的转换公式：<code>北京时间 = GMT时间 + 8小时</code></p>
+<p>在ctf中，php的<code>time()</code>返回的是当前北京时间的时间戳，若需要根据响应包的时间来生成时间戳，需注意是否要转换为北京时间。</p>
+<p><a href="https://tool.lu/timestamp/">时间戳在线转换工具</a></p>
+<p>已编写时间转时间戳的py脚本。</p>
+<h2 id="Request-Headers"><a href="#Request-Headers" class="headerlink" title="Request Headers"></a>Request Headers</h2><p>这部分内容是由客户端的浏览器填写的，告诉服务器，客户的浏览器支持什么样格式的数据。</p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+        <tag>开发者工具</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>note正则</title>
+    <url>/20211124/note%E6%AD%A3%E5%88%99.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p><a href="https://c.runoob.com/front-end/854/">在线工具</a></p>
+<p>该工具有些语法不支持，如(?R)。</p>
+<h1 id="递归-R"><a href="#递归-R" class="headerlink" title="递归(?R)"></a>递归(?R)</h1><p><a href="https://zhidao.baidu.com/question/1696866624128831108.html">教程</a></p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+        <tag>ctf</tag>
+        <tag>正则</tag>
       </tags>
   </entry>
 </search>

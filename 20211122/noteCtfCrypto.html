@@ -154,30 +154,19 @@
   daovoice('update');
   </script>
 
-  <meta name="description" content="前言为了搭建个人博客，在网上查阅了大量的资料，遇到了许多没有用过的技术或工具，一些是之前用过但是不熟练的，像git。在这期间,踩了不少坑,绕了许多弯,终于在第三天，完成了个站的创建！点击查看效果 参考教程教程1,内附作者已配置好的主题源码 若clone作者的源码,好像得在目录输入npm install 教程2，这篇教程在关于绑定域名那块好像讲错了，建议这块换别的教程看 架构静态网站托管服务:git">
+  <meta name="description" content="RSA例子来源于21年新生热身赛 题目条件给了一个309位的n、一个e和一个c。 思路要解密c，必须知道d。 要知道d，必须知道n的欧拉函数。 要知道n的欧拉函数，必须知道p，q。 分解n爆破分解几乎不可能，尝试去网上找是否有对n的分解。 FactorDB 这是一个专门收集质质数的网站。 同过分解，得到p、q。 计算欧拉函数1phi &#x3D; (p - 1) * (q - 1) 计算d12from Cr">
 <meta property="og:type" content="article">
-<meta property="og:title" content="建站之路">
-<meta property="og:url" content="https://zhengjay.com/20211119/%E5%BB%BA%E7%AB%99%E4%B9%8B%E8%B7%AF.html">
+<meta property="og:title" content="noteCtfCrypto">
+<meta property="og:url" content="https://zhengjay.com/20211122/noteCtfCrypto.html">
 <meta property="og:site_name" content="Jay&#39; s blog">
-<meta property="og:description" content="前言为了搭建个人博客，在网上查阅了大量的资料，遇到了许多没有用过的技术或工具，一些是之前用过但是不熟练的，像git。在这期间,踩了不少坑,绕了许多弯,终于在第三天，完成了个站的创建！点击查看效果 参考教程教程1,内附作者已配置好的主题源码 若clone作者的源码,好像得在目录输入npm install 教程2，这篇教程在关于绑定域名那块好像讲错了，建议这块换别的教程看 架构静态网站托管服务:git">
+<meta property="og:description" content="RSA例子来源于21年新生热身赛 题目条件给了一个309位的n、一个e和一个c。 思路要解密c，必须知道d。 要知道d，必须知道n的欧拉函数。 要知道n的欧拉函数，必须知道p，q。 分解n爆破分解几乎不可能，尝试去网上找是否有对n的分解。 FactorDB 这是一个专门收集质质数的网站。 同过分解，得到p、q。 计算欧拉函数1phi &#x3D; (p - 1) * (q - 1) 计算d12from Cr">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://pic1.58cdn.com.cn/nowater/webim/big/n_v252713e82596a4383bc56158f385fc444.png">
-<meta property="og:image" content="https://pic8.58cdn.com.cn/nowater/webim/big/n_v20d1a24738e604235bd610e48bed80252.png">
-<meta property="og:image" content="https://pic5.58cdn.com.cn/nowater/webim/big/n_v20c5a61a993b24add863d108e1401dcf2.png">
-<meta property="og:image" content="https://pic6.58cdn.com.cn/nowater/webim/big/n_v2df397effa26c4579867a74c2e036e655.png">
-<meta property="og:image" content="https://pic1.58cdn.com.cn/nowater/webim/big/n_v2ddd078dcc6b245be9141fcc906da5830.png">
-<meta property="og:image" content="https://pic2.58cdn.com.cn/nowater/webim/big/n_v2bae32754b10842a1b3173f3c3f3363ad.png">
-<meta property="article:published_time" content="2021-11-19T13:28:38.183Z">
-<meta property="article:modified_time" content="2021-11-21T02:48:57.957Z">
+<meta property="article:published_time" content="2021-11-22T09:53:09.508Z">
+<meta property="article:modified_time" content="2021-11-25T05:32:14.200Z">
 <meta property="article:author" content="Jay">
-<meta property="article:tag" content="建站">
-<meta property="article:tag" content="hexo">
-<meta property="article:tag" content="github pages">
-<meta property="article:tag" content="SSH">
-<meta property="article:tag" content="github命令">
-<meta property="article:tag" content="绑定域名">
+<meta property="article:tag" content="笔记">
+<meta property="article:tag" content="Crypto">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://pic1.58cdn.com.cn/nowater/webim/big/n_v252713e82596a4383bc56158f385fc444.png">
 
 
 
@@ -187,7 +176,7 @@
 
   
   
-  <link rel="canonical" href="https://zhengjay.com/20211119/%E5%BB%BA%E7%AB%99%E4%B9%8B%E8%B7%AF"/>
+  <link rel="canonical" href="https://zhengjay.com/20211122/noteCtfCrypto"/>
 
 
 
@@ -197,7 +186,7 @@
   };
 </script>
 
-  <title>建站之路 | Jay' s blog</title>
+  <title>noteCtfCrypto | Jay' s blog</title>
   
 
 
@@ -471,7 +460,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://zhengjay.com/20211119/%E5%BB%BA%E7%AB%99%E4%B9%8B%E8%B7%AF.html"/>
+    <link itemprop="mainEntityOfPage" href="https://zhengjay.com/20211122/noteCtfCrypto.html"/>
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jay"/>
@@ -488,7 +477,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">建站之路
+          <h2 class="post-title" itemprop="name headline">noteCtfCrypto
 
               
             
@@ -514,7 +503,7 @@
                 
               
 
-              <time title="创建时间：2021-11-19 21:28:38" itemprop="dateCreated datePublished" datetime="2021-11-19T21:28:38+08:00">2021-11-19</time>
+              <time title="创建时间：2021-11-22 17:53:09" itemprop="dateCreated datePublished" datetime="2021-11-22T17:53:09+08:00">2021-11-22</time>
             
 
             
@@ -531,7 +520,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2021-11-21 10:48:57" itemprop="dateModified" datetime="2021-11-21T10:48:57+08:00">2021-11-21</time>
+                <time title="修改时间：2021-11-25 13:32:14" itemprop="dateModified" datetime="2021-11-25T13:32:14+08:00">2021-11-25</time>
               
             
           </span>
@@ -548,7 +537,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E6%9D%82%E9%A1%B9/" itemprop="url" rel="index"><span itemprop="name">杂项</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a></span>
 
                 
                 
@@ -585,7 +574,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">4.8k</span>
+                <span title="本文字数">2.1k</span>
               
 
               
@@ -599,7 +588,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">4 分钟</span>
+                <span title="阅读时长">2 分钟</span>
               
             </div>
           
@@ -619,129 +608,62 @@
       
 
       
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>为了搭建个人博客，在网上查阅了大量的资料，遇到了许多没有用过的技术或工具，一些是之前用过但是不熟练的，像git。在这期间,踩了不少坑,绕了许多弯,终于在第三天，完成了个站的创建！<a href="http://zhengjay.com">点击查看效果</a></p>
-<h1 id="参考教程"><a href="#参考教程" class="headerlink" title="参考教程"></a>参考教程</h1><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/quellanan/p/11613109.html">教程1,内附作者已配置好的主题源码</a></p>
-<p>若clone作者的源码,好像得在目录输入<code>npm install</code></p>
-<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html">教程2，这篇教程在关于绑定域名那块好像讲错了，建议这块换别的教程看</a></p>
-<h1 id="架构"><a href="#架构" class="headerlink" title="架构"></a>架构</h1><p>静态网站托管服务:github pages</p>
-<p>博客模板:<code>hexo</code></p>
-<p>工具:<code>git、node.js</code></p>
-<h2 id="github-pages"><a href="#github-pages" class="headerlink" title="github pages"></a>github pages</h2><p>每一个github用户都能够申请一个<code>username.github.io</code>仓库，该仓库能够用于存放静态文件，任何用户都可以通过<code>https://username.github.io</code>访问你的页面，所以，可以将该功能用于<code>博客托管</code>，省了买云服务器的钱😁。</p>
-<p>不过,既然是github提供的服务,那国内的用户如果没梯子没加速器,访问速度应该挺慢的吧?</p>
-<h2 id="hexo"><a href="#hexo" class="headerlink" title="hexo"></a>hexo</h2><p>一个专门提供<code>博客模板服务</code>的网站,有大量的模板主题可以选择.</p>
-<p>我选择的是 <code>next</code>.</p>
-<h1 id="下载环境"><a href="#下载环境" class="headerlink" title="下载环境"></a>下载环境</h1><h2 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h2><p>git是分布式版本控制系统,通过在本地运行git命令,将本地代码上传到github仓库,或者将仓库拉取到本地.</p>
-<h2 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h2><p>网上的定义是:</p>
+        <h1 id="RSA"><a href="#RSA" class="headerlink" title="RSA"></a>RSA</h1><p>例子来源于21年新生热身赛</p>
+<h2 id="题目条件"><a href="#题目条件" class="headerlink" title="题目条件"></a>题目条件</h2><p>给了一个309位的n、一个e和一个c。</p>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>要解密c，必须知道d。</p>
+<p>要知道d，必须知道n的欧拉函数。</p>
+<p>要知道n的欧拉函数，必须知道p，q。</p>
+<h2 id="分解n"><a href="#分解n" class="headerlink" title="分解n"></a>分解n</h2><p>爆破分解几乎不可能，尝试去网上找是否有对n的分解。</p>
+<p><a target="_blank" rel="noopener" href="http://www.factordb.com/index.php?id=1100000001382063076">FactorDB</a></p>
+<p>这是一个专门收集质质数的网站。</p>
+<p>同过分解，得到p、q。</p>
+<h2 id="计算欧拉函数"><a href="#计算欧拉函数" class="headerlink" title="计算欧拉函数"></a>计算欧拉函数</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">phi = (p - <span class="number">1</span>) * (q - <span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="计算d"><a href="#计算d" class="headerlink" title="计算d"></a>计算d</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> inverse</span><br><span class="line">d = inverse(e, phi)</span><br></pre></td></tr></table></figure>
+<h2 id="解出明文"><a href="#解出明文" class="headerlink" title="解出明文"></a>解出明文</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">m = pow(c, d, n)</span><br></pre></td></tr></table></figure>
+<p>解出来的明文是一串数字字符串，需要进行转换。</p>
+<h2 id="long-to-bytes"><a href="#long-to-bytes" class="headerlink" title="long_to_bytes"></a>long_to_bytes</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> long_to_bytes</span><br><span class="line"><span class="built_in">print</span>(long_to_bytes(m))</span><br></pre></td></tr></table></figure>
+<p>关于<code>long_to_bytes()</code>，网上没有找到资料，vscode对其解释为：</p>
 <blockquote>
-<p>简单的说 Node.js 就是运行在服务端的 JavaScript。</p>
-<p>Node.js 是一个基于Chrome JavaScript 运行时建立的一个平台。</p>
-<p>Node.js是一个事件驱动I/O服务端JavaScript环境，基于Google的V8引擎，V8引擎执行Javascript的速度非常快，性能非常好。</p>
+<p>Convert an integer to a byte string.</p>
 </blockquote>
-<p>之前在写小程序的时候,也用到node.js.</p>
-<p>但说实话,一直都是复制别人的命令来运行,没想过要去弄懂,因为觉得这东西更多的是跟开发有关,我以后又不搞开发😬</p>
-<p>对了,跟node.js经常一块出现的还有<code>npm</code>,这东西是node.js的管理工具,用来安装各种扩展的.</p>
-<p>关于node.js的安装,直接百度查教程就行了.</p>
-<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><p>装完npm后,输入<code>npm install -g hexo</code>即可.</p>
-<h1 id="配置SSH密钥"><a href="#配置SSH密钥" class="headerlink" title="配置SSH密钥"></a>配置SSH密钥</h1><h2 id="什么是SSH"><a href="#什么是SSH" class="headerlink" title="什么是SSH?"></a>什么是SSH?</h2><p>SSH全称Secure Shell,是建立在应用层上的安全协议,能够为通信双方的数据提供加密服务,防止中间人攻击.</p>
-<p>SSH有两种级别的安全验证,一种是基于口令,这种验证安全性不高,另一种是基于密钥.</p>
-<p>在对github仓库进行代码管理前,需要配置SSH密钥,只有本地拥有账户上添加的公钥对应私钥的主机,才有权限管理仓库.</p>
-<h2 id="配置SSH密钥-1"><a href="#配置SSH密钥-1" class="headerlink" title="配置SSH密钥"></a>配置SSH密钥</h2><p>在<code>git bash</code>输入命令<code>ssh-keygen -t rsa -C &quot;邮件地址&quot;</code>.</p>
-<p>该命令将在本地生成rsa的私钥\密钥,还有一个用来记录通信主机公钥的文件:</p>
-<p><img src="https://pic1.58cdn.com.cn/nowater/webim/big/n_v252713e82596a4383bc56158f385fc444.png" alt=""></p>
-<p>然后在github个人首页的setting里,将公钥复制到文本框内保存.</p>
-<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p>首先,配置全局用户名和邮箱:</p>
-<p><code>git config --global user.name &quot;nameVal&quot;</code></p>
-<p><code>git config --global user.email &quot;eamil@qq.com&quot;</code></p>
-<p>输入<code>ssh -T git@github.com</code>,注意:这里不用修改邮箱.</p>
-<h3 id="bug"><a href="#bug" class="headerlink" title="bug"></a>bug</h3><p>在配置过程中,遇到这个bug:</p>
-<p><img src="https://pic8.58cdn.com.cn/nowater/webim/big/n_v20d1a24738e604235bd610e48bed80252.png" alt=""></p>
-<p>原因是在known_hosts里没有添加github的公钥,输入yes添加即可.</p>
-<h1 id="搭建博客"><a href="#搭建博客" class="headerlink" title="搭建博客"></a>搭建博客</h1><h2 id="基础框架"><a href="#基础框架" class="headerlink" title="基础框架"></a>基础框架</h2><p>创建<code>blog</code>文件夹,在该目录打开git bash,输入:</p>
-<p><code>hexo init</code>和<code>npm install</code></p>
-<p>将自动搭建基本框架,这时,就可以本地运行看下效果了</p>
-<p>先来认识一下hexo的基本命令.</p>
-<h2 id="hexo基本命令"><a href="#hexo基本命令" class="headerlink" title="hexo基本命令"></a>hexo基本命令</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;postName&quot; #新建文章</span><br><span class="line">hexo new page &quot;pageName&quot; #新建页面</span><br><span class="line">hexo generate #生成静态页面至public目录</span><br><span class="line">hexo server #开启预览访问端口（默认端口4000，&#x27;ctrl + c&#x27;关闭server）</span><br><span class="line">hexo deploy #部署到GitHub</span><br><span class="line">hexo help  # 查看帮助</span><br><span class="line">hexo version  #查看Hexo的版本</span><br></pre></td></tr></table></figure>
-<p>可缩写为:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo n == hexo new</span><br><span class="line">hexo g == hexo generate</span><br><span class="line">hexo s == hexo server</span><br><span class="line">hexo d == hexo deploy</span><br></pre></td></tr></table></figure>
-<p>组合为:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo s -g #生成并本地预览</span><br><span class="line">hexo d -g #生成并上传</span><br></pre></td></tr></table></figure>
-<h2 id="本地运行"><a href="#本地运行" class="headerlink" title="本地运行"></a>本地运行</h2><p>搭好框架之后,输入<code>hexo s -g</code>并可本地运行,在浏览器中输入localhost:4000查看博客.</p>
-<h2 id="修改主题"><a href="#修改主题" class="headerlink" title="修改主题"></a>修改主题</h2><p>默认的主题比较丑,可以上hexo官网找自己喜欢的主题,然后<code>git clone</code>到blog目录.clone下来后,根据仓库里的<code>readme.md</code>进行修改即可.</p>
-<p>我选择的是<code>next</code></p>
-<p>next主题的配置手册在这:<a target="_blank" rel="noopener" href="http://theme-next.iissnan.com/getting-started.html#sidebar-settings">官方文档</a></p>
-<p>官方的文档并不全,我还找到<a target="_blank" rel="noopener" href="https://blog.csdn.net/nightmare_dimple/article/details/86661502">这份</a></p>
-<h2 id="hexo-bug"><a href="#hexo-bug" class="headerlink" title="hexo bug"></a>hexo bug</h2><p>在运行hexo的时候,遇到bug: The “mode” argument must be integer. Received an instance of Object</p>
-<p>原因:node.js和hexo存在<code>版本适配</code>的关系,<code>将node换成低版本</code>可以解决该问题,如何换?</p>
-<p>下载nvm,专门用来管理node版本的工具,<a target="_blank" rel="noopener" href="https://www.jb51.net/article/202124.htm">具体看这篇教程</a></p>
-<p>其他hexo上的bug,看这篇<a target="_blank" rel="noopener" href="https://blog.csdn.net/as403045314/article/details/101337145">博客</a></p>
-<h1 id="上传到github"><a href="#上传到github" class="headerlink" title="上传到github"></a>上传到github</h1><h2 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h2><p><code>_config.yml</code>是hexo的配置文件,分为站点和主题两种,这里打开站点配置,修改<code>deploy</code>为如下:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line"> type: git</span><br><span class="line"> repository: </span><br><span class="line">   github: git@github.com:username/username.github.io.git</span><br><span class="line"> branch: master</span><br></pre></td></tr></table></figure>
-<h2 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h2><p>上传很简单,输入<code>hexo d</code>即可,以后修改后要上传也是直接运行该命令就行.</p>
-<p>忘了用不用在blog目录先进行git仓库的初始化了,姑且记下来:</p>
-<p>git仓库初始化:<code>git init</code>.</p>
-<p>关联远程仓库:<code>git remote add origin https://github.com/Zheng-Jay/Zheng-Jay.github.io.git</code></p>
-<h2 id="源码备份"><a href="#源码备份" class="headerlink" title="源码备份"></a>源码备份</h2><p><code>hexo d</code>上传的文件好像跟本地文件不太一样,因此有必要进行源码的备份</p>
-<p>在仓库创建save分支</p>
-<p>运行<code>git push origin save</code>,运行前记得先关联远程库.</p>
-<h2 id="仓库文件删除"><a href="#仓库文件删除" class="headerlink" title="仓库文件删除"></a>仓库文件删除</h2><p>顺便记下删除仓库文件的办法,在github只能删除仓库,不能删除某个文件或者文件夹,所以必须先把文件都pull到本地进行删除,再上交(这也太麻烦了吧,泪目).</p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_42152081/article/details/80635777">参考资料</a></p>
-<p>首先,拉取仓库到本地:<code>git pull origin master</code></p>
-<p>在本地进行修改</p>
-<p>然后输入<code>git add .</code>将修改上传到暂存区.</p>
-<p>再运行<code>git commit -m &#39;del&#39;提交到本地仓库</code></p>
-<p>最后,才是<code>git push origin master</code>把修改提交到origin的master分支.</p>
-<h2 id="上传后远程无变化"><a href="#上传后远程无变化" class="headerlink" title="上传后远程无变化"></a>上传后远程无变化</h2><p>网上说是命令用反了。。。</p>
-<p><a target="_blank" rel="noopener" href="https://tieba.baidu.com/p/6040845451"></a></p>
+<p>目前个人的理解是，将解密出来的明文（int）作为参数，该函数将得到一个byte类型的字符串（关于byte可以去notePython查看），该字符串若是ascii编码，可以得到读得懂的信息，如：</p>
 <blockquote>
-<p>命令反了…是hexo clean, 回车，hexo g -d<br>这才是正确顺序</p>
+<p>b’0x1337 ^ (-1) mod 0x18a39cb09e40671788a6b9221371e3f5455bbde2aff984e491c85f4f3ad309613 = ?’</p>
 </blockquote>
-<h1 id="绑定自定义域名"><a href="#绑定自定义域名" class="headerlink" title="绑定自定义域名"></a>绑定自定义域名</h1><h2 id="购买域名"><a href="#购买域名" class="headerlink" title="购买域名"></a>购买域名</h2><p>github pages给的域名<code>https://username.github.io</code>有点捞,可以上网买个,价格还可以.</p>
-<p>网友推荐<code>godday</code>和<code>阿里云</code>,个人推荐阿里云.</p>
-<p>一是阿里云是国内大厂,既方便,也信得过</p>
-<p>二是价格便宜,同样一个域名,在godday要80元/年,而阿里云63元/年,这还用选?</p>
-<h2 id="域名实名制认证"><a href="#域名实名制认证" class="headerlink" title="域名实名制认证"></a>域名实名制认证</h2><p>这应该就是传说中的<code>域名备案</code>吧</p>
-<h2 id="将域名和ip进行绑定"><a href="#将域名和ip进行绑定" class="headerlink" title="将域名和ip进行绑定"></a>将域名和ip进行绑定</h2><p>这里有必要先了解下<code>A记录</code>和<code>CNAME</code>。</p>
-<p>当我们拥有多个域名，并且要让它们都指向同个ip时，我们先将一个域名作为A记录与ip绑定，再让其他域名作为别名（即CNAME）指向A记录的域名上。这样，所有的域名就都指向ip了。</p>
-<p>并且，当我们想要改变这些域名的指向时，只需修改A记录的指向，其他域名也会跟着它一块改变。</p>
-<p>回到将我们买的域名绑定到github pages上，这时，我们需要到购买的云平台进行<code>域名解析配置</code>，将购买的域名作为<code>CNAME</code>，绑定到<code>username.github.io</code>。一共添加两条：</p>
-<p><img src="https://pic5.58cdn.com.cn/nowater/webim/big/n_v20c5a61a993b24add863d108e1401dcf2.png" alt=""></p>
-<p>随便记下前缀的含义：</p>
-<p><img src="https://pic6.58cdn.com.cn/nowater/webim/big/n_v2df397effa26c4579867a74c2e036e655.png" alt=""></p>
-<p>而我们的<code>username.github.io</code>就将作为<code>A记录</code>，指向我们的blog。</p>
-<p>当然，我们还要到github进行配置，为什么？</p>
-<p>假如不用在github进行配置，那么试想，是不是任何人都能将他的域名随意地指向你的域名了呢？也就是说，域名的绑定需要<code>双方同意</code>。</p>
-<p>这个时候，需要到github仓库的settings里的<code>pages</code>输入购买的域名，系统将自动生成<code>CNAME</code>文件夹在根目录，完成域名的绑定！</p>
-<h1 id="写文章"><a href="#写文章" class="headerlink" title="写文章"></a>写文章</h1><p>文章是用<code>markdown</code>下的,用的编辑器是<code>typora</code>,要写文章,在blog文件夹输入<code>hexo new &quot;title&quot;</code>即可在<code>source/_posts</code>创建文章.</p>
-<p>创建的文章带有模板,不过这里有个问题,在模板写入文章的标签,在编译的时候会报错.</p>
-<p>图个方便,就复制了教程1的文章作为<code>模板</code>,以后要写,就直接复制一份进行修改就行.</p>
-<p>另外,我的typora也有些问题,在写的时候输入不了中文标点符号,像是句号,顿号,都是英文的.不过这样倒方便了我在输入特殊字符的时候不用进行中英文切换.</p>
-<p>markdown语法教程:</p>
-<p><a target="_blank" rel="noopener" href="https://www.runoob.com/markdown/md-code.html">菜鸟教程</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/815788f4b01d">另外一个</a></p>
-<h1 id="SEO"><a href="#SEO" class="headerlink" title="SEO"></a>SEO</h1><h2 id="什么是SEO"><a href="#什么是SEO" class="headerlink" title="什么是SEO?"></a>什么是SEO?</h2><p>百科解释</p>
+<h2 id="模拟元"><a href="#模拟元" class="headerlink" title="模拟元"></a>模拟元</h2><p>根据提示，继续操作。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag = inverse(<span class="number">0x1337</span>, <span class="number">0x18a39cb09e40671788a6b9221371e3f5455bbde2aff984e491c85f4f3ad309613</span>)</span><br></pre></td></tr></table></figure>
+<p>同样地，得到的是一个int数据，还是调用long_to_bytes()，得到：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">b&#x27;flag&#123;456_easy_rsa_challenge_657&#125;&#x27;</span></span><br></pre></td></tr></table></figure>
+<h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><h3 id="在线分解网站datadb"><a href="#在线分解网站datadb" class="headerlink" title="在线分解网站datadb"></a>在线分解网站datadb</h3><p><a target="_blank" rel="noopener" href="http://www.factordb.com/index.php?id=1100000001382063076">在线分解网站datadb</a></p>
+<h3 id="yafu"><a href="#yafu" class="headerlink" title="yafu"></a>yafu</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/LYJ20010728/article/details/110354004">参考资料</a></p>
+<p>该工具似乎解密100位左右的比较快。</p>
+<p>路径已加入环境变量，直接在命令行输入<code>yafu-x64</code>即可进入程序，输入<code>factor()</code>进行分解。</p>
+<p>若n的位数比较大，将n放在文本文件test.txt中（注意，最后要打个换行符），然后输入</p>
+<p><code>yafu-x64 &quot;factor(@)&quot; -batchfile test.txt</code></p>
+<h1 id="LCG"><a href="#LCG" class="headerlink" title="LCG"></a>LCG</h1><h2 id="概念-amp-加密算法"><a href="#概念-amp-加密算法" class="headerlink" title="概念&amp;加密算法"></a>概念&amp;加密算法</h2><p>LCG(Linear Congruential Generator, 线性同余方法)是应用广泛的<code>伪随机数生成算法</code>，递归公式：</p>
+<p><code>Xn+1=(aXn+b)modn（a、b、n为参数）</code></p>
+<p>将某一个秘密数字（种子，在ctf中是flag）设置为初始值X0，然后再递归地求出其他伪随机数。</p>
+<p>这个算法其实就是嵌套地计算<code>仿射密码而已</code>。</p>
+<h2 id="解密算法"><a href="#解密算法" class="headerlink" title="解密算法"></a>解密算法</h2><p><code>Xn−1=a−1(Xn−b)modn</code></p>
+<p>所以，得先求出a的逆元，这个容易：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> inverse</span><br><span class="line">r = inverse(a, n)</span><br></pre></td></tr></table></figure>
+<p>然后，再写个循环即可，已写成py脚本保存。</p>
+<h2 id="用C进行更快地破解"><a href="#用C进行更快地破解" class="headerlink" title="用C进行更快地破解"></a>用C进行更快地破解</h2><p>循环的次数达到2 ** 30 + 1，由于py的运行速度慢，因此有必要写个C来跑。</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/xf1les/2019JNUCTF/blob/master/Crypto/lincoln/writeup/solve.c">代码</a></p>
+<p>C用到一个叫<code>GMP</code>的开源运算库：<a target="_blank" rel="noopener" href="https://gmplib.org/">官网</a></p>
+<h1 id="一些方法"><a href="#一些方法" class="headerlink" title="一些方法"></a>一些方法</h1><h2 id="int-from-bytes"><a href="#int-from-bytes" class="headerlink" title="int.from_bytes"></a>int.from_bytes</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/aic1999/article/details/80102433/">https://blog.csdn.net/aic1999/article/details/80102433/</a></p>
+<p>将字节串转换为int类型。</p>
+<p>实例：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="built_in">ord</span>(<span class="string">&#x27;1&#x27;</span>))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">int</span>.from_bytes(<span class="string">b&#x27;2&#x27;</span>, byteorder=<span class="string">&#x27;big&#x27;</span>, signed=<span class="literal">False</span>))</span><br><span class="line"><span class="comment">#49</span></span><br><span class="line"><span class="comment">#50</span></span><br></pre></td></tr></table></figure>
+<p>推测这里的<code>b&#39;2&#39;</code>代表用acsii编码的’2’的字节。</p>
+<h2 id="str-endswith"><a href="#str-endswith" class="headerlink" title="str.endswith"></a>str.endswith</h2><p>vscode:</p>
 <blockquote>
-<p>SEO（Search Engine Optimization）：汉译为搜索引擎优化。是一种方式：利用<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/搜索引擎/104812">搜索引擎</a>的规则提高网站在有关搜索引擎内的<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/自然排名/2092669">自然排名</a>。目的是让其在行业内占据领先地位，获得<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/品牌/235720">品牌</a>收益。很大程度上是网站经营者的一种商业行为，将自己或自己公司的排名前移。</p>
+<p>(method) endswith: (<strong>suffix: str | Tuple[str, …], </strong>start: SupportsIndex | None = …, __end: SupportsIndex | None = …) -&gt; bool</p>
+<hr>
+<p>S.endswith(suffix[, start[, end]]) -&gt; bool</p>
+<p>Return True if S ends with the specified suffix, False otherwise. With optional start, test S beginning at that position. With optional end, stop comparing S at that position. suffix can also be a tuple of strings to try.</p>
 </blockquote>
-<p>说简单点,就是使我们的网站能够更容易被搜索引擎搜索爬取,从而提高流量热度.</p>
-<h2 id="在搜索引擎提交我们的站点"><a href="#在搜索引擎提交我们的站点" class="headerlink" title="在搜索引擎提交我们的站点"></a>在搜索引擎提交我们的站点</h2><p>根据教程1，我们可以在<code>google</code>和<code>baidu</code>提交我们的站点，但因为我没有梯子，只能在baidu提交。</p>
-<p><a target="_blank" rel="noopener" href="https://ziyuan.baidu.com/site/index">https://ziyuan.baidu.com/site/index</a></p>
-<p>提交前，需要验证网点是我们的，这里有三种验证方式：</p>
-<p><img src="https://pic1.58cdn.com.cn/nowater/webim/big/n_v2ddd078dcc6b245be9141fcc906da5830.png" alt=""></p>
-<p>这里推荐用<code>第三种</code>，第三种直接把它提供的网站在我们的云服务平台上解析下就可以了。</p>
-<p>第一种我试过，把它给的文件放在public文件夹内，理论上是可以，但我怎么试都不可以。</p>
-<h1 id="一些小工具"><a href="#一些小工具" class="headerlink" title="一些小工具"></a>一些小工具</h1><h2 id="不蒜子"><a href="#不蒜子" class="headerlink" title="不蒜子"></a>不蒜子</h2><p>这是一个博客网站访问人数和浏览人数的<code>计数小工具</code>,说是小工具,其实也就几行代码,引入脚本后调用标签就完了,非常轻量.</p>
-<p>工作原理大概是这样的:</p>
-<blockquote>
-<p>在引入的JS(JavaScript)脚本中，会把当前页面url（或某种唯一标识）注册到其第三方服务器，服务器上保存着url与对应的计数值，点击页面后通过JS更新服务器上的计数值，并在页面初始化时在本地标签加载、显示计数值。</p>
-</blockquote>
-<h2 id="图床"><a href="#图床" class="headerlink" title="图床"></a>图床</h2><p>写文章的时候用到的图片在<a target="_blank" rel="noopener" href="https://www.hualigs.cn/">这里</a>上传就好了.</p>
-<h2 id="live2d"><a href="#live2d" class="headerlink" title="live2d"></a>live2d</h2><p>就是经常在别人博客里看到的左下角的看板娘,但其实除了二次元美少女(为什么这么多人喜欢这种,而且还都是大佬…),还有其他卡通形象,如我这个:</p>
-<p><img src="https://pic2.58cdn.com.cn/nowater/webim/big/n_v2bae32754b10842a1b3173f3c3f3363ad.png" alt=""></p>
-<p>添加方法看这篇<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/5b5c61323772">blog</a></p>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>虽然在搭建个站的过程中，遇到了许多麻烦，但了确确实实地学到了很多东西。</p>
-<p>首先，是git的基本命令，算会敲了，然后对github的仓库托管也搞清楚了，这应该属于程序员的必备技能吧😋？</p>
-<p>其次，是对域名解析、SSH密钥验证这些，有了一定的认识。</p>
-<p>最最重要的是，以后有了一个平台来托管我的文章，促进自己的学习了！</p>
+<p>即判断字符串的结尾是否是给定的参数，是则返回true。</p>
 
       
     </div>
@@ -791,7 +713,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="https://zhengjay.com/20211119/%E5%BB%BA%E7%AB%99%E4%B9%8B%E8%B7%AF.html" title="建站之路">https://zhengjay.com/20211119/%E5%BB%BA%E7%AB%99%E4%B9%8B%E8%B7%AF.html</a>
+    <a href="https://zhengjay.com/20211122/noteCtfCrypto.html" title="noteCtfCrypto">https://zhengjay.com/20211122/noteCtfCrypto.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -813,17 +735,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/%E5%BB%BA%E7%AB%99/" rel="tag"><i class="fa fa-tag"></i> 建站</a>
+            <a href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag"><i class="fa fa-tag"></i> 笔记</a>
           
-            <a href="/tags/hexo/" rel="tag"><i class="fa fa-tag"></i> hexo</a>
-          
-            <a href="/tags/github-pages/" rel="tag"><i class="fa fa-tag"></i> github pages</a>
-          
-            <a href="/tags/SSH/" rel="tag"><i class="fa fa-tag"></i> SSH</a>
-          
-            <a href="/tags/github%E5%91%BD%E4%BB%A4/" rel="tag"><i class="fa fa-tag"></i> github命令</a>
-          
-            <a href="/tags/%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D/" rel="tag"><i class="fa fa-tag"></i> 绑定域名</a>
+            <a href="/tags/Crypto/" rel="tag"><i class="fa fa-tag"></i> Crypto</a>
           
         </div>
       
@@ -836,8 +750,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/20211119/%E4%B8%93%E4%B8%9A%E7%9F%A5%E8%AF%86.html" rel="next" title="专业知识">
-                <i class="fa fa-chevron-left"></i> 专业知识
+              <a href="/20211122/ctf%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0.html" rel="next" title="ctf文件上传">
+                <i class="fa fa-chevron-left"></i> ctf文件上传
               </a>
             
           </div>
@@ -846,8 +760,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/20211119/%E6%96%87%E7%AB%A0%E6%A8%A1%E6%9D%BF.html" rel="prev" title="文章模板">
-                文章模板 <i class="fa fa-chevron-right"></i>
+              <a href="/20211122/noteGit.html" rel="prev" title="noteGit">
+                noteGit <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -926,7 +840,7 @@
                 
                   <a href="/archives/%20%7C%7C%20archive">
                 
-                    <span class="site-state-item-count">17</span>
+                    <span class="site-state-item-count">22</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -957,7 +871,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">7</span>
+                      
+                    
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1032,7 +948,17 @@
                     
                       
                     
-                    <span class="site-state-item-count">29</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">34</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1131,7 +1057,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%95%99%E7%A8%8B"><span class="nav-number">2.</span> <span class="nav-text">参考教程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9E%B6%E6%9E%84"><span class="nav-number">3.</span> <span class="nav-text">架构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#github-pages"><span class="nav-number">3.1.</span> <span class="nav-text">github pages</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo"><span class="nav-number">3.2.</span> <span class="nav-text">hexo</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E7%8E%AF%E5%A2%83"><span class="nav-number">4.</span> <span class="nav-text">下载环境</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85git"><span class="nav-number">4.1.</span> <span class="nav-text">安装git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85node-js"><span class="nav-number">4.2.</span> <span class="nav-text">安装node.js</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85hexo"><span class="nav-number">4.3.</span> <span class="nav-text">安装hexo</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%85%8D%E7%BD%AESSH%E5%AF%86%E9%92%A5"><span class="nav-number">5.</span> <span class="nav-text">配置SSH密钥</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFSSH"><span class="nav-number">5.1.</span> <span class="nav-text">什么是SSH?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AESSH%E5%AF%86%E9%92%A5-1"><span class="nav-number">5.2.</span> <span class="nav-text">配置SSH密钥</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95"><span class="nav-number">5.3.</span> <span class="nav-text">测试</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#bug"><span class="nav-number">5.3.1.</span> <span class="nav-text">bug</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2"><span class="nav-number">6.</span> <span class="nav-text">搭建博客</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E6%A1%86%E6%9E%B6"><span class="nav-number">6.1.</span> <span class="nav-text">基础框架</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4"><span class="nav-number">6.2.</span> <span class="nav-text">hexo基本命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%AC%E5%9C%B0%E8%BF%90%E8%A1%8C"><span class="nav-number">6.3.</span> <span class="nav-text">本地运行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E4%B8%BB%E9%A2%98"><span class="nav-number">6.4.</span> <span class="nav-text">修改主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo-bug"><span class="nav-number">6.5.</span> <span class="nav-text">hexo bug</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%8A%E4%BC%A0%E5%88%B0github"><span class="nav-number">7.</span> <span class="nav-text">上传到github</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-number">7.1.</span> <span class="nav-text">修改配置文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8A%E4%BC%A0"><span class="nav-number">7.2.</span> <span class="nav-text">上传</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%BA%90%E7%A0%81%E5%A4%87%E4%BB%BD"><span class="nav-number">7.3.</span> <span class="nav-text">源码备份</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%93%E5%BA%93%E6%96%87%E4%BB%B6%E5%88%A0%E9%99%A4"><span class="nav-number">7.4.</span> <span class="nav-text">仓库文件删除</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8A%E4%BC%A0%E5%90%8E%E8%BF%9C%E7%A8%8B%E6%97%A0%E5%8F%98%E5%8C%96"><span class="nav-number">7.5.</span> <span class="nav-text">上传后远程无变化</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BB%91%E5%AE%9A%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D"><span class="nav-number">8.</span> <span class="nav-text">绑定自定义域名</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B4%AD%E4%B9%B0%E5%9F%9F%E5%90%8D"><span class="nav-number">8.1.</span> <span class="nav-text">购买域名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%9F%E5%90%8D%E5%AE%9E%E5%90%8D%E5%88%B6%E8%AE%A4%E8%AF%81"><span class="nav-number">8.2.</span> <span class="nav-text">域名实名制认证</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B0%86%E5%9F%9F%E5%90%8D%E5%92%8Cip%E8%BF%9B%E8%A1%8C%E7%BB%91%E5%AE%9A"><span class="nav-number">8.3.</span> <span class="nav-text">将域名和ip进行绑定</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%99%E6%96%87%E7%AB%A0"><span class="nav-number">9.</span> <span class="nav-text">写文章</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SEO"><span class="nav-number">10.</span> <span class="nav-text">SEO</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFSEO"><span class="nav-number">10.1.</span> <span class="nav-text">什么是SEO?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9C%A8%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E6%8F%90%E4%BA%A4%E6%88%91%E4%BB%AC%E7%9A%84%E7%AB%99%E7%82%B9"><span class="nav-number">10.2.</span> <span class="nav-text">在搜索引擎提交我们的站点</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E5%B0%8F%E5%B7%A5%E5%85%B7"><span class="nav-number">11.</span> <span class="nav-text">一些小工具</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8D%E8%92%9C%E5%AD%90"><span class="nav-number">11.1.</span> <span class="nav-text">不蒜子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BE%E5%BA%8A"><span class="nav-number">11.2.</span> <span class="nav-text">图床</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#live2d"><span class="nav-number">11.3.</span> <span class="nav-text">live2d</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">12.</span> <span class="nav-text">总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#RSA"><span class="nav-number">1.</span> <span class="nav-text">RSA</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E6%9D%A1%E4%BB%B6"><span class="nav-number">1.1.</span> <span class="nav-text">题目条件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF"><span class="nav-number">1.2.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E8%A7%A3n"><span class="nav-number">1.3.</span> <span class="nav-text">分解n</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E6%AC%A7%E6%8B%89%E5%87%BD%E6%95%B0"><span class="nav-number">1.4.</span> <span class="nav-text">计算欧拉函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97d"><span class="nav-number">1.5.</span> <span class="nav-text">计算d</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E5%87%BA%E6%98%8E%E6%96%87"><span class="nav-number">1.6.</span> <span class="nav-text">解出明文</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#long-to-bytes"><span class="nav-number">1.7.</span> <span class="nav-text">long_to_bytes</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A8%A1%E6%8B%9F%E5%85%83"><span class="nav-number">1.8.</span> <span class="nav-text">模拟元</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%A5%E5%85%B7"><span class="nav-number">1.9.</span> <span class="nav-text">工具</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8%E7%BA%BF%E5%88%86%E8%A7%A3%E7%BD%91%E7%AB%99datadb"><span class="nav-number">1.9.1.</span> <span class="nav-text">在线分解网站datadb</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#yafu"><span class="nav-number">1.9.2.</span> <span class="nav-text">yafu</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#LCG"><span class="nav-number">2.</span> <span class="nav-text">LCG</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A6%82%E5%BF%B5-amp-%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95"><span class="nav-number">2.1.</span> <span class="nav-text">概念&amp;加密算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E5%AF%86%E7%AE%97%E6%B3%95"><span class="nav-number">2.2.</span> <span class="nav-text">解密算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%A8C%E8%BF%9B%E8%A1%8C%E6%9B%B4%E5%BF%AB%E5%9C%B0%E7%A0%B4%E8%A7%A3"><span class="nav-number">2.3.</span> <span class="nav-text">用C进行更快地破解</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E6%96%B9%E6%B3%95"><span class="nav-number">3.</span> <span class="nav-text">一些方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#int-from-bytes"><span class="nav-number">3.1.</span> <span class="nav-text">int.from_bytes</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#str-endswith"><span class="nav-number">3.2.</span> <span class="nav-text">str.endswith</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1171,7 +1097,7 @@
       <i class="fa fa-area-chart"> 站点字数合计:</i>
     </span>
     
-    <span title="站点总字数">15k</span>
+    <span title="站点总字数">31k</span>
   
   
 </div>
@@ -1372,7 +1298,7 @@
   
     <script>
   window.livereOptions = {
-    refer: '20211119/建站之路.html'
+    refer: '20211122/noteCtfCrypto.html'
   };
   (function(d, s) {
     var j, e = d.getElementsByTagName(s)[0];
